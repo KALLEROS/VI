@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Mapa VI · Leonida</title>
+<meta name="description" content="Mapa interactivo de Leonida (GTA VI): bancos, tiendas, autos raros, saqueo y strip clubs, con fuentes.">
+<!-- iPhone: abrir como app a pantalla completa al añadir a inicio -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mapa VI">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0d0a1a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- Escenario del mapa: el "cielo" solo se ve en vista 3D -->
+<div id="escenario">
+  <div id="cielo"></div>
+  <div id="mapa" aria-label="Mapa de Leonida"></div>
+</div>
+
+<!-- Barra superior -->
+<header id="barra">
+  <h1>Mapa <span>VI</span></h1>
+  <div class="barra-botones">
+    <button id="btn-lista" class="btn-barra" aria-label="Lista y buscador">☰ Lista</button>
+    <button id="btn-trucos" class="btn-barra" aria-label="Trucos e información">🎮 Trucos</button>
+  </div>
+</header>
+
+<!-- Filtros por categoría (se llenan desde app.js) -->
+<nav id="filtros" aria-label="Filtrar por categoría"></nav>
+
+<!-- Controles del mapa -->
+<div id="controles">
+  <button id="btn-3d" class="btn-ctl" aria-pressed="false" title="Vista inclinada 3D">3D</button>
+  <button id="btn-mas" class="btn-ctl" aria-label="Acercar">+</button>
+  <button id="btn-menos" class="btn-ctl" aria-label="Alejar">−</button>
+  <button id="btn-todo" class="btn-ctl" aria-label="Ver todo el mapa">⤢</button>
+</div>
+
+<div id="credito">Mapa base: <a href="https://gtadb.org" target="_blank" rel="noopener">gtadb.org</a> · comunidad · no oficial</div>
+
+<!-- Ficha del marcador (hoja inferior) -->
+<section id="ficha" class="hoja" aria-hidden="true">
+  <div class="asa"></div>
+  <button class="cerrar" data-cerrar="ficha" aria-label="Cerrar">✕</button>
+  <div id="ficha-contenido"></div>
+</section>
+
+<!-- Panel: lista y buscador -->
+<section id="panel-lista" class="panel" aria-hidden="true">
+  <div class="panel-cabeza">
+    <h2>Todos los lugares</h2>
+    <button class="cerrar" data-cerrar="panel-lista" aria-label="Cerrar">✕</button>
+  </div>
+  <input id="buscador" type="search" placeholder="Buscar por nombre o zona…" autocomplete="off">
+  <div id="lista" class="panel-cuerpo"></div>
+</section>
+
+<!-- Panel: trucos e información técnica -->
+<section id="panel-trucos" class="panel" aria-hidden="true">
+  <div class="panel-cabeza">
+    <h2>Trucos e info</h2>
+    <button class="cerrar" data-cerrar="panel-trucos" aria-label="Cerrar">✕</button>
+  </div>
+  <div id="trucos" class="panel-cuerpo"></div>
+</section>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

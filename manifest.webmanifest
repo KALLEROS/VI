@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "Mapa VI · Leonida",
+  "short_name": "Mapa VI",
+  "description": "Mapa de Leonida (GTA VI): bancos, tiendas, autos raros, saqueo y strip clubs, con fuentes.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#0d0a1a",
+  "theme_color": "#0d0a1a",
+  "lang": "es-MX",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
