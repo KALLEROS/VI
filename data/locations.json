@@ -14,7 +14,10 @@
   "raros": "Autos raros",
   "regalo": "Autos / ítems de regalo",
   "loot": "Lugares para saquear",
-  "strip": "Strip clubs"
+  "strip": "Strip clubs",
+  "peristas": "Peristas (vender lo robado)",
+  "cajas": "Cajas fuertes y Smash 'n' Grab",
+  "remolcables": "Cajeros remolcables (grúa)"
  },
  "items": [
   {
@@ -503,6 +506,150 @@
     "https://api.gtadb.org/geocode?gta=6&address=uncle%20jack"
    ],
    "verificado": "no"
+  },
+  {
+   "id": "caja-joyeria-empenos",
+   "nombre": "Joyeria Empenos (casa de empeño)",
+   "categoria": "cajas",
+   "x": -1148,
+   "y": 1012,
+   "zona": "Rockridge, Vice City, condado Vice-Dale",
+   "descripcion": "Smash 'n' Grab de casa de empeño: rompe las vitrinas, agarra las joyas y luego entra al cuarto de atrás a vaciar la caja fuerte (si no abres la caja puede no contar como completado). Se desbloquea con la misión 'Coffee Break' del Capítulo 2; botín estimado de $4,500 a $12,000.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "fuentes_extra": [
+    "https://bloxodes.com/wiki/gta-6/robberies",
+    "https://api.gtadb.org/geocode?gta=6&address=Joyeria+Empenos"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "botin-almacen-apollo-caja-fuerte",
+   "nombre": "Caja fuerte y bolsa de billetes marcados del almacén",
+   "categoria": "loot",
+   "x": -1837,
+   "y": -2876,
+   "zona": "Peregrine Bay / al este de Hamlet, Vice-Dale County",
+   "descripcion": "Dentro del mismo almacén cerca de Apollo Aggregates: bolsa con billetes marcados en la mesa central (games.gg dice 6,000 dólares), coca en dos camionetas de osos de peluche, caja registradora y una caja fuerte en la segunda oficina con efectivo, coca y la carta Leroy Rook (unos 6,000 dólares en casa de empeño). En total se reportan unos 13,000 dólares; lo ilegal se vende en Brian's Lockup. En el patio hay además una caja de herramientas amarilla: En el patio de grava del almacén rojo junto a Apollo Aggregates (al este de Hamlet, junto a tres albercas rectangulares al lado de la carretera) hay una caja de herramientas amarilla con unos lentes de sol para Jason. Las guías dicen que es fácil pasarla de largo; revísala antes de entrar.",
+   "fuente": "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-hamlet-warehouse-location-early-game-money/",
+   "fuentes_extra": [
+    "https://beebom.com/gta-6-best-money-spots/",
+    "https://roonby.com/2026/11/19/6-best-early-game-money-locations-in-gta-6-hidden-loot-spots-and-treasure/amp/",
+    "https://insider-gaming.com/gta-6-early-game-locations-make-money/",
+    "https://api.gtadb.org/geocode?gta=6&address=Apollo%20Aggregates"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "remolcable-perkins-deli",
+   "nombre": "Cajero remolcable junto a Perkins Deli",
+   "categoria": "remolcables",
+   "x": -350,
+   "y": 1549,
+   "zona": "Vice City (Bayside/Crosstown)",
+   "descripcion": "Cajero de pared que se puede arrancar con grúa o winche, junto a Perkins Deli. La guía lo ubica en Bayside y gtadb pone Perkins Deli en Crosstown (Catalan Blvd), barrios vecinos; el punto es el del negocio, el cajero está pegado a él.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=Perkins+Deli"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "remolcable-conch-king-la-perle",
+   "nombre": "Cajero remolcable junto a Conch King",
+   "categoria": "remolcables",
+   "x": -905,
+   "y": 1536,
+   "zona": "Vice City (La Perle)",
+   "descripcion": "Cajero de pared remolcable junto a Conch King, en La Perle. El punto marca el negocio; el cajero está en su pared exterior o a un lado.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=Conch+King"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "remolcable-shorefront-rockridge",
+   "nombre": "Cajero remolcable junto a ShoreFront (Rockridge)",
+   "categoria": "remolcables",
+   "x": -1327,
+   "y": 801,
+   "zona": "Vice City (Rockridge)",
+   "descripcion": "Cajero de pared remolcable junto a la tienda ShoreFront de Rockridge. El punto marca el negocio; el cajero está pegado a él.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=ShoreFront%2C+Rockridge"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "remolcable-lombank-tequesta",
+   "nombre": "Cajero remolcable junto a Lombank (Tequesta)",
+   "categoria": "remolcables",
+   "x": -1094,
+   "y": -1479,
+   "zona": "Vice City (Tequesta)",
+   "descripcion": "Cajero de pared remolcable junto a la sucursal de Lombank en Tequesta. El punto marca el banco; el cajero está en su fachada o a un lado.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=Lombank%2C+Tequesta"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "remolcable-vapid-southside",
+   "nombre": "Cajero remolcable junto a la agencia Vapid",
+   "categoria": "remolcables",
+   "x": -1967,
+   "y": -2339,
+   "zona": "Vice City (Southside)",
+   "descripcion": "Cajero de pared remolcable junto a la agencia de autos Vapid en Southside. El punto marca la agencia; el cajero está pegado a ella.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=Vapid+Dealership"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "remolcable-akio-hotel",
+   "nombre": "Cajero remolcable junto al Akio Hotel",
+   "categoria": "remolcables",
+   "x": -352,
+   "y": -1209,
+   "zona": "Vice City (Tequesta Retreat)",
+   "descripcion": "Cajero de pared remolcable junto al Akio Hotel. La guía dice Tequesta y gtadb dice Tequesta Retreat; el punto marca el hotel y el cajero está a un lado.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=Akio+Hotel"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "remolcable-bite-house-watson-bay",
+   "nombre": "Cajero remolcable junto a Bite House",
+   "categoria": "remolcables",
+   "x": -5235,
+   "y": -3390,
+   "zona": "Grassrivers (Watson Bay)",
+   "descripcion": "Cajero de pared remolcable junto al restaurante Bite House, en Watson Bay. El punto marca el negocio; el cajero está pegado a él.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=Bite+House"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "remolcable-money-shift-port-gellhorn",
+   "nombre": "Cajero remolcable junto a Money Shift",
+   "categoria": "remolcables",
+   "x": -6370,
+   "y": 3915,
+   "zona": "Port Gellhorn",
+   "descripcion": "Cajero de pared remolcable junto a Money Shift, en Port Gellhorn. El punto marca el negocio; el cajero está a un lado.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=Money+Shift"
+   ],
+   "verificado": "no"
   }
  ],
  "pendientes": [
@@ -517,7 +664,7 @@
   {
    "id": "pend-atm-exterior",
    "nombre": "Cajeros exteriores para arrancar",
-   "categoria": "cajeros",
+   "categoria": "remolcables",
    "descripcion": "Desde los encargos de Yasmani (Cap. 3) puedes arrancar cajeros de pared exteriores con un vehículo con gancho/winch, romperlos y disparar a los cartuchos. Pagan en billetes marcados (llévalos al perista). Dos seguidos ≈ $16,000.",
    "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
    "motivo": "Las guías no dan direcciones de cajeros concretos."
@@ -937,6 +1084,766 @@
    "descripcion": "Cajero de marco verde bajo un letrero rojo y blanco de ATM, en un edificio verde de techo rojo junto a un cajón para discapacitados, cerca de Chuck's Tackle and Shot. Es exterior: se puede arrancar con grúa.",
    "fuente": "https://howtovideogame.com/gta-6-atm-locations/",
    "motivo": "gtadb.org no tiene este Ammu-Nation de Key Lento; no hay coordenada exacta."
+  },
+  {
+   "id": "perista-brian",
+   "nombre": "Brian's Lockup (Brian)",
+   "categoria": "peristas",
+   "descripcion": "Perista del Capítulo 1 en el sur de Key Lento; se desbloquea tras la misión 'Lab Fees'. Compra narcóticos, joyas y billetes marcados a precio muy bajo y deja de estar disponible después del Capítulo 1. Beebom y Roonby dicen que una caja/locker de este lugar tiene el código 7700.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/",
+   "motivo": "Sin coordenada exacta: gtadb no tiene este lugar (búsqueda por nombre sin resultados), y las guías solo dan zona aproximada. Las guías solo dicen 'sur de Key Lento'. gtadb tiene 'Brian's Boat Works & Marina' en Key Lento, pero no hay fuente que diga que es el mismo lugar, así que no se usó. Fuentes: https://beebom.com/gta-6-fence-locations/ , https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Brian%27s+Lockup"
+  },
+  {
+   "id": "perista-donnie",
+   "nombre": "Donnie's Trailer (Donnie)",
+   "categoria": "peristas",
+   "descripcion": "Perista del Capítulo 1 en Key Lento; paga bajo por narcóticos y muy bajo por joyas y billetes marcados. Deja de estar disponible tras la misión 'Swamped' del Capítulo 1.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/",
+   "motivo": "Sin coordenada exacta: gtadb no tiene este lugar (búsqueda por nombre sin resultados), y las guías solo dan zona aproximada. Además las fuentes no coinciden: PowerPyx dice sur de Key Lento y Beebom dice norte de Key Lento, frente a la tienda Nifty Threads Island Wear. Fuentes: https://beebom.com/gta-6-fence-locations/ , https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Donnie%27s+Trailer"
+  },
+  {
+   "id": "perista-dunk",
+   "nombre": "Dunk's Trailer (Dunk/Duncan)",
+   "categoria": "peristas",
+   "descripcion": "Perista en Port Gellhorn (condado Kelly), se desbloquea con 'Slam Dunk' en el Capítulo 2. Paga bajo por narcóticos y joyas y muy bajo por billetes marcados; se vuelve a habilitar al terminar la historia.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/",
+   "motivo": "Sin coordenada exacta: gtadb no tiene este lugar (búsqueda por nombre sin resultados), y las guías solo dan zona aproximada. Beebom lo ubica en el sur de Port Gellhorn. Fuentes: https://beebom.com/gta-6-fence-locations/ , https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Dunk%27s+Trailer"
+  },
+  {
+   "id": "perista-moses",
+   "nombre": "Moses 'Mo' Watkins (garage)",
+   "categoria": "peristas",
+   "descripcion": "Perista de autos en Port Gellhorn: solo acepta coches sin rastreador (revísalos con la app WAINK) y se los llevas a su garage. Se desbloquea con la misión 'Moses' del Capítulo 2.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/",
+   "motivo": "Sin coordenada exacta: gtadb no tiene este lugar (búsqueda por nombre sin resultados), y las guías solo dan zona aproximada. Beebom dice 'directamente al oeste del condado Kelly', lo cual es ambiguo. Fuentes: https://beebom.com/gta-6-fence-locations/ , https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Moses"
+  },
+  {
+   "id": "perista-tyrone",
+   "nombre": "Tyrone",
+   "categoria": "peristas",
+   "descripcion": "Perista en La Perle, Vice City, disponible desde el Capítulo 3 (KeenGamer dice tras 'Here, Kitty Kitty'). Es el que mejor paga los narcóticos (alto); joyas y billetes marcados a precio medio.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/",
+   "motivo": "Sin coordenada exacta: gtadb no tiene este lugar (búsqueda por nombre sin resultados), y las guías solo dan zona aproximada. Solo se sabe el barrio (La Perle). Fuentes: https://beebom.com/gta-6-fence-locations/ , https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Tyrone"
+  },
+  {
+   "id": "perista-yasmani",
+   "nombre": "Yasmani",
+   "categoria": "peristas",
+   "descripcion": "Perista en Little Cuba, Vice City, desde el Capítulo 3 (tras 'Boobie Time'). Paga lo más alto por joyas y billetes marcados y medio por narcóticos; también vende el dato de rutas de camiones blindados por $10,000.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/",
+   "motivo": "Sin coordenada exacta: gtadb no tiene este lugar (búsqueda por nombre sin resultados), y las guías solo dan zona aproximada. Solo se sabe el barrio (Little Cuba). Fuentes: https://beebom.com/gta-6-fence-locations/ , https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Yasmani"
+  },
+  {
+   "id": "perista-randy",
+   "nombre": "Randy",
+   "categoria": "peristas",
+   "descripcion": "Perista de autos de lujo en Balsero, Vice City: compra coches de alta gama con rastreador avanzado. Se desbloquea tras 'Clonin' Keys, Makin' GS (Steal the Zorrusso for Randy)' en el Capítulo 3.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/",
+   "motivo": "Sin coordenada exacta: gtadb no tiene este lugar (búsqueda por nombre sin resultados), y las guías solo dan zona aproximada. Beebom no da ubicación; PowerPyx y KeenGamer dicen Balsero. Fuentes: https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://beebom.com/gta-6-fence-locations/ , https://api.gtadb.org/geocode?gta=6&address=Randy"
+  },
+  {
+   "id": "caja-the-sirens-chest",
+   "nombre": "The Siren's Chest",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Mariana: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $1k–$10k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=The+Siren%27s+Chest"
+  },
+  {
+   "id": "caja-timeless-peculiars",
+   "nombre": "Timeless Peculiars",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Mariana: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $4.5k–$12k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Timeless+Peculiars Bloxodes la lista bajo Vice-Dale pero anota 'Mariana County'; PowerPyx dice Mariana."
+  },
+  {
+   "id": "caja-victoria-lee-jeweler",
+   "nombre": "Victoria Lee Jeweler",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Mariana: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $9k–$20k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Victoria+Lee+Jeweler"
+  },
+  {
+   "id": "caja-hamlet-pawn",
+   "nombre": "Hamlet Pawn",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $4.5k–$12k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Hamlet+Pawn"
+  },
+  {
+   "id": "caja-ernestos-pawn",
+   "nombre": "Ernesto's Pawn",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $4.5k–$12k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Ernesto%27s+Pawn"
+  },
+  {
+   "id": "caja-donovan-banks-co",
+   "nombre": "Donovan Banks & Co.",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $14k–$25k. games.gg reporta el código de caja 0104, pero otras guías dicen que los códigos de tienda son aleatorios.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Donovan+Banks+%26+Co."
+  },
+  {
+   "id": "caja-plush",
+   "nombre": "Plush",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $9k–$20k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Plush"
+  },
+  {
+   "id": "caja-pawn-city",
+   "nombre": "Pawn City",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $1k–$10k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Pawn+City"
+  },
+  {
+   "id": "caja-icegem-diamonds-watches",
+   "nombre": "Icegem Diamonds & Watches",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $14k–$25k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Icegem+Diamonds+%26+Watches"
+  },
+  {
+   "id": "caja-richardson-jewelry-diamonds",
+   "nombre": "Richardson Jewelry & Diamonds",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $4.5k–$12k. games.gg reporta el código de caja 6815, pero otras guías dicen que los códigos de tienda son aleatorios.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Richardson+Jewelry+%26+Diamonds"
+  },
+  {
+   "id": "caja-all-that-glitters",
+   "nombre": "All That Glitters",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $9k–$20k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=All+That+Glitters"
+  },
+  {
+   "id": "caja-peacock",
+   "nombre": "Peacock",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $9k–$20k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Peacock gtadb sí tiene el barrio 'Peacock Bay', pero eso no prueba que la joyería esté ahí."
+  },
+  {
+   "id": "caja-fast-cash",
+   "nombre": "Fast Cash",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $1k–$10k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Fast+Cash gtadb tiene un lugar llamado 'Cash...' en Hamlet, pero el nombre está incompleto y no se puede confirmar que sea este."
+  },
+  {
+   "id": "caja-the-jewelry-place",
+   "nombre": "The Jewelry Place",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $1k–$10k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=The+Jewelry+Place"
+  },
+  {
+   "id": "caja-crown-jewels",
+   "nombre": "Crown Jewels",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $1k–$10k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Crown+Jewels"
+  },
+  {
+   "id": "caja-dorado-pawn-shop",
+   "nombre": "Dorado Pawn Shop",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $4.5k–$12k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Dorado+Pawn+Shop"
+  },
+  {
+   "id": "caja-white-sands-jewelry-pawn",
+   "nombre": "White Sands Jewelry Pawn",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $4.5k–$12k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=White+Sands+Jewelry+Pawn"
+  },
+  {
+   "id": "caja-down-town-pawn",
+   "nombre": "Down Town Pawn",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $1k–$10k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Down+Town+Pawn"
+  },
+  {
+   "id": "caja-pawn-stash",
+   "nombre": "Pawn Stash",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $4.5k–$12k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Pawn+Stash"
+  },
+  {
+   "id": "caja-blanc-giroux",
+   "nombre": "Blanc & Giroux",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $14k–$25k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Blanc+%26+Giroux games.gg da botín de $14k–$35k (difiere de PowerPyx)."
+  },
+  {
+   "id": "caja-roval-jewelry",
+   "nombre": "Roval Jewelry",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $14k–$25k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Roval+Jewelry Ojo: PowerPyx y Bloxodes escriben 'Roval', games.gg escribe 'Royal Jewelry'."
+  },
+  {
+   "id": "caja-covgari",
+   "nombre": "Covgari",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $14k–$25k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Covgari"
+  },
+  {
+   "id": "caja-akoya-jewelers",
+   "nombre": "Akoya Jewelers",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $14k–$25k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Akoya+Jewelers"
+  },
+  {
+   "id": "caja-marshals",
+   "nombre": "Marshal's",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $9k–$20k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Marshal%27s"
+  },
+  {
+   "id": "caja-casa-de-empeno",
+   "nombre": "Casa De Empeno",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $4.5k–$12k. games.gg reporta el código de caja 1680, pero otras guías dicen que los códigos de tienda son aleatorios.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Casa+De+Empeno"
+  },
+  {
+   "id": "caja-rococo-rich",
+   "nombre": "Rococo Rich",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $14k–$25k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Rococo+Rich"
+  },
+  {
+   "id": "caja-legendary-custom-jewelry",
+   "nombre": "Legendary Custom Jewelry",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Vice-Dale: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $14k–$25k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Legendary+Custom+Jewelry"
+  },
+  {
+   "id": "caja-brilliant-cuts",
+   "nombre": "Brilliant Cuts",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Leonard: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $9k–$20k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Brilliant+Cuts"
+  },
+  {
+   "id": "caja-skala",
+   "nombre": "Skala",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Leonard: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $14k–$25k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Skala"
+  },
+  {
+   "id": "caja-kowalski",
+   "nombre": "Kowalski",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de joyería en el condado Leonard: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Yasmani's Jewelry Jobs' (Capítulo 3); botín estimado $14k–$25k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Kowalski"
+  },
+  {
+   "id": "caja-bucks-jewelry-pawn",
+   "nombre": "Buck's Jewelry & Pawn",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Kelly: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $1k–$10k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Buck%27s+Jewelry+%26+Pawn"
+  },
+  {
+   "id": "caja-avery-pawn",
+   "nombre": "Avery Pawn",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Kelly: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $1k–$10k. Bloxodes la ubica en Port Gellhorn y dice que es misión opcional tras 'Coffee Break'.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Avery+Pawn"
+  },
+  {
+   "id": "caja-florence-co",
+   "nombre": "Florence & Co.",
+   "categoria": "cajas",
+   "descripcion": "Smash 'n' Grab de casa de empeño en el condado Kelly: rompe vitrinas, toma las joyas y vacía la caja fuerte del cuarto de atrás. Se desbloquea con 'Coffee Break' (Capítulo 2); botín estimado $4.5k–$12k.",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Las guías solo dan el condado, no barrio ni dirección; gtadb no tiene el nombre. Fuentes: https://bloxodes.com/wiki/gta-6/robberies , https://api.gtadb.org/geocode?gta=6&address=Florence+%26+Co."
+  },
+  {
+   "id": "caja-payday-quick-buck-hamlet",
+   "nombre": "Quick Buck (Hamlet)",
+   "categoria": "cajas",
+   "descripcion": "Tienda de préstamos (Payday Loan): el cajero te da el efectivo del mostrador y luego robas la caja fuerte del cuarto de atrás; da billetes marcados que necesitan el Dye Pack Jammer para venderse. Se desbloquea con 'Credit Check' (Capítulo 3); botín estimado $2,000–$25,000. Zona aproximada: Hamlet.",
+   "fuente": "https://bloxodes.com/wiki/gta-6/robberies",
+   "motivo": "Solo una fuente (Bloxodes) da los nombres y barrios; gtadb no tiene ninguna tienda Payday Loan / Quick Buck / Cash Flow. KeenGamer confirma que son 7 Payday Loans. Fuentes: https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Quick+Buck , https://api.gtadb.org/geocode?gta=6&address=Payday+Loans"
+  },
+  {
+   "id": "caja-payday-payline-loans-247",
+   "nombre": "Payline Loans 247",
+   "categoria": "cajas",
+   "descripcion": "Tienda de préstamos (Payday Loan): el cajero te da el efectivo del mostrador y luego robas la caja fuerte del cuarto de atrás; da billetes marcados que necesitan el Dye Pack Jammer para venderse. Se desbloquea con 'Credit Check' (Capítulo 3); botín estimado $2,000–$25,000.",
+   "fuente": "https://bloxodes.com/wiki/gta-6/robberies",
+   "motivo": "Solo una fuente (Bloxodes) da los nombres y barrios; gtadb no tiene ninguna tienda Payday Loan / Quick Buck / Cash Flow. KeenGamer confirma que son 7 Payday Loans. Fuentes: https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Quick+Buck , https://api.gtadb.org/geocode?gta=6&address=Payday+Loans"
+  },
+  {
+   "id": "caja-payday-payday-loans-store-southside",
+   "nombre": "Payday Loans Store (Southside)",
+   "categoria": "cajas",
+   "descripcion": "Tienda de préstamos (Payday Loan): el cajero te da el efectivo del mostrador y luego robas la caja fuerte del cuarto de atrás; da billetes marcados que necesitan el Dye Pack Jammer para venderse. Se desbloquea con 'Credit Check' (Capítulo 3); botín estimado $2,000–$25,000. Zona aproximada: Southside, Vice City.",
+   "fuente": "https://bloxodes.com/wiki/gta-6/robberies",
+   "motivo": "Solo una fuente (Bloxodes) da los nombres y barrios; gtadb no tiene ninguna tienda Payday Loan / Quick Buck / Cash Flow. KeenGamer confirma que son 7 Payday Loans. Fuentes: https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Quick+Buck , https://api.gtadb.org/geocode?gta=6&address=Payday+Loans"
+  },
+  {
+   "id": "caja-payday-payday-loans-store-little-cuba",
+   "nombre": "Payday Loans Store (Little Cuba)",
+   "categoria": "cajas",
+   "descripcion": "Tienda de préstamos (Payday Loan): el cajero te da el efectivo del mostrador y luego robas la caja fuerte del cuarto de atrás; da billetes marcados que necesitan el Dye Pack Jammer para venderse. Se desbloquea con 'Credit Check' (Capítulo 3); botín estimado $2,000–$25,000. Zona aproximada: Little Cuba, Vice City.",
+   "fuente": "https://bloxodes.com/wiki/gta-6/robberies",
+   "motivo": "Solo una fuente (Bloxodes) da los nombres y barrios; gtadb no tiene ninguna tienda Payday Loan / Quick Buck / Cash Flow. KeenGamer confirma que son 7 Payday Loans. Fuentes: https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Quick+Buck , https://api.gtadb.org/geocode?gta=6&address=Payday+Loans"
+  },
+  {
+   "id": "caja-payday-payday-loans-store-rockridge",
+   "nombre": "Payday Loans Store (Rockridge)",
+   "categoria": "cajas",
+   "descripcion": "Tienda de préstamos (Payday Loan): el cajero te da el efectivo del mostrador y luego robas la caja fuerte del cuarto de atrás; da billetes marcados que necesitan el Dye Pack Jammer para venderse. Se desbloquea con 'Credit Check' (Capítulo 3); botín estimado $2,000–$25,000. Zona aproximada: Rockridge, Vice City.",
+   "fuente": "https://bloxodes.com/wiki/gta-6/robberies",
+   "motivo": "Solo una fuente (Bloxodes) da los nombres y barrios; gtadb no tiene ninguna tienda Payday Loan / Quick Buck / Cash Flow. KeenGamer confirma que son 7 Payday Loans. Fuentes: https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Quick+Buck , https://api.gtadb.org/geocode?gta=6&address=Payday+Loans"
+  },
+  {
+   "id": "caja-payday-quick-buck-la-perle",
+   "nombre": "Quick Buck (La Perle)",
+   "categoria": "cajas",
+   "descripcion": "Tienda de préstamos (Payday Loan): el cajero te da el efectivo del mostrador y luego robas la caja fuerte del cuarto de atrás; da billetes marcados que necesitan el Dye Pack Jammer para venderse. Se desbloquea con 'Credit Check' (Capítulo 3); botín estimado $2,000–$25,000. Zona aproximada: La Perle, Vice City.",
+   "fuente": "https://bloxodes.com/wiki/gta-6/robberies",
+   "motivo": "Solo una fuente (Bloxodes) da los nombres y barrios; gtadb no tiene ninguna tienda Payday Loan / Quick Buck / Cash Flow. KeenGamer confirma que son 7 Payday Loans. Fuentes: https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Quick+Buck , https://api.gtadb.org/geocode?gta=6&address=Payday+Loans"
+  },
+  {
+   "id": "caja-payday-cash-flow",
+   "nombre": "Cash Flow",
+   "categoria": "cajas",
+   "descripcion": "Tienda de préstamos (Payday Loan): el cajero te da el efectivo del mostrador y luego robas la caja fuerte del cuarto de atrás; da billetes marcados que necesitan el Dye Pack Jammer para venderse. Se desbloquea con 'Credit Check' (Capítulo 3); botín estimado $2,000–$25,000. Zona aproximada: condado Kelly.",
+   "fuente": "https://bloxodes.com/wiki/gta-6/robberies",
+   "motivo": "Solo una fuente (Bloxodes) da los nombres y barrios; gtadb no tiene ninguna tienda Payday Loan / Quick Buck / Cash Flow. KeenGamer confirma que son 7 Payday Loans. Fuentes: https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/ , https://api.gtadb.org/geocode?gta=6&address=Quick+Buck , https://api.gtadb.org/geocode?gta=6&address=Payday+Loans"
+  },
+  {
+   "id": "caja-kingpin-bowling",
+   "nombre": "Kingpin Bowling (operación de Kolt & Associates)",
+   "categoria": "cajas",
+   "descripcion": "Operación ilegal (laboratorio de pastillas) en Port Gellhorn con una caja fuerte que hay que volar con Sticky Bombs de Ammu-Nation. Se desbloquea con la misión opcional 'Hit Kingpin Bowling' del Capítulo 2; al salir te ponen 2 estrellas.",
+   "fuente": "https://bloxodes.com/wiki/gta-6/robberies",
+   "motivo": "Solo una fuente; gtadb no tiene 'Kingpin Bowling'. https://api.gtadb.org/geocode?gta=6&address=Kingpin+Bowling+Port+Gellhorn"
+  },
+  {
+   "id": "caja-leonida-carrier-warehouse",
+   "nombre": "Leonida Carrier Warehouse",
+   "categoria": "cajas",
+   "descripcion": "Operación de pandilla con caja fuerte; según Bloxodes el código de la caja aparece en la tarjeta del mapa.",
+   "fuente": "https://bloxodes.com/wiki/gta-6/robberies",
+   "motivo": "Solo una fuente y sin zona; gtadb no lo tiene. https://api.gtadb.org/geocode?gta=6&address=Leonida+Carrier+Warehouse"
+  },
+  {
+   "id": "caja-moonstone-boutique",
+   "nombre": "Moonstone Boutique (cuarto)",
+   "categoria": "cajas",
+   "descripcion": "Beebom reporta una caja/cuarto con código 0420 en este lugar; no dice capítulo ni misión.",
+   "fuente": "https://beebom.com/gta-6-safe-codes/",
+   "motivo": "Sin zona en la fuente y gtadb no lo tiene (solo existe 'Moonstone Hwy' en Port Gellhorn, que no prueba nada). https://api.gtadb.org/geocode?gta=6&address=Moonstone+Boutique"
+  },
+  {
+   "id": "caja-cottonmouth-lake-trailer",
+   "nombre": "Tráiler de Cottonmouth Lake",
+   "categoria": "cajas",
+   "descripcion": "Beebom reporta un tráiler junto a Cottonmouth Lake (condado Mariana) con código 44017.",
+   "fuente": "https://beebom.com/gta-6-safe-codes/",
+   "motivo": "gtadb tiene el lago Cottonmouth Lake (aprox. x -3480, y -4788) pero no el tráiler, así que solo sirve como zona. https://api.gtadb.org/geocode?gta=6&address=Cottonmouth+Lake"
+  },
+  {
+   "id": "caja-nova-auto-junkyard",
+   "nombre": "Nova Auto Junkyard",
+   "categoria": "cajas",
+   "descripcion": "Beebom reporta una caja/locker con código 7777 en este deshuesadero; no dice capítulo ni zona.",
+   "fuente": "https://beebom.com/gta-6-safe-codes/",
+   "motivo": "Sin zona en la fuente y gtadb no lo tiene. https://api.gtadb.org/geocode?gta=6&address=Nova+Auto+Junkyard"
+  },
+  {
+   "id": "info-peristas",
+   "nombre": "Cómo funciona",
+   "categoria": "peristas",
+   "descripcion": "Los peristas (fences, icono verde en el mapa) compran lo robado: narcóticos (de operaciones ilegales de pandillas), joyas (joyerías y casas de empeño) y billetes marcados (Payday Loans, bancos, cajeros y camiones de valores). Guardas el botín en una mochila o en la cajuela, pierdes a la policía y dejas la mochila en el contenedor del perista; al pasar el cursor por su icono ves cuánto paga cada uno. Al principio el pago llega en efectivo al buzón de Jason y luego por transferencia (BuckMe). Para vender billetes marcados necesitas el Dye Pack Jammer de la misión 'Credit Check' (Capítulo 3). Desde el Capítulo 3 (Yasmani) puedes dejar el botín en tu garage y elegir perista (con comisión) o mandar a tu pareja a venderlo desde el menú de compañero. Hay 5 peristas de mercancía (Brian, Donnie, Dunk, Tyrone, Yasmani) y 2 de autos (Moses: sin rastreador; Randy: alta gama con rastreador avanzado). Fuentes: https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/ , https://beebom.com/gta-6-fence-locations/ , https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/",
+   "fuente": "https://www.powerpyx.com/gta-6-all-fence-locations-how-to-fence-stolen-goods/",
+   "motivo": "Información general, no es un lugar."
+  },
+  {
+   "id": "info-cajas",
+   "nombre": "Cómo funciona",
+   "categoria": "cajas",
+   "descripcion": "Hay 35 Smash 'n' Grab (15 casas de empeño desde 'Coffee Break', Cap. 2, y 20 joyerías desde 'Yasmani's Jewelry Jobs', Cap. 3); 34 cuentan para el 100%. Se rompen las vitrinas, se toman las joyas y hay que entrar al cuarto de atrás a vaciar la caja fuerte, si no puede no contar. En el mapa: Robos > Smash 'n' Grabs (verde brillante = completado, verde oscuro = pendiente). Las cajas también están en las 7 Payday Loans (Cap. 3, billetes marcados) y en algunas operaciones de pandilla. Para abrirlas: amenaza a un empleado cercano para que te dé el código, busca notas o pantallas con el código, o vuélala con explosivos (ruidoso). La mayoría de guías dicen que los códigos de tiendas son aleatorios; games.gg y Beebom publican códigos fijos, así que tómalos con reserva. El snap gun de los trabajos de Yasmani abre puertas traseras en silencio. Fuentes: https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/ , https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-jewelry-stores-guide-locations-codes/ , https://bloxodes.com/wiki/gta-6/robberies , https://beebom.com/gta-6-safe-codes/ , https://gamesfuze.com/guides/gta-6-how-to-unlock-safes-when-robbing-stores/",
+   "fuente": "https://www.powerpyx.com/gta-6-all-smash-n-grabs-locations/",
+   "motivo": "Información general, no es un lugar."
+  },
+  {
+   "id": "botin-cottonmouth-caja-fuerte-trailer",
+   "nombre": "Caja fuerte del tráiler de Cottonmouth Lake",
+   "categoria": "loot",
+   "descripcion": "Beebom lista un tráiler en Cottonmouth Lake con caja fuerte de combinación 44017. No da el monto ni la ubicación exacta del tráiler; el punto marca el lago.",
+   "fuente": "https://beebom.com/gta-6-safe-codes/",
+   "motivo": "Solo se conoce el lago (Cottonmouth), no la posición del tráiler."
+  },
+  {
+   "id": "botin-three-sheets-ventila",
+   "nombre": "Escondite del perico en Three Sheets Liquor (Exotic Animals Front)",
+   "categoria": "loot",
+   "descripcion": "En Key Lento, tras el encargo de ron Salty Squid de la vecina Shirley, en el patio trasero de la licorería Three Sheets hay una operación de animales exóticos. El perico da una pista hacia el generador: en la ventila junto a él hay unos 1,300-1,500 dólares; además caja fuerte del cuarto trasero (~900) y caja registradora (~100).",
+   "fuente": "https://beebom.com/gta-6-best-money-spots/",
+   "motivo": "gtadb no tiene Three Sheets Liquor ni Exotic Animals Front (solo la localidad Key Lento). Fuentes extra: https://roonby.com/2026/11/19/6-best-early-game-money-locations-in-gta-6-hidden-loot-spots-and-treasure/amp/, https://games.gg/grand-theft-auto-vi/guides/best-early-money-spots-in-gta-6/, https://playday.one/2026/11/19/gta-6-talking-parrot-hidden-cash/, https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-secret-cash-box-location-explained/"
+  },
+  {
+   "id": "botin-hamlet-bodega-carretera-caja-amarilla",
+   "nombre": "Caja amarilla de la bodega industrial al sur de Hamlet",
+   "categoria": "loot",
+   "descripcion": "Bodega/almacén industrial al sur de Hamlet, junto a la carretera, sin ícono en el mapa (se oyen gritos). Adentro: escopeta Marabunta Grande Hobo en un estuche, efectivo en una mesa y una caja de herramientas amarilla en la esquina con más fajos.",
+   "fuente": "https://beebom.com/gta-6-best-money-spots/",
+   "motivo": "gtadb no tiene el edificio con nombre. Fuentes extra: https://roonby.com/2026/11/19/6-best-early-game-money-locations-in-gta-6-hidden-loot-spots-and-treasure/amp/, https://games.gg/grand-theft-auto-vi/guides/best-early-money-spots-in-gta-6/"
+  },
+  {
+   "id": "botin-hamlet-motel-tigre",
+   "nombre": "Motel al sur de Hamlet (tigre)",
+   "categoria": "loot",
+   "descripcion": "Motel deteriorado al sur de Hamlet donde un tigre ataca a un hombre. Caja fuerte con más de 1,000 dólares, unos 640 en coca, efectivo suelto y el rifle Laird 350 de Kingfisher. Insider Gaming menciona un 'Manatee Motel' al suroeste de Hamlet, arriba de Shoeless Keys, posiblemente el mismo.",
+   "fuente": "https://beebom.com/gta-6-best-money-spots/",
+   "motivo": "gtadb no tiene el motel; no está confirmado que sea el Manatee Motel. Fuentes extra: https://roonby.com/2026/11/19/6-best-early-game-money-locations-in-gta-6-hidden-loot-spots-and-treasure/amp/, https://insider-gaming.com/gta-6-early-game-locations-make-money/"
+  },
+  {
+   "id": "botin-casa-palafito-corsair",
+   "nombre": "Casa de palafito secreta en el océano",
+   "categoria": "loot",
+   "descripcion": "Casa sobre pilotes en el Atlántico, al noreste de Corsair Key: efectivo y coca entre pandilleros muertos, y más efectivo bajo un tablón suelto del piso (se ve con el modo de enfoque).",
+   "fuente": "https://insider-gaming.com/gta-6-early-game-locations-make-money/",
+   "motivo": "Solo una fuente; gtadb tiene Corsair Key (isla) pero no la casa, que está mar adentro."
+  },
+  {
+   "id": "botin-pelican-valley-puesto",
+   "nombre": "Puesto de investigación abandonado de Pelican Valley",
+   "categoria": "loot",
+   "descripcion": "Cerca de Grassrivers. Caja fuerte del edificio principal (código 0072, unos 1,000 dólares) y la del cobertizo de botes (código 0212) con el subfusil Crabshack VF5 y más de 10,000 dólares.",
+   "fuente": "https://insider-gaming.com/gta-6-early-game-locations-make-money/",
+   "motivo": "Solo una fuente; gtadb no tiene Pelican Valley ni el puesto."
+  },
+  {
+   "id": "botin-palmer-fishing",
+   "nombre": "Palmer Fishing Warehouse",
+   "categoria": "loot",
+   "descripcion": "Almacén pesquero en Mariana County: reloj y rifle de asalto especial en el edificio principal; coca y efectivo en las casetas de afuera.",
+   "fuente": "https://insider-gaming.com/gta-6-early-game-locations-make-money/",
+   "motivo": "Solo una fuente; gtadb no lo tiene."
+  },
+  {
+   "id": "botin-cultivo-mariguana-mariana",
+   "nombre": "Cultivo industrial de mariguana (norte de Mariana County)",
+   "categoria": "loot",
+   "descripcion": "Unas cuatro bolsas de mariguana, efectivo, botín de guardias, un subfusil exclusivo y un vehículo Sandking.",
+   "fuente": "https://insider-gaming.com/gta-6-early-game-locations-make-money/",
+   "motivo": "Solo una fuente, sin nombre de lugar; gtadb no lo tiene."
+  },
+  {
+   "id": "botin-kingfisher-compound",
+   "nombre": "Kingfisher Compound (Grassrivers)",
+   "categoria": "loot",
+   "descripcion": "Golpe que da Donnie. Conviene llegar en lancha al muelle; en el edificio junto al agua hay un cajón de armas con el rifle Kingfisher W22 y productos ilegales para Brian's Lockup.",
+   "fuente": "https://beebom.com/gta-6-best-money-spots/",
+   "motivo": "gtadb no tiene Kingfisher Compound. Fuente extra: https://roonby.com/2026/11/19/6-best-early-game-money-locations-in-gta-6-hidden-loot-spots-and-treasure/amp/"
+  },
+  {
+   "id": "botin-avionetas-grassrivers",
+   "nombre": "Avionetas estrelladas en Grassrivers (evento aleatorio)",
+   "categoria": "loot",
+   "descripcion": "Sigue el humo hasta la avioneta: bajo los restos hay coca por unos 1,000 dólares y un cuerpo con pistola de bengalas. Llegan criminales y policía.",
+   "fuente": "https://beebom.com/gta-6-best-money-spots/",
+   "motivo": "Evento aleatorio sin ubicación fija. Fuentes extra: https://roonby.com/2026/11/19/6-best-early-game-money-locations-in-gta-6-hidden-loot-spots-and-treasure/amp/, https://games.gg/grand-theft-auto-vi/guides/best-early-money-spots-in-gta-6/"
+  },
+  {
+   "id": "botin-autos-varados",
+   "nombre": "Autos 'descompuestos' en carreteras de Leonida (evento aleatorio)",
+   "categoria": "loot",
+   "descripcion": "Algunos conductores varados son falsos: en la cajuela hay una bolsa con unos 1,280 dólares en productos ilegales, que se venden en Brian's Lockup.",
+   "fuente": "https://beebom.com/gta-6-best-money-spots/",
+   "motivo": "Evento aleatorio sin ubicación fija. Fuentes extra: https://roonby.com/2026/11/19/6-best-early-game-money-locations-in-gta-6-hidden-loot-spots-and-treasure/amp/, https://games.gg/grand-theft-auto-vi/guides/best-early-money-spots-in-gta-6/"
+  },
+  {
+   "id": "botin-cajas-fuertes-codigos",
+   "nombre": "Cajas fuertes con código: Moonstone Boutique (0420) y Nova Auto Junkyard (7777)",
+   "categoria": "loot",
+   "descripcion": "Beebom lista estos códigos (además de Brian's Lockup 7700 y el tráiler de Cottonmouth Lake 44017). games.gg dice que en la operación 'Lab Fees' hay una caja con código 0420 en una nota.",
+   "fuente": "https://beebom.com/gta-6-safe-codes/",
+   "motivo": "gtadb no tiene Moonstone Boutique ni Nova Auto Junkyard; sin pueblo ni montos. Fuente extra: https://games.gg/grand-theft-auto-vi/guides/best-early-money-spots-in-gta-6/"
+  },
+  {
+   "id": "botin-naufragio-noche",
+   "nombre": "Naufragio Nuestra Señora de la Noche",
+   "categoria": "loot",
+   "descripcion": "Al sureste de la punta sur de Key Lento. 7 tesoros: gema morada, pipa de dragón, santo de marfil, guantelete de peltre, estatua serpentina, candelabro antiguo y doblón manchado (en un cofre). Se busca con detector de metales y se vende a Kenton Rees.",
+   "fuente": "https://www.gtaboom.com/gta-6-treasure-hunting-2b73",
+   "motivo": "Está bajo el agua y gtadb no tiene el naufragio (solo localidades como Key Lento o Abismo Key). Fuentes extra: https://www.slashgear.com/2322274/gta-6-how-to-make-money-early-underwater-shipwreck-treasure-dives-locations/, https://itemlevel.net/gta-6-nuestra-senora-de-la-noche-treasure-locations/"
+  },
+  {
+   "id": "botin-naufragio-etica-laxa",
+   "nombre": "Naufragio Nuestra Señora de la Ética Laxa",
+   "categoria": "loot",
+   "descripcion": "Más al sur que La Noche, frente a Abismo Key. 5 tesoros, entre ellos una cajita de rapé antigua y una cuchara ceremonial. Se busca con detector de metales y se vende a Kenton Rees.",
+   "fuente": "https://www.gtaboom.com/gta-6-treasure-hunting-2b73",
+   "motivo": "Está bajo el agua y gtadb no tiene el naufragio (solo localidades como Key Lento o Abismo Key). Fuentes extra: https://www.slashgear.com/2322274/gta-6-how-to-make-money-early-underwater-shipwreck-treasure-dives-locations/, https://itemlevel.net/gta-6-all-5-treasure-locations-in-nuestra-senora-de-la-etica-laxa/"
+  },
+  {
+   "id": "botin-naufragio-cinco-torres",
+   "nombre": "Naufragio Urca de Cinco Torres",
+   "categoria": "loot",
+   "descripcion": "Frente al sureste de Key Lento, justo al este de la islita en forma de gancho. 6 tesoros, entre ellos un plato ceremonial y un guante dorado. Se busca con detector de metales y se vende a Kenton Rees.",
+   "fuente": "https://www.gtaboom.com/gta-6-treasure-hunting-2b73",
+   "motivo": "Está bajo el agua y gtadb no tiene el naufragio (solo localidades como Key Lento o Abismo Key). Fuentes extra: https://www.slashgear.com/2322274/gta-6-how-to-make-money-early-underwater-shipwreck-treasure-dives-locations/"
+  },
+  {
+   "id": "botin-naufragio-lujuriosa",
+   "nombre": "Naufragio Nuestra Señora Lujuriosa",
+   "categoria": "loot",
+   "descripcion": "En la misma cadena de islas, al suroeste de la isla en gancho. 6 tesoros, entre ellos una estatuilla dorada y un cuchillo ceremonial. Se busca con detector de metales y se vende a Kenton Rees.",
+   "fuente": "https://www.gtaboom.com/gta-6-treasure-hunting-2b73",
+   "motivo": "Está bajo el agua y gtadb no tiene el naufragio (solo localidades como Key Lento o Abismo Key). Fuentes extra: https://www.slashgear.com/2322274/gta-6-how-to-make-money-early-underwater-shipwreck-treasure-dives-locations/"
+  },
+  {
+   "id": "botin-naufragio-santa-sierra",
+   "nombre": "Naufragio Urca de Santa Sierra",
+   "categoria": "loot",
+   "descripcion": "Más lejos de Key Lento, al este de los dos naufragios de la cadena de islas. 6 tesoros: petaca de plata, catalejo de latón, reloj de bolsillo, entre otros. Se busca con detector de metales y se vende a Kenton Rees.",
+   "fuente": "https://www.gtaboom.com/gta-6-treasure-hunting-2b73",
+   "motivo": "Está bajo el agua y gtadb no tiene el naufragio (solo localidades como Key Lento o Abismo Key). Fuentes extra: https://www.slashgear.com/2322274/gta-6-how-to-make-money-early-underwater-shipwreck-treasure-dives-locations/"
+  },
+  {
+   "id": "botin-naufragio-ocio",
+   "nombre": "Naufragio Nuestra Señora del Ocio",
+   "categoria": "loot",
+   "descripcion": "El naufragio de la misión Island Dreams, al este de Key Lento y al noreste de la tienda de Kenton. 10 doblones de oro (los de la misión cuentan). Se busca con detector de metales y se vende a Kenton Rees.",
+   "fuente": "https://www.gtaboom.com/gta-6-treasure-hunting-2b73",
+   "motivo": "Está bajo el agua y gtadb no tiene el naufragio (solo localidades como Key Lento o Abismo Key). Fuentes extra: https://www.slashgear.com/2322274/gta-6-how-to-make-money-early-underwater-shipwreck-treasure-dives-locations/"
+  },
+  {
+   "id": "info-loot",
+   "nombre": "Cómo funciona el botín escondido",
+   "categoria": "loot",
+   "descripcion": "Paquetes ocultos (Hidden Packages): no encontré ninguna guía ni hilo que confirme que existan en GTA VI; games.gg los trata como posibilidad no confirmada y el Progress Database de PowerPyx no los incluye (https://www.powerpyx.com/gta-6-collectible-guide/). Cajas amarillas: no hay un coleccionable llamado 'Yellow Loot Box'. Las guías hablan de (1) cajas de herramientas amarillas sueltas con botín (efectivo o los lentes de Jason) en lugares como el almacén al este de Hamlet (https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-hamlet-warehouse-location-early-game-money/, https://beebom.com/gta-6-best-money-spots/) y (2) cajas telefónicas amarillas en paredes y cajas de herramientas donde aparecen las cartas coleccionables: 480 cartas en 18 sets, se venden en casas de empeño de unos 20 a más de 1,000 dólares; 3 sets dan el trofeo 'Don't Touch My Deck' y 15 sets cuentan para el 100% (https://gmtreks.com/gta6/page/01M7Q14Z47TMRMR101MF07KYYA, https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-collectible-cards-all-sets-guide/). Tesoros (Underwater Discoveries / Kenton's Treasures): se desbloquean tras la misión 'Island Dreams' del capítulo 1; Kenton Rees, en Island Dreams Boat Charters (Key Lento), marca naufragios con íconos morados. Con equipo de buceo y detector de metales se desentierran y se le venden a Kenton (una guía reporta 200 dólares por moneda y 2,600 en una ronda). PowerPyx y GMTreks cuentan 33 descubrimientos submarinos; GMTreks habla de 7 sets de Kenton, pero las guías solo nombran 6 naufragios (https://www.gtaboom.com/gta-6-treasure-hunting-2b73, https://www.slashgear.com/2322274/gta-6-how-to-make-money-early-underwater-shipwreck-treasure-dives-locations/, https://gmtreks.com/gta6/page/01M7Q14Z47TMRMR101MF07KYYA). Escondites y cajas fuertes: hay botín fijo (ventilas, tablones sueltos, cajas fuertes, registradoras) en lugares como Three Sheets Liquor en Key Lento, el almacén de Hamlet o el puesto de Pelican Valley. Los códigos se sacan interrogando a cajeros o dueños, o de notas cercanas; también se pueden volar con explosivos. Lo ilegal (coca, billetes marcados) se vende en Brian's Lockup (código 7700) y el dinero llega al buzón al día siguiente. El efectivo que traes encima se pierde si mueres o te arrestan (https://beebom.com/gta-6-best-money-spots/, https://beebom.com/gta-6-safe-codes/, https://games.gg/grand-theft-auto-vi/guides/best-early-money-spots-in-gta-6/, https://insider-gaming.com/gta-6-early-game-locations-make-money/).",
+   "fuente": "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-hamlet-warehouse-location-early-game-money/",
+   "motivo": "Información general, no es un lugar."
+  },
+  {
+   "id": "remolcable-lowballers-balsero",
+   "nombre": "Cajero remolcable junto a Lowballers Customs",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a Lowballers Customs, en Balsero (Vice City).",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb no tiene este negocio (ZERO_RESULTS)."
+  },
+  {
+   "id": "remolcable-pawn-gun-crosstown",
+   "nombre": "Cajero Fleeca remolcable en la pared de un bar (Crosstown)",
+   "categoria": "remolcables",
+   "descripcion": "Cajero Fleeca en la pared exterior de un bar en Crosstown, al norte del gran entronque de autopistas; la guía lo ubica junto a Pawn & Gun, Crosstown. Es el cajero que la guía arrancó en su prueba.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb solo tiene Pawn & Gun en Port Gellhorn, no en Crosstown; el bar no tiene nombre."
+  },
+  {
+   "id": "remolcable-covgari-decor",
+   "nombre": "Cajero remolcable junto a Covgari",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a Covgari, en Decor District (Vice City).",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb no tiene este negocio (ZERO_RESULTS)."
+  },
+  {
+   "id": "remolcable-zekes-gadgets",
+   "nombre": "Cajero remolcable junto a Zeke's Gadgets",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a Zeke's Gadgets; la guía lo pone en Hamlet.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb tiene Zeke's Gadgets en Rockridge (-1146, 1003), no en Hamlet; no coincide el barrio."
+  },
+  {
+   "id": "remolcable-shorefront-downtown",
+   "nombre": "Cajero remolcable junto a ShoreFront (Downtown)",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a ShoreFront Downtown; la guía lo lista en el barrio Little Cuba.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb tiene ShoreFront, Downtown (-393, -495), pero la guía dice Little Cuba; contradicción de barrio."
+  },
+  {
+   "id": "remolcable-martez-empenos",
+   "nombre": "Cajero remolcable junto a Martez Empeños",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a Martez Empeños, en Little Cuba.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb no tiene Martez Empeños (solo Joyeria Empenos en Rockridge, otro nombre)."
+  },
+  {
+   "id": "remolcable-lombank-peacock-bay",
+   "nombre": "Cajero remolcable junto a Lombank (Peacock Bay)",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a la sucursal de Lombank en Peacock Bay.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb no tiene Lombank en Peacock Bay (solo Ocean Beach y Tequesta)."
+  },
+  {
+   "id": "remolcable-ron-car-wash-salton",
+   "nombre": "Cajero remolcable junto a RON Car Wash",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto al autolavado RON, en Salton.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb no tiene este negocio (ZERO_RESULTS)."
+  },
+  {
+   "id": "remolcable-marbles-ambrosia",
+   "nombre": "Cajero remolcable junto a Marbles (Ambrosia)",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a Marbles, en Ambrosia.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb solo tiene Marbles en Key Lento, no en Ambrosia."
+  },
+  {
+   "id": "remolcable-puentes-canal-balsero",
+   "nombre": "Cajero remolcable junto a los puentes del Leonida Canal",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a los puentes del Leonida Canal; la guía lo lista en Balsero dentro de la región Ambrosia.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "Sin negocio con nombre; ubicación vaga y región contradictoria."
+  },
+  {
+   "id": "remolcable-gibson-brothers-capri",
+   "nombre": "Cajero remolcable junto a Gibson Brothers Bank",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a Gibson Brothers Bank, en Capri (Grassrivers).",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb no tiene este negocio (ZERO_RESULTS)."
+  },
+  {
+   "id": "remolcable-fleeca-key-lento",
+   "nombre": "Cajero remolcable junto a Fleeca (Key Lento)",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto al Fleeca de Key Lento. Podría coincidir con alguno de los cajeros de Key Lento que ya están en el mapa.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb no tiene un Fleeca en Key Lento."
+  },
+  {
+   "id": "remolcable-barrage-southwind",
+   "nombre": "Cajero remolcable junto a Barrage Gun Supply",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a Barrage Gun Supply, en Southwind (Leonida Keys).",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb no tiene este negocio (ZERO_RESULTS)."
+  },
+  {
+   "id": "remolcable-pollo-diablo-millport",
+   "nombre": "Cajero remolcable junto a Pollo Diablo (Millport)",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a Pollo Diablo, en Millport (Mount Kalaga National Park).",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb no tiene este negocio (ZERO_RESULTS)."
+  },
+  {
+   "id": "remolcable-taco-bomb-west-kalaga",
+   "nombre": "Cajero remolcable junto a Taco Bomb (West Kalaga)",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a Taco Bomb; la guía dice Moreau / West Kalaga.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb tiene un Taco Bomb en Historic Route 628, Kelly County (-5250, 3499); Moreau está en Lummox County según gtadb. No es claro que sea el mismo."
+  },
+  {
+   "id": "remolcable-tactical-outlet-belville",
+   "nombre": "Cajero remolcable junto a Tactical Outlet Guns",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a Tactical Outlet Guns, en Belville (Waning Sands).",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb no tiene este negocio (ZERO_RESULTS)."
+  },
+  {
+   "id": "remolcable-pollo-diablo-waning-sands",
+   "nombre": "Cajero remolcable junto a Pollo Diablo (Waning Sands)",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de pared remolcable junto a Pollo Diablo, en Waning Sands.",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "gtadb no tiene este negocio (ZERO_RESULTS)."
+  },
+  {
+   "id": "remolcable-bar-hamlet",
+   "nombre": "Cajero Fleeca remolcable afuera de un bar en Hamlet",
+   "categoria": "remolcables",
+   "descripcion": "Cajero Fleeca verde en la pared de un bar en Hamlet (South Vice-Dale County), que la guía arrancó con una grúa estacionada afuera de un deshuesadero.",
+   "fuente": "https://gta6motors.com/guides/how-to-rob-an-atm/",
+   "motivo": "El bar no tiene nombre. gtadb tiene 'Fleeca, Hamlet' en (-2224, -3274), pero no se puede confirmar que sea ese mismo punto. Puede ser el mismo que 'Hamlet, by Zekes Gadgets' de gta6heists."
+  },
+  {
+   "id": "remolcable-yasmani-megamart",
+   "nombre": "Cajero de Megamart (trabajo de Yasmani)",
+   "categoria": "remolcables",
+   "descripcion": "Uno de los cajeros objetivo de los trabajos de cajeros de Yasmani; se usa el cajero exterior, no el de adentro de la tienda. Según una guía está en Vice City.",
+   "fuente": "https://gta6-japan.com/en/tips/tow-atm-winch-mod-shop/",
+   "motivo": "gtadb no tiene Megamart; sin barrio ni calle."
+  },
+  {
+   "id": "remolcable-yasmani-merlins-palace",
+   "nombre": "Cajero del Merlin's Palace Casino (trabajo de Yasmani)",
+   "categoria": "remolcables",
+   "descripcion": "Uno de los cajeros objetivo de los trabajos de cajeros de Yasmani, en el casino Merlin's Palace.",
+   "fuente": "https://gta6-japan.com/en/tips/tow-atm-winch-mod-shop/",
+   "motivo": "gtadb no tiene Merlin's Palace; sin barrio ni calle."
+  },
+  {
+   "id": "remolcable-yasmani-xero-gas",
+   "nombre": "Cajero de Xero Gas (pista de Yasmani)",
+   "categoria": "remolcables",
+   "descripcion": "Cajero de una gasolinera Xero que aparece como pista de Yasmani.",
+   "fuente": "https://everyblip.com/missions/yasmanis-atm-jobs/",
+   "motivo": "gtadb tiene 8 gasolineras Xero (Ambrosia, Crosstown, Rockridge, Capri, Waning Sands); ninguna fuente dice cuál."
+  },
+  {
+   "id": "info-remolcables",
+   "nombre": "Cómo se arranca un cajero",
+   "categoria": "remolcables",
+   "descripcion": "Los cajeros remolcables son cajeros empotrados en una pared exterior (los de adentro de edificios no se pueden arrancar, y no todo cajero exterior sirve: hay que buscar el marcador en Mapa > Robos > Objetivos > Cajeros remolcables; la app BuckMe tiene un buscador de cajeros pero no dice cuáles se remolcan). Se necesita una grúa (tow truck) o una pickup propia y registrada con winche (Mod Shop > Carrocería > Remolque > The Winch; games.gg dice que cuesta $1,595 y que el registro de vehículos llega tras la misión de Moses en el capítulo 2). Grúas: corralón de policía de Key Lento al sur de Nifty Threads Island Wear (cap. 1), corralón de Port Gellhorn cerca del camino al Starlet Motel (cap. 2), detrás de un deshuesadero con letrero Atomic en Hamlet, y una Declasse Rancher '86 detrás del local de Yasmani en Little Cuba. Se da reversa hasta el cajero, se baja el gancho (MOVE ARM / stick izquierdo), y se acelera hasta arrancarlo; la policía se alerta en cuanto se suelta. Para abrirlo: arrastrarlo hasta que reviente, o desengancharlo (UNHOOK) y ponerle una bomba lapa ($185 en Ammu-Nation). Salen estuches/casetes que hay que abrir a balazos y recoger los fajos. El botín son billetes marcados (con candado en el HUD), no efectivo: hay que venderlos a un perista; Yasmani en Little Cuba paga mejor. Pueden traer paquetes de tinta que arruinan el botín; el Dye Pack Jammer sale en 'Credit Check' (cap. 3). Pago reportado por gta6heists: $7,200 en una corrida (fajos de $720, $1,800 y $3,600); gta6motors también reporta $7,200. Un cajero interior baleado dio $185. Desbloqueo formal: trabajos de cajeros de Yasmani en el capítulo 3, después de sus trabajos de joyería; da 3 pistas gratis que duran 24 horas del juego. Nivel de búsqueda: ninguna fuente da estrellas exactas para el robo con grúa (games.gg menciona 2 estrellas al volar un cajero con explosivo, sin confirmar). Fuentes: https://www.gta6heists.com/money/towable-atm ; https://games.gg/grand-theft-auto-vi/guides/gta-6-how-to-open-a-stolen-atm-and-rob-atms-with-a-winch/ ; https://happygamer.com/gta-6-how-to-rob-atm-178845/ ; https://gta6motors.com/guides/how-to-rob-an-atm/ ; https://gta6-japan.com/en/tips/tow-atm-winch-mod-shop/ ; https://www.gta-xtreme.com/en/gta-6-tow-truck ; https://insider-gaming.com/how-to-steal-an-atm-with-tow-trucks-in-gta-6/ ; https://vicecityintelhq.com/gta-6/missions/yasmanis-atm-jobs-510237 ; https://everyblip.com/missions/yasmanis-atm-jobs/ ; https://www.gta6walk.com/side-missions/yasmanis-atm-payday-loans-and-security-van/ ; https://www.ppe.pl/poradniki/432031/gta-6-wyrywanie-i-okradanie-bankomatow-ze-sciany-pojazd-z-wyciagarka-dzwig-gdzie-jest.html ; https://www.ppe.pl/news/433760/tak-w-gta-6-wyrywa-sie-bankomaty-ze-scian-trzeba-tylko-pamietac-o-jednym.html ; https://gta6.house/library/items/winch ; https://www.gamersheroes.com/game-guides/how-to-rob-atm-machines-in-gta-6/ ; https://www.a90skid.com/gta-6-player-uses-a-tow-truck-to-rip-an-atm-from-a-wall-outside-a-mission/",
+   "fuente": "https://www.gta6heists.com/money/towable-atm",
+   "motivo": "Información general, no es un lugar."
   }
  ]
 }

@@ -2,8 +2,8 @@
 // - La "cáscara" (HTML, CSS, JS, datos) se pide primero a la red y, si falla, sale de la caché.
 // - Las teselas del mapa casi nunca cambian: se sirven desde la caché y se guardan al verlas.
 // - Al instalar se guardan las teselas de zoom 0 a 3 (todo el mapa a vista general).
-var VERSION = 'mapa-vi-v2';
-var CASCARA = ['./', './index.html', './css/estilos.css', './js/app.js', './manifest.webmanifest',
+var VERSION = 'mapa-vi-v3';
+var CASCARA = ['./', './index.html', './css/estilos.css', './js/guardado.js', './js/grupos.js', './js/ruta.js', './js/app.js', './manifest.webmanifest',
   './data/locations.json', './data/trucos.json', './data/zonas.json', './tiles/indice.json', './vendor/leaflet/leaflet.js', './vendor/leaflet/leaflet.css',
   './icons/apple-touch-icon.png', './icons/icon-512-maskable.png', './icons/icon-192.png', './icons/icon-512.png'];
 

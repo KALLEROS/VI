@@ -3,6 +3,8 @@
    - Carga data/locations.json y data/trucos.json
    - Dibuja el mapa (Leaflet) con las teselas de tiles/
    - Filtros, ficha, lista con buscador, trucos y vista 3D
+   - Progreso, favoritos, marcas propias, compartir y ruta de golpes
+   Usa js/guardado.js, js/grupos.js y js/ruta.js (se cargan antes).
    ========================================================= */
 (function () {
   'use strict';
@@ -16,7 +18,11 @@
     { id: 'deportivos', color: '#ff4d4d', icono: '🏎️' },
     { id: 'raros',      color: '#b388ff', icono: '💎' },
     { id: 'regalo',     color: '#ffd23f', icono: '🎁' },
-    { id: 'loot',       color: '#c98b5a', icono: '💰' }
+    { id: 'loot',       color: '#c98b5a', icono: '💰' },
+    { id: 'peristas',   color: '#9ad14b', icono: '🤝' },
+    { id: 'cajas',      color: '#e0b23a', icono: '🔐' },
+    { id: 'remolcables',color: '#4fb0ff', icono: '🪝' },
+    { id: 'marcas',     color: '#ffffff', icono: '📌' }   // marcas propias del usuario
   ];
   var CAT = {};
   // Icono redondo tipo "blip" del juego (para filtros, lista y ficha)
@@ -43,6 +49,13 @@
   var activas = {};          // categoría -> visible (true/false)
   var capas = {};            // categoría -> L.layerGroup
   var resaltado = null;
+  var porId = {};            // id -> lugar (incluye marcas propias)
+  var ordenCat = {};         // categoría -> lugares en orden para ‹ ›
+  var fichaActual = null;    // lugar abierto en la ficha
+  var capaVisible = null;    // iconos que se ven ahora
+  var capaTemporal = null;   // marca compartida que todavía no se guarda
+
+  var G = window.MapaVI.guardado, GRUPOS = window.MapaVI.grupos, RUTA = window.MapaVI.ruta;
 
   var $ = function (sel) { return document.querySelector(sel); };
   var esc = function (s) {
@@ -136,31 +149,88 @@
     var esStrip = item.categoria === 'strip';
     // Tamaño parecido a los iconos del mapa del juego; los strip clubs un poco más grandes
     var tam = esStrip ? 34 : 24;
+    var clases = 'pin pin-' + item.categoria;
+    if (item.categoria !== 'marcas' && item.verificado !== 'sí') clases += ' no-verif';
+    if (G.esEncontrado(item.id)) clases += ' encontrado';
     return L.divIcon({
-      className: 'pin pin-' + item.categoria + (item.verificado === 'sí' ? '' : ' no-verif'),
+      className: clases,
       html: '<div class="pin-interior" style="--c:' + c.color + '"><span>' + c.icono + '</span></div>',
       iconSize: [tam, tam],
       iconAnchor: [tam / 2, tam / 2]
     });
   }
 
-  function pintarMarcadores() {
-    CATEGORIAS.forEach(function (c) {
-      // Todas las categorías empiezan apagadas: el mapa arranca limpio y se encienden con los filtros
-      capas[c.id] = L.layerGroup();
-      activas[c.id] = false;
-    });
-    datos.items.forEach(function (item) {
-      var m = L.marker([item.y, item.x], {
+  // Un marcador por lugar; se crea una vez y se reutiliza
+  function marcadorDe(item) {
+    var m = marcadores[item.id];
+    if (!m) {
+      m = L.marker([item.y, item.x], {
         icon: crearIcono(item),
         title: item.nombre,
         // Los strip clubs siempre encima de todo
         zIndexOffset: item.categoria === 'strip' ? 1000 : 0
       });
-      m.on('click', function () { abrirFicha(item); });
-      m.addTo(capas[item.categoria]);
+      m.on('click', function () {
+        if (RUTA.activa) RUTA.alternar(porId[item.id] || item);
+        else abrirFicha(porId[item.id] || item);
+      });
       marcadores[item.id] = m;
+    }
+    return m;
+  }
+
+  // Icono de grupo: blip de la categoría con el número de lugares
+  function iconoGrupo(c, n) {
+    return L.divIcon({
+      className: 'pin pin-grupo',
+      html: '<div class="pin-interior" style="--c:' + c.color + '"><span>' + n + '</span></div>',
+      iconSize: [28, 28],
+      iconAnchor: [14, 14]
     });
+  }
+
+  // Lugares de una categoría (las marcas propias salen de lo guardado)
+  function itemsDe(cat) {
+    if (cat === 'marcas') return marcasComoItems();
+    return datos.items.filter(function (i) { return i.categoria === cat; });
+  }
+  function marcasComoItems() {
+    return G.marcas().map(function (m) {
+      return { id: m.id, nombre: m.nombre, categoria: 'marcas', x: m.x, y: m.y, zona: 'Marca propia (solo en este teléfono)' };
+    });
+  }
+
+  /* Vuelve a dibujar los iconos visibles: categorías encendidas, sin los encontrados
+     si así se pidió, y agrupados cuando el mapa está lejos. */
+  function redibujar() {
+    if (!datos) return;
+    capaVisible.clearLayers();
+    CATEGORIAS.forEach(function (c) {
+      if (!activas[c.id]) return;
+      var lista = itemsDe(c.id).filter(function (i) {
+        return !(G.ocultarEncontrados() && G.esEncontrado(i.id)) || RUTA.tiene(porId[i.id]);
+      });
+      var grupos = (c.id === 'strip' || c.id === 'marcas')
+        ? lista.map(function (i) { return { items: [i] }; })
+        : GRUPOS.agrupar(mapa, lista);
+      grupos.forEach(function (g) {
+        if (g.items.length === 1) { marcadorDe(g.items[0]).addTo(capaVisible); return; }
+        L.marker([g.lat, g.lng], { icon: iconoGrupo(c, g.items.length), title: g.items.length + ' lugares' })
+          .on('click', function () {
+            mapa.flyTo([g.lat, g.lng], Math.max(mapa.getZoom() + 1.5, GRUPOS.ZOOM_SIN_GRUPOS), { duration: 0.5 });
+          })
+          .addTo(capaVisible);
+      });
+    });
+    resaltar(resaltado);
+  }
+
+  // Cuando cambia el progreso de un lugar se actualiza su icono, los contadores y la lista
+  function refrescarLugar(item) {
+    if (marcadores[item.id]) marcadores[item.id].setIcon(crearIcono(item));
+    actualizarConteos();
+    pintarLista($('#buscador').value);
+    redibujar();
   }
 
   function resaltar(id) {
@@ -173,6 +243,24 @@
       var el2 = marcadores[id].getElement();
       if (el2) el2.classList.add('resaltado');
     }
+  }
+
+  /* Orden fijo para pasar de un lugar al siguiente con ‹ ›:
+     empieza en el primero y siempre salta al más cercano que falte. */
+  function cadena(lista) {
+    if (lista.length < 3) return lista.slice();
+    var resto = lista.slice(1), out = [lista[0]];
+    while (resto.length) {
+      var u = out[out.length - 1], k = 0;
+      for (var i = 1; i < resto.length; i++) {
+        if (Math.hypot(resto[i].x - u.x, resto[i].y - u.y) < Math.hypot(resto[k].x - u.x, resto[k].y - u.y)) k = i;
+      }
+      out.push(resto.splice(k, 1)[0]);
+    }
+    return out;
+  }
+  function hermanosDe(item) {
+    return item.categoria === 'marcas' ? marcasComoItems() : ordenCat[item.categoria];
   }
 
   /* ---------- Nombres de zonas (Leonida, condados, ciudades, barrios) ----------
@@ -217,21 +305,38 @@
   }
 
   /* ---------- Filtros ---------- */
+  function activar(cat, on) {
+    activas[cat] = on;
+    var b = $('#filtros [data-cat="' + cat + '"]');
+    if (b) b.classList.toggle('apagado', !on);
+    redibujar();
+  }
+
   function pintarFiltros() {
     var nav = $('#filtros');
     nav.innerHTML = '';
     CATEGORIAS.forEach(function (c) {
-      var n = datos.items.filter(function (i) { return i.categoria === c.id; }).length;
+      var n = itemsDe(c.id).length;
+      // Sin lugares en el mapa no tiene caso el botón (sus pendientes siguen en la lista)
+      if (!n) return;
       var b = document.createElement('button');
-      b.className = 'chip apagado' + (c.id === 'strip' ? ' strip' : '');
+      b.className = 'chip' + (activas[c.id] ? '' : ' apagado') + (c.id === 'strip' ? ' strip' : '');
+      b.setAttribute('data-cat', c.id);
       b.style.setProperty('--c', c.color);
-      b.innerHTML = blip(c) + esc(datos.categorias[c.id]) + ' <span class="num">' + n + '</span>';
-      b.onclick = function () {
-        activas[c.id] = !activas[c.id];
-        b.classList.toggle('apagado', !activas[c.id]);
-        if (activas[c.id]) capas[c.id].addTo(mapa); else mapa.removeLayer(capas[c.id]);
-      };
+      b.innerHTML = blip(c) + esc(datos.categorias[c.id]) + ' <span class="num"></span>';
+      b.onclick = function () { activar(c.id, !activas[c.id]); };
       nav.appendChild(b);
+    });
+    actualizarConteos();
+  }
+
+  // Contador de cada filtro: encontrados / total (las marcas propias solo cuentan)
+  function actualizarConteos() {
+    CATEGORIAS.forEach(function (c) {
+      var num = $('#filtros [data-cat="' + c.id + '"] .num');
+      if (!num) return;
+      var ids = itemsDe(c.id).map(function (i) { return i.id; });
+      num.textContent = c.id === 'marcas' ? ids.length : G.cuantosEncontrados(ids) + '/' + ids.length;
     });
   }
 
@@ -246,22 +351,85 @@
   }
 
   function abrirFicha(item) {
+    fichaActual = item;
     var c = CAT[item.categoria];
-    var verif = item.verificado === 'sí'
-      ? '<span class="estado si">✔ Verificado (2+ fuentes)</span>'
-      : '<span class="estado no">[PENDIENTE DE VERIFICAR] una sola fuente o datos que no coinciden</span>';
-    $('#ficha-contenido').innerHTML =
-      '<div class="ficha">' +
-        '<span class="ficha-cat">' + blip(c) + esc(datos.categorias[item.categoria]) + '</span>' +
-        '<h3>' + esc(item.nombre) + '</h3>' +
-        '<p class="zona">📍 ' + esc(item.zona || '') + '</p>' +
-        verif +
-        '<p><b>Qué hacer ahí:</b> ' + esc(item.descripcion) + '</p>' +
-        htmlFuentes(item) +
-      '</div>';
+    var esMarca = item.categoria === 'marcas';
+    var html = '<div class="ficha">' +
+      '<span class="ficha-cat">' + blip(c) + esc(datos.categorias[item.categoria]) + '</span>' +
+      '<h3>' + esc(item.nombre) + '</h3>' +
+      '<p class="zona">📍 ' + esc(item.zona || '') + '</p>';
+
+    // Botones de acción, con el estilo de las filas del menú del juego
+    var fav = G.esFavorito(item.id);
+    html += '<div class="acciones">';
+    if (item.temporal) {
+      html += '<button class="accion ancha" data-accion="guardar-compartida">📌 Guardar en mis marcas</button>';
+    } else if (esMarca) {
+      html += '<button class="accion" data-accion="renombrar">✏️ Renombrar</button>' +
+              '<button class="accion" data-accion="borrar">🗑 Borrar</button>';
+    } else {
+      var hecho = G.esEncontrado(item.id);
+      html += '<button class="accion ancha' + (hecho ? ' on' : '') + '" data-accion="encontrado">' +
+              '<span class="casilla">' + (hecho ? '✔' : '') + '</span>Encontrado</button>';
+    }
+    if (!item.temporal) {
+      html += '<button class="accion icono' + (fav ? ' on' : '') + '" data-accion="favorito" aria-label="Favorito">' + (fav ? '★' : '☆') + '</button>';
+    }
+    html += '<button class="accion icono" data-accion="compartir" aria-label="Compartir">🔗</button></div>';
+
+    if (!esMarca) {
+      html += (item.verificado === 'sí'
+        ? '<span class="estado si">✔ Verificado (2+ fuentes)</span>'
+        : '<span class="estado no">[PENDIENTE DE VERIFICAR] una sola fuente o datos que no coinciden</span>') +
+        '<p><b>Qué hacer ahí:</b> ' + esc(item.descripcion) + '</p>' + htmlFuentes(item);
+    } else if (!item.temporal) {
+      html += '<p class="aviso">Marca propia: solo se guarda en este teléfono. Para crear otra, deja presionado el mapa.</p>';
+    }
+
+    // ‹ 3 / 8 › para recorrer los lugares de la misma categoría
+    var hermanos = item.temporal ? [] : hermanosDe(item);
+    var pos = hermanos.findIndex(function (h) { return h.id === item.id; });
+    if (hermanos.length > 1 && pos !== -1) {
+      html += '<div class="pasar">' +
+        '<button data-accion="anterior" aria-label="Anterior">‹</button>' +
+        '<span>' + (pos + 1) + ' / ' + hermanos.length + '</span>' +
+        '<button data-accion="siguiente" aria-label="Siguiente">›</button></div>';
+    }
+    html += '</div>';
+    $('#ficha-contenido').innerHTML = html;
     abrir('ficha');
     resaltar(item.id);
   }
+
+  // Botones dentro de la ficha
+  $('#ficha-contenido').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-accion]');
+    if (!b || !fichaActual) return;
+    var item = fichaActual, a = b.getAttribute('data-accion');
+    if (a === 'encontrado') { G.alternarEncontrado(item.id); refrescarLugar(item); abrirFicha(item); }
+    else if (a === 'favorito') { G.alternarFavorito(item.id); pintarLista($('#buscador').value); abrirFicha(item); }
+    else if (a === 'compartir') compartir(item);
+    else if (a === 'anterior' || a === 'siguiente') {
+      var hs = hermanosDe(item);
+      var p = hs.findIndex(function (h) { return h.id === item.id; });
+      var otro = hs[(p + (a === 'siguiente' ? 1 : -1) + hs.length) % hs.length];
+      irA(otro.id);
+    }
+    else if (a === 'renombrar') {
+      var nuevo = prompt('Nuevo nombre de la marca:', item.nombre);
+      if (nuevo && nuevo.trim()) { G.renombrarMarca(item.id, nuevo.trim()); recargarMarcas(); abrirFicha(porId[item.id]); }
+    }
+    else if (a === 'borrar') {
+      if (confirm('¿Borrar la marca «' + item.nombre + '»?')) { G.borrarMarca(item.id); cerrar('ficha'); recargarMarcas(); }
+    }
+    else if (a === 'guardar-compartida') {
+      var m = G.agregarMarca(item.nombre, item.x, item.y);
+      if (marcadores[item.id]) { capaTemporal.clearLayers(); delete marcadores[item.id]; }
+      recargarMarcas();
+      activar('marcas', true);
+      abrirFicha(porId[m.id]);
+    }
+  });
 
   /* ---------- Abrir y cerrar hojas/paneles ---------- */
   function abrir(id) {
@@ -273,7 +441,7 @@
     var el = document.getElementById(id);
     el.classList.remove('abierta', 'abierto');
     el.setAttribute('aria-hidden', 'true');
-    if (id === 'ficha') resaltar(null);
+    if (id === 'ficha') { resaltar(null); fichaActual = null; }
   }
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-cerrar]');
@@ -281,46 +449,195 @@
   });
   mapa.on('click', function () { cerrar('ficha'); });
 
-  /* ---------- Ir a un lugar desde la lista ---------- */
+  // Aviso corto abajo de la pantalla ("Enlace copiado", etc.)
+  var temporizadorAviso = null;
+  function aviso(texto) {
+    var el = $('#aviso');
+    el.textContent = texto;
+    el.classList.add('visible');
+    clearTimeout(temporizadorAviso);
+    temporizadorAviso = setTimeout(function () { el.classList.remove('visible'); }, 2200);
+  }
+
+  /* ---------- Ir a un lugar (lista, ‹ ›, enlaces) ---------- */
   function irA(id) {
-    var item = datos.items.find(function (i) { return i.id === id; });
+    var item = porId[id];
     if (!item) return;
-    // Si su categoría está apagada, la encendemos
-    if (!activas[item.categoria]) {
-      var idx = CATEGORIAS.findIndex(function (c) { return c.id === item.categoria; });
-      $('#filtros').children[idx].click();
-    }
+    if (!activas[item.categoria]) activar(item.categoria, true);
     cerrar('panel-lista');
     // Centramos un poco más abajo del punto para que la ficha no lo tape
-    var z = 3.75;
+    var z = Math.max(mapa.getZoom(), 4);
     var p = mapa.project([item.y, item.x], z).add([0, mapa.getSize().y * 0.22]);
     mapa.flyTo(mapa.unproject(p, z), z, { duration: 0.8 });
     mapa.once('moveend', function () { abrirFicha(item); });
   }
+
+  /* ---------- Compartir ---------- */
+  function baseUrl() { return location.origin + location.pathname; }
+  function compartir(item) {
+    var url = baseUrl() + (item.categoria === 'marcas'
+      ? '#p=' + item.x + ',' + item.y + ',' + encodeURIComponent(item.nombre)
+      : '#l=' + encodeURIComponent(item.id));
+    enviarEnlace(item.nombre + ' · Mapa VI', url);
+  }
+  function enviarEnlace(titulo, url) {
+    if (navigator.share) {
+      navigator.share({ title: titulo, url: url }).catch(function () {});
+    } else if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(function () { aviso('Enlace copiado'); },
+        function () { prompt('Copia el enlace:', url); });
+    } else {
+      prompt('Copia el enlace:', url);
+    }
+  }
+
+  // Al abrir la app con un enlace compartido: #l=lugar, #p=x,y,nombre o #r=lugar1,lugar2…
+  function leerEnlace() {
+    var h = decodeURIComponent(location.hash.slice(1));
+    if (!h) return;
+    history.replaceState(null, '', baseUrl());
+    if (h.indexOf('l=') === 0) { irA(h.slice(2)); return; }
+    if (h.indexOf('p=') === 0) {
+      var partes = h.slice(2).split(',');
+      var x = parseFloat(partes[0]), y = parseFloat(partes[1]);
+      if (isNaN(x) || isNaN(y)) return;
+      var item = { id: 'compartida', categoria: 'marcas', temporal: true, x: x, y: y,
+        nombre: partes.slice(2).join(',') || 'Marca compartida', zona: 'Marca que te compartieron' };
+      porId[item.id] = item;
+      marcadorDe(item).addTo(capaTemporal);
+      irA(item.id);
+      return;
+    }
+    if (h.indexOf('r=') === 0) {
+      var items = h.slice(2).split(',').map(function (id) { return porId[id]; }).filter(Boolean);
+      if (!items.length) return;
+      items.forEach(function (i) { if (!activas[i.categoria]) activar(i.categoria, true); });
+      modoRuta(true);
+      RUTA.poner(items);
+      mapa.fitBounds(L.latLngBounds(items.map(function (i) { return [i.y, i.x]; })).pad(0.3));
+    }
+  }
+
+  /* ---------- Marcas propias ----------
+     Se crean dejando presionado el mapa (o clic derecho en computadora). */
+  function recargarMarcas() {
+    Object.keys(porId).forEach(function (id) { if (id.indexOf('marca-') === 0) delete porId[id]; });
+    Object.keys(marcadores).forEach(function (id) {
+      if (id.indexOf('marca-') === 0) { capaVisible.removeLayer(marcadores[id]); delete marcadores[id]; }
+    });
+    marcasComoItems().forEach(function (m) { porId[m.id] = m; });
+    pintarFiltros();
+    pintarLista($('#buscador').value);
+    redibujar();
+  }
+
+  function nuevaMarca(latlng) {
+    if (RUTA.activa) return;
+    var nombre = prompt('Nombre de tu marca (por ejemplo «Mi casa» o «Aquí hay botín»):', 'Mi marca');
+    if (nombre === null) return;
+    var m = G.agregarMarca(nombre.trim() || 'Mi marca', latlng.lng, latlng.lat);
+    recargarMarcas();
+    activar('marcas', true);
+    abrirFicha(porId[m.id]);
+  }
+  mapa.on('contextmenu', function (e) { nuevaMarca(e.latlng); });
+
+  // Pulsación larga en el teléfono (iPhone no manda "contextmenu" por sí solo)
+  (function () {
+    var t = null, inicio = null;
+    var cont = mapa.getContainer();
+    cont.addEventListener('touchstart', function (e) {
+      clearTimeout(t);
+      if (e.touches.length !== 1 || e.target.closest('.leaflet-marker-icon')) return;
+      var toque = e.touches[0];
+      inicio = { x: toque.clientX, y: toque.clientY };
+      t = setTimeout(function () {
+        var r = cont.getBoundingClientRect();
+        if (document.body.classList.contains('vista-3d')) return;   // en 3D la posición no sería exacta
+        nuevaMarca(mapa.containerPointToLatLng([inicio.x - r.left, inicio.y - r.top]));
+      }, 650);
+    }, { passive: true });
+    cont.addEventListener('touchmove', function (e) {
+      if (!inicio) return;
+      var toque = e.touches[0];
+      if (e.touches.length > 1 || Math.hypot(toque.clientX - inicio.x, toque.clientY - inicio.y) > 10) clearTimeout(t);
+    }, { passive: true });
+    cont.addEventListener('touchend', function () { clearTimeout(t); }, { passive: true });
+  })();
+
+  /* ---------- Ruta de golpes ---------- */
+  function modoRuta(on) {
+    RUTA.activa = on;
+    document.body.classList.toggle('modo-ruta', on);
+    $('#btn-ruta').setAttribute('aria-pressed', on ? 'true' : 'false');
+    if (on) { cerrar('ficha'); if (!RUTA.paradas().length) aviso('Toca los lugares que quieres robar'); }
+    pintarBarraRuta();
+  }
+  function pintarBarraRuta() {
+    var ps = RUTA.paradas(), m = RUTA.metros();
+    var km = (m / 1000).toFixed(1), mi = (m / 1609.34).toFixed(1);
+    $('#ruta-texto').innerHTML = ps.length
+      ? '<b>' + ps.length + ' parada' + (ps.length > 1 ? 's' : '') + '</b> · ' + km + ' km (' + mi + ' mi) en línea recta'
+      : 'Toca los iconos para armar la ruta. El orden se calcula solo.';
+    $('#ruta-lista').innerHTML = ps.map(function (p, n) {
+      return '<span>' + (n + 1) + '. ' + esc(p.nombre) + '</span>';
+    }).join('');
+  }
+  $('#btn-ruta').onclick = function () { modoRuta(!RUTA.activa); };
+  $('#ruta-salir').onclick = function () { modoRuta(false); };
+  $('#ruta-limpiar').onclick = function () { RUTA.limpiar(); };
+  $('#ruta-compartir').onclick = function () {
+    var ps = RUTA.paradas();
+    if (!ps.length) { aviso('La ruta está vacía'); return; }
+    enviarEnlace('Ruta de golpes · Mapa VI', baseUrl() + '#r=' + ps.map(function (p) { return encodeURIComponent(p.id); }).join(','));
+  };
 
   /* ---------- Lista y buscador ---------- */
   function normalizar(s) {
     return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
   }
 
+  function filaLugar(i) {
+    var c = CAT[i.categoria];
+    var hecho = G.esEncontrado(i.id);
+    var detalle = i.categoria === 'marcas' ? 'Marca propia'
+      : esc(i.zona || '') + (i.verificado === 'sí' ? ' · ✔ verificado' : ' · sin verificar');
+    return '<button class="fila' + (hecho ? ' hecha' : '') + '" data-ir="' + esc(i.id) + '">' + blip(c) +
+      '<span class="txt"><b>' + (G.esFavorito(i.id) ? '★ ' : '') + esc(i.nombre) + '</b><small>' + detalle +
+      '</small></span><span class="flecha">' + (hecho ? '✔' : '›') + '</span></button>';
+  }
+
   function pintarLista(filtro) {
     var q = normalizar(filtro);
     var coincide = function (i) {
-      return !q || normalizar(i.nombre + ' ' + (i.zona || '') + ' ' + i.descripcion).indexOf(q) !== -1;
+      return !q || normalizar(i.nombre + ' ' + (i.zona || '') + ' ' + (i.descripcion || '')).indexOf(q) !== -1;
     };
-    var html = '<p class="aviso">' + esc(datos.meta.aviso_fuentes) + '<br><br>Los marcados [PENDIENTE] no tienen ubicación exacta confirmada y no aparecen en el mapa.</p>';
+    var html = '<div class="herramientas">' +
+      '<button class="fila-op' + (G.ocultarEncontrados() ? ' on' : '') + '" data-op="ocultar"><span class="casilla">' +
+      (G.ocultarEncontrados() ? '✔' : '') + '</span>Ocultar encontrados en el mapa</button></div>';
     var total = 0;
+
+    // Favoritos primero
+    var favs = G.favoritos().map(function (id) { return porId[id]; }).filter(function (i) { return i && coincide(i); });
+    if (favs.length) {
+      total += favs.length;
+      html += '<div class="grupo"><h4>★ Favoritos <span class="num">' + favs.length + '</span></h4>' + favs.map(filaLugar).join('') + '</div>';
+    }
+
     CATEGORIAS.forEach(function (c) {
-      var con = datos.items.filter(function (i) { return i.categoria === c.id && coincide(i); });
-      var sin = datos.pendientes.filter(function (i) { return i.categoria === c.id && coincide(i); });
+      var con = itemsDe(c.id).filter(coincide);
+      var sin = (c.id === 'marcas' ? [] : datos.pendientes).filter(function (i) { return i.categoria === c.id && coincide(i); });
+      if (c.id === 'marcas' && !con.length) {
+        if (!q) html += '<div class="grupo"><h4>' + esc(datos.categorias.marcas) + '</h4>' +
+          '<p class="aviso">Deja presionado el mapa para poner tu propia marca (se guarda solo en este teléfono).</p></div>';
+        return;
+      }
       if (!con.length && !sin.length) return;
       total += con.length + sin.length;
-      html += '<div class="grupo"><h4>' + esc(datos.categorias[c.id]) + ' <span class="num">' + (con.length + sin.length) + '</span></h4>';
-      con.forEach(function (i) {
-        html += '<button class="fila" data-ir="' + esc(i.id) + '">' + blip(c) +
-          '<span class="txt"><b>' + esc(i.nombre) + '</b><small>' + esc(i.zona || '') +
-          (i.verificado === 'sí' ? ' · ✔ verificado' : ' · sin verificar') + '</small></span><span class="flecha">›</span></button>';
-      });
+      var cuenta = c.id === 'marcas' ? con.length
+        : G.cuantosEncontrados(con.map(function (i) { return i.id; })) + '/' + con.length + (sin.length ? ' + ' + sin.length + ' pend.' : '');
+      html += '<div class="grupo"><h4>' + esc(datos.categorias[c.id]) + ' <span class="num">' + cuenta + '</span></h4>';
+      html += con.map(filaLugar).join('');
       sin.forEach(function (i) {
         html += '<div class="fila sin-punto"><span class="blip" style="--c:#8a87c4">❔</span><span class="txt">' +
           '<b><span class="pendiente-tag">PENDIENTE</span>' + esc(i.nombre) + '</b>' +
@@ -330,15 +647,32 @@
       html += '</div>';
     });
     if (!total) html += '<p class="aviso">Nada coincide con «' + esc(filtro) + '».</p>';
+    html += '<p class="aviso">' + esc(datos.meta.aviso_fuentes) + '<br><br>Los marcados [PENDIENTE] no tienen ubicación exacta confirmada y no aparecen en el mapa.</p>' +
+      '<button class="fila-op peligro" data-op="reiniciar">Reiniciar progreso (encontrados)</button>';
     $('#lista').innerHTML = html;
   }
 
   $('#lista').addEventListener('click', function (e) {
     var b = e.target.closest('[data-ir]');
-    if (b) irA(b.getAttribute('data-ir'));
+    if (b) { irA(b.getAttribute('data-ir')); return; }
+    var op = e.target.closest('[data-op]');
+    if (!op) return;
+    if (op.getAttribute('data-op') === 'ocultar') {
+      G.alternarOcultar();
+      pintarLista($('#buscador').value);
+      redibujar();
+    } else if (op.getAttribute('data-op') === 'reiniciar') {
+      if (confirm('¿Borrar todo lo marcado como encontrado? Tus favoritos y marcas se quedan.')) {
+        G.reiniciarProgreso();
+        Object.keys(marcadores).forEach(function (id) { if (porId[id]) marcadores[id].setIcon(crearIcono(porId[id])); });
+        actualizarConteos();
+        pintarLista($('#buscador').value);
+        redibujar();
+      }
+    }
   });
   $('#buscador').addEventListener('input', function () { pintarLista(this.value); });
-  $('#btn-lista').onclick = function () { cerrar('ficha'); abrir('panel-lista'); };
+  $('#btn-lista').onclick = function () { cerrar('ficha'); modoRuta(false); abrir('panel-lista'); };
 
   /* ---------- Trucos e información ---------- */
   function linksFuentes(lista) {
@@ -384,11 +718,21 @@
     fetch('data/zonas.json').then(function (r) { return r.json(); })
   ]).then(function (res) {
     datos = res[0];
+    datos.categorias.marcas = 'Mis marcas';
+    // Todas las categorías empiezan apagadas: el mapa arranca limpio y se encienden con los filtros
+    CATEGORIAS.forEach(function (c) { activas[c.id] = false; });
+    datos.items.forEach(function (i) { porId[i.id] = i; });
+    marcasComoItems().forEach(function (m) { porId[m.id] = m; });
+    CATEGORIAS.forEach(function (c) { if (c.id !== 'marcas') ordenCat[c.id] = cadena(itemsDe(c.id)); });
+    capaVisible = L.layerGroup().addTo(mapa);
+    capaTemporal = L.layerGroup().addTo(mapa);
+    RUTA.iniciar(mapa, pintarBarraRuta);
+    mapa.on('zoomend', redibujar);
     pintarZonas(res[2]);
-    pintarMarcadores();
     pintarFiltros();
     pintarLista('');
     pintarTrucos(res[1]);
+    leerEnlace();
   }).catch(function (err) {
     console.error(err);
     alert('No se pudieron cargar los datos. Abre la app desde internet (GitHub Pages) al menos una vez.');

@@ -11,7 +11,13 @@ No es una tienda ni un catálogo: no incluye ropa ni cosas que solo se compran.
 - **3D:** inclina el mapa como en el juego.
 - **Filtros:** el mapa arranca limpio. Toca una categoría arriba para encenderla y otra vez para apagarla.
 - **Cajeros:** en el juego se usan con la app BuckMe del teléfono (ATM Finder marca el más cercano). En el mapa solo están los que las guías ubican con nombre; el resto queda en la lista como [PENDIENTE].
-- **Lista:** todos los lugares por categoría, con buscador. Toca uno y el mapa te lleva ahí.
+- **Lista:** todos los lugares por categoría, con buscador y tus favoritos arriba. Toca uno y el mapa te lleva ahí.
+- **Progreso:** en la ficha marca «Encontrado». Los filtros y la lista cuentan cuántos llevas (3/8) y puedes ocultar los ya encontrados. Se guarda en el teléfono.
+- **‹ ›:** en la ficha pasa al siguiente lugar de la misma categoría, siempre al más cercano.
+- **Favoritos ★ y compartir 🔗:** el enlace abre la app directo en ese lugar (sirve para mandarlo por WhatsApp).
+- **Marcas propias:** deja presionado el mapa para poner un punto con nombre. Se pueden renombrar, borrar y compartir.
+- **RUTA:** activa el modo ruta y toca varios lugares; se calcula el orden más corto para robarlos seguidos y la distancia (en línea recta). La ruta también se puede compartir.
+- **Grupos:** de lejos, los iconos juntos se ven como uno con número; tócalo o acércate para separarlos.
 - **Trucos:** códigos, controles y consejos, cada uno con su fuente.
 
 ## Instalar en el iPhone
@@ -27,7 +33,10 @@ No es una tienda ni un catálogo: no incluye ropa ni cosas que solo se compran.
 |---|---|
 | `index.html` | La página |
 | `css/estilos.css` | Diseño |
-| `js/app.js` | Mapa, filtros, ficha, lista, trucos y vista 3D |
+| `js/app.js` | Mapa, filtros, ficha, lista, trucos, vista 3D, compartir y marcas |
+| `js/guardado.js` | Lo que se guarda en el teléfono: encontrados, favoritos, marcas |
+| `js/grupos.js` | Agrupa iconos cercanos cuando el mapa está lejos |
+| `js/ruta.js` | Ruta de golpes: orden más corto y distancia |
 | `data/locations.json` | Ubicaciones y pendientes (con fuente y verificado sí/no) |
 | `data/trucos.json` | Trucos e información técnica |
 | `data/zonas.json` | Nombres de condados, ciudades, zonas y barrios con su posición |

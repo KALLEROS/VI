@@ -83,6 +83,8 @@ body.vista-3d .pin-interior { transform: rotateX(-52deg); transform-origin: 50% 
 .btn-ctl { width: 46px; height: 46px; border-radius: 6px; border: none; border-bottom: 2px solid var(--linea); background: var(--panel);
   font-size: 24px; font-weight: 700; box-shadow: 0 3px 10px rgba(0,0,0,.35); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
 .btn-ctl:active { background: var(--seleccion); color: #1c1a3f; }
+#btn-ruta { font-family: var(--condensada); font-weight: 800; font-size: 14px; }
+#btn-ruta[aria-pressed="true"] { background: var(--rosa); color: #fff; }
 #btn-3d { font-family: var(--condensada); font-weight: 800; font-size: 18px; }
 #btn-3d[aria-pressed="true"] { background: var(--seleccion); color: #1c1a3f; }
 #credito { position: fixed; z-index: 998; left: 8px; bottom: calc(var(--seguro-abajo) + 6px); font-size: 11px; color: #fff;
@@ -109,6 +111,20 @@ body.vista-3d .pin-interior { transform: rotateX(-52deg); transform-origin: 50% 
   animation: pulso 1.8s ease-out infinite; pointer-events: none; }
 @keyframes pulso { from { transform: scale(.5); opacity: 1; } to { transform: scale(1.3); opacity: 0; } }
 .pin.resaltado .pin-interior { outline: 2px solid #fff; outline-offset: 2px; }
+/* Lugar ya encontrado: más tenue y con palomita */
+.pin.encontrado .pin-interior { opacity: .5; }
+.pin.encontrado::before { content: "✔"; position: absolute; z-index: 2; right: -5px; top: -6px; width: 14px; height: 14px; border-radius: 50%;
+  background: #3ddc84; color: #10301e; font-size: 9px; font-weight: 900; line-height: 14px; text-align: center; }
+/* Marcas propias: blip blanco */
+.pin-marcas .pin-interior { background: #fff; border-color: var(--rosa-menu); }
+.pin-marcas .pin-interior::after { border-top-color: var(--rosa-menu); }
+/* Grupo de iconos: blip con el número de lugares */
+.pin-grupo .pin-interior { font-family: var(--condensada); font-weight: 800; font-size: 14px; color: #fff; border-width: 2.5px; }
+.pin-grupo .pin-interior::after { display: none; }
+/* Número de parada en la ruta */
+.num-ruta span { display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--rosa); color: #fff; font-family: var(--condensada); font-weight: 800; font-size: 13px; border: 1.5px solid #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.6); }
 
 /* ---------- Nombres de zonas ----------
    Como los rótulos del juego: letra condensada gruesa en mayúsculas, lavanda con contorno oscuro. */
@@ -189,3 +205,51 @@ details.seccion[open] summary::after { content: "▴"; }
 .codigo { font-size: 20px; letter-spacing: 3px; font-weight: 700; color: var(--rosa-menu); }
 .mini-fuentes { font-size: 12px; }
 .mini-fuentes a { margin-right: 8px; }
+
+/* ---------- Acciones de la ficha (encontrado, favorito, compartir) ---------- */
+.acciones { display: flex; gap: 8px; margin: 4px 0 10px; }
+.accion { display: flex; align-items: center; justify-content: center; gap: 8px; height: 42px; padding: 0 12px; border: none;
+  border-bottom: 2px solid var(--linea); border-radius: 4px; background: rgba(255,255,255,.1);
+  font-family: var(--condensada); font-weight: 800; font-size: 17px; text-transform: uppercase; }
+.accion.ancha { flex: 1; justify-content: flex-start; }
+.accion.icono { width: 46px; padding: 0; font-size: 20px; }
+.accion.on { background: var(--seleccion); color: #1c1a3f; }
+.casilla { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border: 2px solid currentColor;
+  border-radius: 3px; font-size: 13px; }
+/* ‹ 3 / 8 › */
+.pasar { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding-top: 10px; border-top: 1.5px solid var(--linea); }
+.pasar button { width: 54px; height: 40px; border: none; border-radius: 4px; background: rgba(255,255,255,.1); font-size: 26px; line-height: 1; }
+.pasar button:active { background: var(--seleccion); color: #1c1a3f; }
+.pasar span { font-family: var(--condensada); font-weight: 800; font-size: 18px; color: var(--suave); }
+
+/* ---------- Lista: opciones y lugares encontrados ---------- */
+.herramientas { margin: 4px 0; }
+.fila-op { width: 100%; display: flex; align-items: center; gap: 10px; padding: 10px 6px; border: none; border-bottom: 1.5px solid var(--linea);
+  background: none; font-family: var(--condensada); font-weight: 700; font-size: 17px; text-transform: uppercase; text-align: left; }
+.fila-op.on { background: var(--seleccion); color: #1c1a3f; border-radius: 3px; }
+.fila-op.peligro { color: #ffb3c9; justify-content: center; margin-top: 8px; }
+.fila.hecha { opacity: .6; }
+.fila.hecha .flecha { color: #3ddc84; }
+
+/* ---------- Barra de la ruta de golpes ---------- */
+#barra-ruta { position: fixed; z-index: 1050; left: 0; right: 0; bottom: 0; display: none;
+  padding: 10px 14px calc(var(--seguro-abajo) + 12px); background: rgba(40, 38, 92, .94);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 2px solid var(--rosa); }
+body.modo-ruta #barra-ruta { display: block; }
+body.modo-ruta #controles { bottom: calc(var(--seguro-abajo) + 150px); }
+body.modo-ruta #credito { display: none; }
+.ruta-cabeza { display: flex; flex-direction: column; gap: 2px; }
+.ruta-cabeza b { font-family: var(--condensada); font-weight: 800; font-size: 20px; color: var(--rosa-menu); }
+#ruta-texto { font-size: 14px; color: var(--suave); }
+#ruta-texto b { color: #fff; }
+#ruta-lista { display: flex; gap: 6px 12px; flex-wrap: wrap; max-height: 48px; overflow-y: auto; margin: 6px 0; font-size: 13px; }
+.ruta-botones { display: flex; gap: 8px; }
+.ruta-botones button { flex: 1; height: 38px; border: none; border-bottom: 2px solid var(--linea); border-radius: 4px;
+  background: rgba(255,255,255,.1); font-family: var(--condensada); font-weight: 800; font-size: 16px; text-transform: uppercase; }
+.ruta-botones button:active { background: var(--seleccion); color: #1c1a3f; }
+
+/* ---------- Aviso corto ---------- */
+#aviso { position: fixed; z-index: 1300; left: 50%; bottom: calc(var(--seguro-abajo) + 90px); transform: translate(-50%, 20px);
+  padding: 9px 16px; border-radius: 4px; background: var(--seleccion); color: #1c1a3f; font-weight: 700; font-size: 15px;
+  opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; white-space: nowrap; }
+#aviso.visible { opacity: 1; transform: translate(-50%, 0); }

@@ -39,6 +39,7 @@
 
 <!-- Controles del mapa -->
 <div id="controles">
+  <button id="btn-ruta" class="btn-ctl" aria-pressed="false" title="Ruta de golpes">RUTA</button>
   <button id="btn-3d" class="btn-ctl" aria-pressed="false" title="Vista inclinada 3D">3D</button>
   <button id="btn-mas" class="btn-ctl" aria-label="Acercar">+</button>
   <button id="btn-menos" class="btn-ctl" aria-label="Alejar">−</button>
@@ -46,6 +47,20 @@
 </div>
 
 <div id="credito">Mapa base: <a href="https://gtadb.org" target="_blank" rel="noopener">gtadb.org</a> · comunidad · no oficial</div>
+
+<!-- Barra de la ruta de golpes (solo en modo ruta) -->
+<section id="barra-ruta" aria-label="Ruta de golpes">
+  <div class="ruta-cabeza"><b>RUTA DE GOLPES</b><span id="ruta-texto"></span></div>
+  <div id="ruta-lista"></div>
+  <div class="ruta-botones">
+    <button id="ruta-compartir">🔗 Compartir</button>
+    <button id="ruta-limpiar">Limpiar</button>
+    <button id="ruta-salir">Salir</button>
+  </div>
+</section>
+
+<!-- Aviso corto ("Enlace copiado") -->
+<div id="aviso" role="status"></div>
 
 <!-- Ficha del marcador (hoja inferior) -->
 <section id="ficha" class="hoja" aria-hidden="true">
@@ -74,6 +89,9 @@
 </section>
 
 <script src="vendor/leaflet/leaflet.js"></script>
+<script src="js/guardado.js"></script>
+<script src="js/grupos.js"></script>
+<script src="js/ruta.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
