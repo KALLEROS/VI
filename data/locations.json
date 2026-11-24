@@ -1,875 +1,942 @@
 {
-  "meta": {
-    "descripcion": "Ubicaciones de GTA VI (Leonida) para el mapa. x/y = metros del juego, sistema de coordenadas de gtadb.org (x crece al este, y crece al norte).",
-    "actualizado": "2026-11-23",
-    "regla_verificado": "«sí» = al menos dos guías independientes coinciden en el lugar y gtadb.org tiene ese lugar con nombre. «no» = una sola fuente, contradicción o ubicación de marca genérica.",
-    "aviso_fuentes": "Se buscaron hilos de Reddit y publicaciones oficiales de Rockstar con estas ubicaciones y no se encontraron. Las fuentes son guías publicadas del 18 al 23 de noviembre de 2026 y el mapa comunitario gtadb.org.",
-    "mapa_base": "gtadb.org (GTA VI Mapping Project), trazado a mano por la comunidad. Dominio público salvo indicación contraria."
+ "meta": {
+  "descripcion": "Ubicaciones de GTA VI (Leonida) para el mapa. x/y = metros del juego, sistema de coordenadas de gtadb.org (x crece al este, y crece al norte).",
+  "actualizado": "2026-11-23",
+  "regla_verificado": "«sí» = al menos dos guías independientes coinciden en el lugar y gtadb.org tiene ese lugar con nombre. «no» = una sola fuente, contradicción o ubicación de marca genérica.",
+  "aviso_fuentes": "Se buscaron hilos de Reddit y publicaciones oficiales de Rockstar con estas ubicaciones y no se encontraron. Las fuentes son guías publicadas del 18 al 23 de noviembre de 2026 y el mapa comunitario gtadb.org.",
+  "mapa_base": "gtadb.org, capa «day» de su visor de mapas (repositorio rolux/gtadb.org), recoloreada para parecerse al mapa del juego. No es un archivo de Rockstar."
+ },
+ "categorias": {
+  "bancos": "Bancos para robar",
+  "cajeros": "Cajeros",
+  "tiendas": "Tiendas que se pueden robar",
+  "deportivos": "Autos deportivos exclusivos",
+  "raros": "Autos raros",
+  "regalo": "Autos / ítems de regalo",
+  "loot": "Lugares para saquear",
+  "strip": "Strip clubs"
+ },
+ "items": [
+  {
+   "id": "strip-nine1nine",
+   "nombre": "NINE1NINE",
+   "categoria": "strip",
+   "x": -671,
+   "y": 468,
+   "zona": "Downtown, Vice City",
+   "descripcion": "Club nocturno con strip: pista, bebidas, salón VIP y bailes privados ($300, propina $50). Tiene cajeros. Abierto desde el Capítulo 1. Ojo: al lado está The Vault, que es otra discoteca.",
+   "fuente": "https://beebom.com/gta-6-strip-club-locations/",
+   "fuentes_extra": [
+    "https://www.keengamer.com/articles/guides/gta-6-all-strip-club-locations-and-private-dance-prices/",
+    "https://api.gtadb.org/geocode?gta=6&address=nine1nine"
+   ],
+   "verificado": "sí"
   },
-  "categorias": {
-    "bancos": "Bancos para robar",
-    "cajeros": "Cajeros",
-    "tiendas": "Tiendas que se pueden robar",
-    "deportivos": "Autos deportivos exclusivos",
-    "raros": "Autos raros",
-    "regalo": "Autos / ítems de regalo",
-    "loot": "Lugares para saquear",
-    "strip": "Strip clubs"
+  {
+   "id": "strip-jack-of-hearts",
+   "nombre": "Jack of Hearts",
+   "categoria": "strip",
+   "x": -686,
+   "y": 1195,
+   "zona": "Miramar Dr, Crosstown, Vice City",
+   "descripcion": "Escenario, propinas, bebidas y bailes privados ($1,000). Se desbloquea en el Capítulo 3; es el único que pide avanzar la historia.",
+   "fuente": "https://beebom.com/gta-6-strip-club-locations/",
+   "fuentes_extra": [
+    "https://www.keengamer.com/articles/guides/gta-6-all-strip-club-locations-and-private-dance-prices/",
+    "https://api.gtadb.org/geocode?gta=6&address=jack%20of%20hearts"
+   ],
+   "verificado": "sí"
   },
-  "items": [
-    {
-      "id": "strip-nine1nine",
-      "nombre": "NINE1NINE",
-      "categoria": "strip",
-      "x": -671,
-      "y": 468,
-      "zona": "Downtown, Vice City",
-      "descripcion": "Club nocturno con strip: pista, bebidas, salón VIP y bailes privados ($300, propina $50). Tiene cajeros. Abierto desde el Capítulo 1. Ojo: al lado está The Vault, que es otra discoteca.",
-      "fuente": "https://beebom.com/gta-6-strip-club-locations/",
-      "fuentes_extra": [
-        "https://www.keengamer.com/articles/guides/gta-6-all-strip-club-locations-and-private-dance-prices/",
-        "https://api.gtadb.org/geocode?gta=6&address=nine1nine"
-      ],
-      "verificado": "sí"
-    },
-    {
-      "id": "strip-jack-of-hearts",
-      "nombre": "Jack of Hearts",
-      "categoria": "strip",
-      "x": -686,
-      "y": 1195,
-      "zona": "Miramar Dr, Crosstown, Vice City",
-      "descripcion": "Escenario, propinas, bebidas y bailes privados ($1,000). Se desbloquea en el Capítulo 3; es el único que pide avanzar la historia.",
-      "fuente": "https://beebom.com/gta-6-strip-club-locations/",
-      "fuentes_extra": [
-        "https://www.keengamer.com/articles/guides/gta-6-all-strip-club-locations-and-private-dance-prices/",
-        "https://api.gtadb.org/geocode?gta=6&address=jack%20of%20hearts"
-      ],
-      "verificado": "sí"
-    },
-    {
-      "id": "strip-delights",
-      "nombre": "Delights Cabaret",
-      "categoria": "strip",
-      "x": -6360,
-      "y": 3591,
-      "zona": "Interstate 404, Port Gellhorn",
-      "descripcion": "El más barato: baile privado $40, propina $10, propina al escenario $5. Billar, bebidas y cajeros. Abierto desde el Capítulo 1.",
-      "fuente": "https://beebom.com/gta-6-strip-club-locations/",
-      "fuentes_extra": [
-        "https://www.keengamer.com/articles/guides/gta-6-all-strip-club-locations-and-private-dance-prices/",
-        "https://api.gtadb.org/geocode?gta=6&address=delights"
-      ],
-      "verificado": "sí"
-    },
-    {
-      "id": "banco-lombank-ocean-norte",
-      "nombre": "Lombank (Ocean Beach, norte)",
-      "categoria": "bancos",
-      "x": 1762,
-      "y": 1301,
-      "zona": "Ocean Beach, Vice Beach",
-      "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable. OutputLag dice que la bóveda de Lombank Ocean Beach es de las que más pagan, pero hay dos Lombank en Ocean Beach y no dice cuál.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "fuentes_extra": [
-        "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-        "https://api.gtadb.org/geocode?gta=6&address=lombank"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "banco-lombank-ocean-sur",
-      "nombre": "Lombank (Ocean Beach, sur)",
-      "categoria": "bancos",
-      "x": 1659,
-      "y": 16,
-      "zona": "Ocean Beach, Vice Beach",
-      "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "fuentes_extra": [
-        "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-        "https://api.gtadb.org/geocode?gta=6&address=lombank"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "banco-lombank-tequesta",
-      "nombre": "Lombank (Tequesta)",
-      "categoria": "bancos",
-      "x": -1114,
-      "y": -1479,
-      "zona": "Tequesta, Vice City",
-      "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=lombank"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "banco-fleeca-sw4",
-      "nombre": "Fleeca (SW 4th St)",
-      "categoria": "bancos",
-      "x": 1507,
-      "y": 1801,
-      "zona": "Vice Beach",
-      "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=fleeca"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "banco-fleeca-ocean",
-      "nombre": "Fleeca (Ocean Beach)",
-      "categoria": "bancos",
-      "x": 1695,
-      "y": 45,
-      "zona": "Ocean Beach, Vice Beach",
-      "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=fleeca"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "banco-fleeca-hamlet",
-      "nombre": "Fleeca (Hamlet)",
-      "categoria": "bancos",
-      "x": -2224,
-      "y": -3274,
-      "zona": "Hamlet",
-      "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=fleeca"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "banco-shorefront-downtown",
-      "nombre": "ShoreFront (Downtown)",
-      "categoria": "bancos",
-      "x": -393,
-      "y": -495,
-      "zona": "Downtown, Vice City",
-      "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=shorefront"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "banco-shorefront-rockridge",
-      "nombre": "ShoreFront (Rockridge)",
-      "categoria": "bancos",
-      "x": -1347,
-      "y": 801,
-      "zona": "Rockridge, Vice City",
-      "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=shorefront"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "tienda-xero-crosstown",
-      "nombre": "Gasolinera Xero (Crosstown)",
-      "categoria": "tiendas",
-      "x": -699,
-      "y": 1143,
-      "zona": "Crosstown, Vice City",
-      "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "tienda-xero-rockridge",
-      "nombre": "Gasolinera Xero (Rockridge)",
-      "categoria": "tiendas",
-      "x": -1299,
-      "y": 989,
-      "zona": "Rockridge, Vice City",
-      "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "tienda-xero-ambrosia",
-      "nombre": "Gasolinera Xero (Ambrosia)",
-      "categoria": "tiendas",
-      "x": -2698,
-      "y": 4179,
-      "zona": "Ambrosia",
-      "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "tienda-arrow-belville",
-      "nombre": "Gasolinera Arrow (Belville)",
-      "categoria": "tiendas",
-      "x": -772,
-      "y": 2841,
-      "zona": "Belville",
-      "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "tienda-arrow-waning",
-      "nombre": "Gasolinera Arrow (Waning Sands)",
-      "categoria": "tiendas",
-      "x": -304,
-      "y": 4202,
-      "zona": "Waning Sands",
-      "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "tienda-ltd-hamlet",
-      "nombre": "Gasolinera LTD (Hamlet)",
-      "categoria": "tiendas",
-      "x": -2568,
-      "y": -3617,
-      "zona": "Hamlet",
-      "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "tienda-alpha-628",
-      "nombre": "Gasolinera Alpha (Ruta 628)",
-      "categoria": "tiendas",
-      "x": -5277,
-      "y": 3567,
-      "zona": "Kelly County",
-      "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "tienda-licor-miramar",
-      "nombre": "Licorería (Miramar Dr)",
-      "categoria": "tiendas",
-      "x": -659,
-      "y": 1210,
-      "zona": "Crosstown, Vice City",
-      "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=liquor"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "tienda-uncle-jacks",
-      "nombre": "Uncle Jack's Liquor",
-      "categoria": "tiendas",
-      "x": -6355,
-      "y": 3866,
-      "zona": "Port Gellhorn",
-      "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=liquor"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "tienda-vc-pawn",
-      "nombre": "Vice City Pawn",
-      "categoria": "tiendas",
-      "x": -660,
-      "y": 1163,
-      "zona": "Crosstown, Vice City",
-      "descripcion": "Casa de empeño. Las guías dicen que las casas de empeño se pueden asaltar desde «Coffee Break» (Cap. 2). Esta en concreto no está confirmada.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "fuentes_extra": [
-        "https://meowdb.com/gta6/robberies",
-        "https://api.gtadb.org/geocode?gta=6&address=pawn"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "tienda-little-gems",
-      "nombre": "Little Gems Jewellery",
-      "categoria": "tiendas",
-      "x": -1245,
-      "y": 645,
-      "zona": "Rockridge, Vice City",
-      "descripcion": "Joyería. Los robos de joyerías llegan con los encargos de Yasmani (Cap. 3). Esta joyería no aparece en ninguna guía como objetivo.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=jewel"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "auto-pop-art-cypher",
-      "nombre": "Übermacht Cypher «Pop Art»",
-      "categoria": "deportivos",
-      "x": -242,
-      "y": 687,
-      "zona": "Panos Plaza, Bayside, Vice City",
-      "descripcion": "Estacionamiento techado junto a Panos Plaza, al lado de una camioneta de plomero. Cerrado: necesitas el clonador de llaves.",
-      "fuente": "https://fandomwire.com/rarest-cars-in-gta-6-you-can-get-for-free-ranked/",
-      "fuentes_extra": [
-        "https://gameta.gg/gta6/guides/rare-cars/",
-        "https://api.gtadb.org/geocode?gta=6&address=panos"
-      ],
-      "verificado": "sí"
-    },
-    {
-      "id": "auto-valiant-tempesta",
-      "nombre": "Pegassi Tempesta «Valiant»",
-      "categoria": "deportivos",
-      "x": 1792,
-      "y": 1474,
-      "zona": "Vice Museum of Art, Vice Beach",
-      "descripcion": "En el patio frente al Vice Museum of Art. Se roba. Solo una guía lo menciona.",
-      "fuente": "https://gta6route.com/en/rare-cars/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=museum%20of%20art"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "auto-toros",
-      "nombre": "Pegassi Toros (lista de Randy)",
-      "categoria": "deportivos",
-      "x": 2,
-      "y": -956,
-      "zona": "Pegassi Residences, Tequesta Retreat",
-      "descripcion": "Afuera de Pegassi Residences (Bayside Dr). Una guía la da por confirmada y otra dice que se mueve; el punto marca el complejo, no un lugar exacto.",
-      "fuente": "https://gta6route.com/en/rare-cars/",
-      "fuentes_extra": [
-        "https://gtainfohub.com/gta-6-car-locations/",
-        "https://api.gtadb.org/geocode?gta=6&address=pegassi%20residences"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "auto-thrax-boone",
-      "nombre": "Truffade Thrax",
-      "categoria": "deportivos",
-      "x": -3092,
-      "y": -3376,
-      "zona": "Boone Speedway, Hamlet",
-      "descripcion": "Puede aparecer en un remolque en la entrada sur del autódromo; aparece al azar, vuelve más tarde si no está. Es el último auto de la lista de Randy.",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "fuentes_extra": [
-        "https://fandomwire.com/rarest-cars-in-gta-6-you-can-get-for-free-ranked/",
-        "https://api.gtadb.org/geocode?gta=6&address=boone%20speedway"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "raro-mile-zero",
-      "nombre": "Base aérea Mile Zero (jets y tanques)",
-      "categoria": "raros",
-      "x": -6956,
-      "y": -6403,
-      "zona": "Goose Key, Leonida Keys",
-      "descripcion": "Jets P-996 Lazer junto a la pista, tanques Rhino y helicópteros. Zona restringida: robar un jet da 5 estrellas. Llevan rastreador fijo: no se pueden registrar ni guardar, solo pasear.",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "fuentes_extra": [
-        "https://gta6route.com/en/rare-cars/",
-        "https://api.gtadb.org/geocode?gta=6&address=mile%20zero"
-      ],
-      "verificado": "sí"
-    },
-    {
-      "id": "raro-gellhorn-raceway",
-      "nombre": "Gellhorn International Raceway",
-      "categoria": "raros",
-      "x": -6733,
-      "y": 2325,
-      "zona": "Port Gellhorn",
-      "descripcion": "Una guía ubica aquí el Dominator «Darkling» y el Elegy «Drifter».",
-      "fuente": "https://gameta.gg/gta6/guides/rare-cars/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=raceway"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "raro-ambrosia-raceway",
-      "nombre": "Ambrosia Raceway Park",
-      "categoria": "raros",
-      "x": -2978,
-      "y": 4645,
-      "zona": "Ambrosia",
-      "descripcion": "Una guía ubica aquí el Penumbra «Blue Drake» y el Dominator «Murica».",
-      "fuente": "https://gameta.gg/gta6/guides/rare-cars/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=raceway"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "regalo-dominator-buggy",
-      "nombre": "'67 Vapid Dominator Buggy (Ultimate Edition)",
-      "categoria": "regalo",
-      "x": -4088,
-      "y": -2424,
-      "zona": "Paradise Garage, Watson Bay",
-      "descripcion": "Vehículo de regalo de la Ultimate Edition, disponible desde el Capítulo 2 en Paradise Garage.",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=paradise%20garage"
-      ],
-      "verificado": "no"
-    },
-    {
-      "id": "loot-sunrise-rv",
-      "nombre": "Sunrise RV Park",
-      "categoria": "loot",
-      "x": -3477,
-      "y": -4497,
-      "zona": "Mariana County",
-      "descripcion": "Operación de los Kingfishers (cocaína y animales exóticos). Seguridad alta, botín $10,700–17,900. Se vuelve a llenar con el tiempo. Pieza clave: Kingfishers Akulus.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "fuentes_extra": [
-        "https://api.gtadb.org/geocode?gta=6&address=sunrise%20rv"
-      ],
-      "verificado": "no"
-    }
-  ],
-  "pendientes": [
-    {
-      "id": "pend-strip-4",
-      "nombre": "¿Cuarto strip club?",
-      "categoria": "strip",
-      "descripcion": "Se dijo que eran 4. Todas las guías que se pudieron leer dicen 3 (NINE1NINE, Jack of Hearts, Delights). The Vault y Rusty Anchor son bares o discotecas, no strip clubs.",
-      "fuente": "https://beebom.com/gta-6-strip-club-locations/",
-      "motivo": "Ninguna fuente confirma un cuarto."
-    },
-    {
-      "id": "pend-atm-exterior",
-      "nombre": "Cajeros exteriores para arrancar",
-      "categoria": "cajeros",
-      "descripcion": "Desde los encargos de Yasmani (Cap. 3) puedes arrancar cajeros de pared exteriores con un vehículo con gancho/winch, romperlos y disparar a los cartuchos. Pagan en billetes marcados (llévalos al perista). Dos seguidos ≈ $16,000.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "motivo": "Las guías no dan direcciones de cajeros concretos."
-    },
-    {
-      "id": "pend-atm-clubs",
-      "nombre": "Cajeros dentro de NINE1NINE y Delights",
-      "categoria": "cajeros",
-      "descripcion": "Las guías dicen que hay cajeros dentro de estos dos clubes (para usar tu dinero, no para robar).",
-      "fuente": "https://www.keengamer.com/articles/guides/gta-6-all-strip-club-locations-and-private-dance-prices/",
-      "motivo": "No se pone marcador aparte para no tapar el del club; ver ficha del club."
-    },
-    {
-      "id": "pend-lombank-downtown",
-      "nombre": "Lombank Downtown (bóveda)",
-      "categoria": "bancos",
-      "descripcion": "Bóveda con seguridad alta, botín $135,000–205,000. La que más paga.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-fleeca-tequesta",
-      "nombre": "Fleeca Tequesta (bóveda)",
-      "categoria": "bancos",
-      "descripcion": "Bóveda, botín $65,000–110,000.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-fleeca-vcia",
-      "nombre": "Fleeca VCIA (bóveda)",
-      "categoria": "bancos",
-      "descripcion": "Seguridad alta, botín $100,000–150,000.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-gibson",
-      "nombre": "Gibson Brothers Bank",
-      "categoria": "bancos",
-      "descripcion": "Seguridad alta, botín $10,000–30,000 (caja y caja fuerte, sin bóveda). Pide el bloqueador de tinta.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-payday",
-      "nombre": "Tiendas de préstamos (Payday Loan) ×7",
-      "categoria": "bancos",
-      "descripcion": "7 locales; pagan en billetes marcados. Se abren en el Cap. 3 (las guías difieren en la misión exacta).",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "Las guías no dan direcciones."
-    },
-    {
-      "id": "pend-blanc",
-      "nombre": "Blanc & Giroux / Covgari (joyería)",
-      "categoria": "tiendas",
-      "descripcion": "Joyería pequeña de lujo: seguridad media, $14,000–25,000. Encargos de Yasmani (Cap. 3). Dos guías le dan nombres distintos.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-richardson",
-      "nombre": "Richardson Jewelry & Diamonds",
-      "categoria": "tiendas",
-      "descripcion": "Joyería grande: seguridad media, $4,500–12,000. Cap. 3.",
-      "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-avery",
-      "nombre": "Avery Pawn (Port Gellhorn)",
-      "categoria": "tiendas",
-      "descripcion": "Misión «Hit Avery Pawn» (Cap. 2, Coffee Break).",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-bucks",
-      "nombre": "Buck's Jewelry & Pawn",
-      "categoria": "tiendas",
-      "descripcion": "Seguridad baja, $1,000–10,000. Compra doblones y meteoritos.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-dales",
-      "nombre": "Dale's Shopwell",
-      "categoria": "tiendas",
-      "descripcion": "Tienda de carretera: seguridad baja, $50–500.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-infernus",
-      "nombre": "Pegassi Infernus (lista de Randy)",
-      "categoria": "deportivos",
-      "descripcion": "Piso 7 del estacionamiento de la policía de Crosstown. Robarlo trae persecución.",
-      "fuente": "https://gta6route.com/en/rare-cars/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-hellfire",
-      "nombre": "Bravado Gauntlet Hellfire",
-      "categoria": "deportivos",
-      "descripcion": "Al fondo del All Grade Scrapyard, sureste de Hamlet, junto a un contenedor rojo.",
-      "fuente": "https://gta6route.com/en/rare-cars/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-zorrusso",
-      "nombre": "Granforma Zorrusso",
-      "categoria": "deportivos",
-      "descripcion": "Estacionamiento de Hathaway Apartments, sur de Ocean Beach. Auto de la misión «Clonin' Keys, Makin' GS» (Cap. 3).",
-      "fuente": "https://gta6route.com/en/rare-cars/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-vitello",
-      "nombre": "Pegassi Vitello",
-      "categoria": "deportivos",
-      "descripcion": "Una guía dice Vinewood Beach y otra Waning Sands (Flamingo Pkwy).",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "motivo": "Las fuentes se contradicen."
-    },
-    {
-      "id": "pend-paragon",
-      "nombre": "Ascot Paragon",
-      "categoria": "deportivos",
-      "descripcion": "Belville (garaje de mansión) u Ocean Beach (bar en Shore Dr), según la guía.",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "motivo": "Las fuentes se contradicen."
-    },
-    {
-      "id": "pend-furia",
-      "nombre": "Piccia Furia",
-      "categoria": "deportivos",
-      "descripcion": "Mansión amarilla en Palladia Ln, Peacock Estates.",
-      "fuente": "https://gta6route.com/en/rare-cars/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-growler",
-      "nombre": "Pfister Growler",
-      "categoria": "deportivos",
-      "descripcion": "Estacionamiento de varios pisos en Fig St, Ocean Beach.",
-      "fuente": "https://gta6route.com/en/rare-cars/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-banshee",
-      "nombre": "Bravado Banshee",
-      "categoria": "deportivos",
-      "descripcion": "Sunrise Premium Autos (El Joven Blvd) o Sweetbay Inn (Capri), según la guía.",
-      "fuente": "https://gta6route.com/en/rare-cars/",
-      "motivo": "Las fuentes se contradicen."
-    },
-    {
-      "id": "pend-tempesta",
-      "nombre": "Pegassi Tempesta",
-      "categoria": "deportivos",
-      "descripcion": "Entrada de una cabaña de madera al oeste del lago Tallaloko.",
-      "fuente": "https://gta6route.com/en/rare-cars/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-coquette",
-      "nombre": "Invetero Coquette D10",
-      "categoria": "deportivos",
-      "descripcion": "Patio de contenedores en Waxman Island; una guía dice que es robo libre y otra que solo es misión.",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "motivo": "Las fuentes se contradicen."
-    },
-    {
-      "id": "pend-thrax-dalton",
-      "nombre": "Truffade Thrax (Dalton Island Club)",
-      "categoria": "deportivos",
-      "descripcion": "Último encargo de Randy, en el estacionamiento del club de Dalton Island (en ferry).",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-node-thrax",
-      "nombre": "Thrax de Andrew Node",
-      "categoria": "deportivos",
-      "descripcion": "Garaje de mansión en Sabal Cir, sur de Starfish Island.",
-      "fuente": "https://gta6route.com/en/rare-cars/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-cheetah",
-      "nombre": "Grotti Cheetah '95 (Ultimate Edition)",
-      "categoria": "deportivos",
-      "descripcion": "Sótano B1 de Pegassi Residences, tras «Honest Abe» (Cap. 5).",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "motivo": "No se sabe en cuál de las tres torres."
-    },
-    {
-      "id": "pend-emerus-ruby",
-      "nombre": "Progen Emerus «Royal Ruby»",
-      "categoria": "deportivos",
-      "descripcion": "Garaje de Vespucci Mansion (Neptune Cir, Vespucci Island). Una guía dice que está vigilado.",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-emerus-drank",
-      "nombre": "Progen Emerus «Purple Drank»",
-      "categoria": "deportivos",
-      "descripcion": "Entre contenedores de Chatfield Storage & Logistics.",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-rsx",
-      "nombre": "Grotti Itali RSX",
-      "categoria": "deportivos",
-      "descripcion": "Garaje de una casa en Vespucci Island (Rialto Islands).",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-gold-infernus",
-      "nombre": "Infernus «Gold Rope»",
-      "categoria": "raros",
-      "descripcion": "Porche de una casa junto al agua en Reservoir St, Ambrosia.",
-      "fuente": "https://gta6route.com/en/rare-cars/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-enforcer",
-      "nombre": "Coquette «Enforcer»",
-      "categoria": "raros",
-      "descripcion": "En exhibición frente a la policía de Capri. Robarlo trae persecución.",
-      "fuente": "https://gta6route.com/en/rare-cars/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-penumbra",
-      "nombre": "Maibatsu Penumbra FF '97",
-      "categoria": "raros",
-      "descripcion": "Garaje de una villa en Vespucci Island (homenaje a Paul Walker).",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-copperheads",
-      "nombre": "Gauntlet «Copperheads»",
-      "categoria": "raros",
-      "descripcion": "Casa junto al río en Reservoir St, Ambrosia.",
-      "fuente": "https://fandomwire.com/rarest-cars-in-gta-6-you-can-get-for-free-ranked/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-devils",
-      "nombre": "Gauntlet «Devil's Rope»",
-      "categoria": "raros",
-      "descripcion": "Hog Stars Garage, Acacia St, Ambrosia (entrada por el techo, vigilado).",
-      "fuente": "https://fandomwire.com/rarest-cars-in-gta-6-you-can-get-for-free-ranked/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-hustler",
-      "nombre": "Vapid Hustler 1932",
-      "categoria": "raros",
-      "descripcion": "Rialto Islands o un hotel de Capri, según la guía.",
-      "fuente": "https://fandomwire.com/rarest-cars-in-gta-6-you-can-get-for-free-ranked/",
-      "motivo": "Las fuentes se contradicen."
-    },
-    {
-      "id": "pend-schafter",
-      "nombre": "Schafter «Nightlight»",
-      "categoria": "raros",
-      "descripcion": "Casa Guardia, noreste de Little Cuba.",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-sultan",
-      "nombre": "Emperor Sultan de Moses",
-      "categoria": "regalo",
-      "descripcion": "Regalo al completar las 7 entregas de Moses (Port Gellhorn). Registro: $1,600.",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "motivo": "Es un regalo sin punto fijo en el mapa."
-    },
-    {
-      "id": "pend-slimjim",
-      "nombre": "Slim Jim de Moses",
-      "categoria": "regalo",
-      "descripcion": "Moses te lo regala en el Cap. 2 al abrir el registro de autos.",
-      "fuente": "https://gtainfohub.com/gta-6-car-locations/",
-      "motivo": "Sin punto fijo en el mapa."
-    },
-    {
-      "id": "pend-loot-kingpin",
-      "nombre": "Kingpin Bowling",
-      "categoria": "loot",
-      "descripcion": "Operación de Kolt & Associates (Port Gellhorn). Misión «Hit Kingpin Bowling».",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-loot-cascara",
-      "nombre": "La Cascara Motel",
-      "categoria": "loot",
-      "descripcion": "Operación de Kolt & Associates.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-loot-brooks",
-      "nombre": "Brooks Boatworks",
-      "categoria": "loot",
-      "descripcion": "Kolt & Associates; tiene caja fuerte (códigos en un mapa de pared).",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-loot-stash",
-      "nombre": "The Stash House",
-      "categoria": "loot",
-      "descripcion": "Seguridad media, $1,800–2,200.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-loot-nova",
-      "nombre": "Nova Auto Junkyard (Hamlet)",
-      "categoria": "loot",
-      "descripcion": "Operación de metanfetamina del M7: seguridad alta, $10,500–11,500.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-loot-janjak",
-      "nombre": "Janjak's Garage",
-      "categoria": "loot",
-      "descripcion": "Fachada de San4San: $11,300–16,800.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-loot-perle",
-      "nombre": "La Perle Trap House",
-      "categoria": "loot",
-      "descripcion": "Cocaína de San4San.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-loot-palmer",
-      "nombre": "Palmer Fishing Warehouse",
-      "categoria": "loot",
-      "descripcion": "La Polilla Negra: seguridad alta, $7,400–13,200.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-loot-watson",
-      "nombre": "Watson Bay Safehouse",
-      "categoria": "loot",
-      "descripcion": "La Polilla Negra: seguridad alta, $6,200–9,600.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-loot-carrier",
-      "nombre": "Leonida Carrier Warehouse",
-      "categoria": "loot",
-      "descripcion": "Armas ilegales: seguridad alta, $2,500–3,500.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-loot-irons",
-      "nombre": "Irons Building Supply",
-      "categoria": "loot",
-      "descripcion": "Club de The Final Chapter: seguridad alta, $7,000–8,000.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-loot-manatee",
-      "nombre": "Manatee Motel",
-      "categoria": "loot",
-      "descripcion": "Operación de los Kingfishers.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    },
-    {
-      "id": "pend-loot-shacks",
-      "nombre": "Fishing Shacks (Wetman Bay)",
-      "categoria": "loot",
-      "descripcion": "Choza de cocaína de los Kingfishers.",
-      "fuente": "https://meowdb.com/gta6/robberies",
-      "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
-    }
-  ]
+  {
+   "id": "strip-delights",
+   "nombre": "Delights Cabaret",
+   "categoria": "strip",
+   "x": -6360,
+   "y": 3591,
+   "zona": "Interstate 404, Port Gellhorn",
+   "descripcion": "El más barato: baile privado $40, propina $10, propina al escenario $5. Billar, bebidas y cajeros. Abierto desde el Capítulo 1.",
+   "fuente": "https://beebom.com/gta-6-strip-club-locations/",
+   "fuentes_extra": [
+    "https://www.keengamer.com/articles/guides/gta-6-all-strip-club-locations-and-private-dance-prices/",
+    "https://api.gtadb.org/geocode?gta=6&address=delights"
+   ],
+   "verificado": "sí"
+  },
+  {
+   "id": "banco-lombank-ocean-norte",
+   "nombre": "Lombank (Ocean Beach, norte)",
+   "categoria": "bancos",
+   "x": 1762,
+   "y": 1301,
+   "zona": "Ocean Beach, Vice Beach",
+   "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable. OutputLag dice que la bóveda de Lombank Ocean Beach es de las que más pagan, pero hay dos Lombank en Ocean Beach y no dice cuál.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "fuentes_extra": [
+    "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+    "https://api.gtadb.org/geocode?gta=6&address=lombank"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "banco-lombank-ocean-sur",
+   "nombre": "Lombank (Ocean Beach, sur)",
+   "categoria": "bancos",
+   "x": 1659,
+   "y": 16,
+   "zona": "Ocean Beach, Vice Beach",
+   "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "fuentes_extra": [
+    "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+    "https://api.gtadb.org/geocode?gta=6&address=lombank"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "banco-lombank-tequesta",
+   "nombre": "Lombank (Tequesta)",
+   "categoria": "bancos",
+   "x": -1114,
+   "y": -1479,
+   "zona": "Tequesta, Vice City",
+   "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=lombank"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "banco-fleeca-sw4",
+   "nombre": "Fleeca (SW 4th St)",
+   "categoria": "bancos",
+   "x": 1507,
+   "y": 1801,
+   "zona": "Vice Beach",
+   "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=fleeca"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "banco-fleeca-ocean",
+   "nombre": "Fleeca (Ocean Beach)",
+   "categoria": "bancos",
+   "x": 1695,
+   "y": 45,
+   "zona": "Ocean Beach, Vice Beach",
+   "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=fleeca"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "banco-fleeca-hamlet",
+   "nombre": "Fleeca (Hamlet)",
+   "categoria": "bancos",
+   "x": -2224,
+   "y": -3274,
+   "zona": "Hamlet",
+   "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=fleeca"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "banco-shorefront-downtown",
+   "nombre": "ShoreFront (Downtown)",
+   "categoria": "bancos",
+   "x": -393,
+   "y": -495,
+   "zona": "Downtown, Vice City",
+   "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=shorefront"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "banco-shorefront-rockridge",
+   "nombre": "ShoreFront (Rockridge)",
+   "categoria": "bancos",
+   "x": -1347,
+   "y": 801,
+   "zona": "Rockridge, Vice City",
+   "descripcion": "Marca que las guías listan como objetivo de robo. Bancos pequeños: tras la misión «Credit Check» (Cap. 3) con el bloqueador de tinta. Bóvedas: tras «That's Where the Money Is…» (final del Cap. 4), siguiendo al camión blindado. Esta sucursal concreta no está confirmada como robable.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=shorefront"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "tienda-xero-crosstown",
+   "nombre": "Gasolinera Xero (Crosstown)",
+   "categoria": "tiendas",
+   "x": -699,
+   "y": 1143,
+   "zona": "Crosstown, Vice City",
+   "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "tienda-xero-rockridge",
+   "nombre": "Gasolinera Xero (Rockridge)",
+   "categoria": "tiendas",
+   "x": -1299,
+   "y": 989,
+   "zona": "Rockridge, Vice City",
+   "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "tienda-xero-ambrosia",
+   "nombre": "Gasolinera Xero (Ambrosia)",
+   "categoria": "tiendas",
+   "x": -2698,
+   "y": 4179,
+   "zona": "Ambrosia",
+   "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "tienda-arrow-belville",
+   "nombre": "Gasolinera Arrow (Belville)",
+   "categoria": "tiendas",
+   "x": -772,
+   "y": 2841,
+   "zona": "Belville",
+   "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "tienda-arrow-waning",
+   "nombre": "Gasolinera Arrow (Waning Sands)",
+   "categoria": "tiendas",
+   "x": -304,
+   "y": 4202,
+   "zona": "Waning Sands",
+   "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "tienda-ltd-hamlet",
+   "nombre": "Gasolinera LTD (Hamlet)",
+   "categoria": "tiendas",
+   "x": -2568,
+   "y": -3617,
+   "zona": "Hamlet",
+   "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "tienda-alpha-628",
+   "nombre": "Gasolinera Alpha (Ruta 628)",
+   "categoria": "tiendas",
+   "x": -5277,
+   "y": 3567,
+   "zona": "Kelly County",
+   "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=gas%20station"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "tienda-licor-miramar",
+   "nombre": "Licorería (Miramar Dr)",
+   "categoria": "tiendas",
+   "x": -659,
+   "y": 1210,
+   "zona": "Crosstown, Vice City",
+   "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=liquor"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "tienda-uncle-jacks",
+   "nombre": "Uncle Jack's Liquor",
+   "categoria": "tiendas",
+   "x": -6355,
+   "y": 3866,
+   "zona": "Port Gellhorn",
+   "descripcion": "Gasolineras, tiendas y licorerías se pueden asaltar desde el inicio: caja de $100–300 y a veces una caja fuerte en la trastienda. Esta tienda concreta no está confirmada.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=liquor"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "tienda-vc-pawn",
+   "nombre": "Vice City Pawn",
+   "categoria": "tiendas",
+   "x": -660,
+   "y": 1163,
+   "zona": "Crosstown, Vice City",
+   "descripcion": "Casa de empeño. Las guías dicen que las casas de empeño se pueden asaltar desde «Coffee Break» (Cap. 2). Esta en concreto no está confirmada.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "fuentes_extra": [
+    "https://meowdb.com/gta6/robberies",
+    "https://api.gtadb.org/geocode?gta=6&address=pawn"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "tienda-little-gems",
+   "nombre": "Little Gems Jewellery",
+   "categoria": "tiendas",
+   "x": -1245,
+   "y": 645,
+   "zona": "Rockridge, Vice City",
+   "descripcion": "Joyería. Los robos de joyerías llegan con los encargos de Yasmani (Cap. 3). Esta joyería no aparece en ninguna guía como objetivo.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=jewel"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "auto-pop-art-cypher",
+   "nombre": "Übermacht Cypher «Pop Art»",
+   "categoria": "deportivos",
+   "x": -242,
+   "y": 687,
+   "zona": "Panos Plaza, Bayside, Vice City",
+   "descripcion": "Estacionamiento techado junto a Panos Plaza, al lado de una camioneta de plomero. Cerrado: necesitas el clonador de llaves.",
+   "fuente": "https://fandomwire.com/rarest-cars-in-gta-6-you-can-get-for-free-ranked/",
+   "fuentes_extra": [
+    "https://gameta.gg/gta6/guides/rare-cars/",
+    "https://api.gtadb.org/geocode?gta=6&address=panos"
+   ],
+   "verificado": "sí"
+  },
+  {
+   "id": "auto-valiant-tempesta",
+   "nombre": "Pegassi Tempesta «Valiant»",
+   "categoria": "deportivos",
+   "x": 1792,
+   "y": 1474,
+   "zona": "Vice Museum of Art, Vice Beach",
+   "descripcion": "En el patio frente al Vice Museum of Art. Se roba. Solo una guía lo menciona.",
+   "fuente": "https://gta6route.com/en/rare-cars/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=museum%20of%20art"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "auto-toros",
+   "nombre": "Pegassi Toros (lista de Randy)",
+   "categoria": "deportivos",
+   "x": 2,
+   "y": -956,
+   "zona": "Pegassi Residences, Tequesta Retreat",
+   "descripcion": "Afuera de Pegassi Residences (Bayside Dr). Una guía la da por confirmada y otra dice que se mueve; el punto marca el complejo, no un lugar exacto.",
+   "fuente": "https://gta6route.com/en/rare-cars/",
+   "fuentes_extra": [
+    "https://gtainfohub.com/gta-6-car-locations/",
+    "https://api.gtadb.org/geocode?gta=6&address=pegassi%20residences"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "auto-thrax-boone",
+   "nombre": "Truffade Thrax",
+   "categoria": "deportivos",
+   "x": -3092,
+   "y": -3376,
+   "zona": "Boone Speedway, Hamlet",
+   "descripcion": "Puede aparecer en un remolque en la entrada sur del autódromo; aparece al azar, vuelve más tarde si no está. Es el último auto de la lista de Randy.",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "fuentes_extra": [
+    "https://fandomwire.com/rarest-cars-in-gta-6-you-can-get-for-free-ranked/",
+    "https://api.gtadb.org/geocode?gta=6&address=boone%20speedway"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "raro-mile-zero",
+   "nombre": "Base aérea Mile Zero (jets y tanques)",
+   "categoria": "raros",
+   "x": -6956,
+   "y": -6403,
+   "zona": "Goose Key, Leonida Keys",
+   "descripcion": "Jets P-996 Lazer junto a la pista, tanques Rhino y helicópteros. Zona restringida: robar un jet da 5 estrellas. Llevan rastreador fijo: no se pueden registrar ni guardar, solo pasear.",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "fuentes_extra": [
+    "https://gta6route.com/en/rare-cars/",
+    "https://api.gtadb.org/geocode?gta=6&address=mile%20zero"
+   ],
+   "verificado": "sí"
+  },
+  {
+   "id": "raro-gellhorn-raceway",
+   "nombre": "Gellhorn International Raceway",
+   "categoria": "raros",
+   "x": -6733,
+   "y": 2325,
+   "zona": "Port Gellhorn",
+   "descripcion": "Una guía ubica aquí el Dominator «Darkling» y el Elegy «Drifter».",
+   "fuente": "https://gameta.gg/gta6/guides/rare-cars/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=raceway"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "raro-ambrosia-raceway",
+   "nombre": "Ambrosia Raceway Park",
+   "categoria": "raros",
+   "x": -2978,
+   "y": 4645,
+   "zona": "Ambrosia",
+   "descripcion": "Una guía ubica aquí el Penumbra «Blue Drake» y el Dominator «Murica».",
+   "fuente": "https://gameta.gg/gta6/guides/rare-cars/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=raceway"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "regalo-dominator-buggy",
+   "nombre": "'67 Vapid Dominator Buggy (Ultimate Edition)",
+   "categoria": "regalo",
+   "x": -4088,
+   "y": -2424,
+   "zona": "Paradise Garage, Watson Bay",
+   "descripcion": "Vehículo de regalo de la Ultimate Edition, disponible desde el Capítulo 2 en Paradise Garage.",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=paradise%20garage"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "loot-sunrise-rv",
+   "nombre": "Sunrise RV Park",
+   "categoria": "loot",
+   "x": -3477,
+   "y": -4497,
+   "zona": "Mariana County",
+   "descripcion": "Operación de los Kingfishers (cocaína y animales exóticos). Seguridad alta, botín $10,700–17,900. Se vuelve a llenar con el tiempo. Pieza clave: Kingfishers Akulus.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=sunrise%20rv"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "atm-casa-jason",
+   "nombre": "Cajero junto a la casa de Jason",
+   "categoria": "cajeros",
+   "x": -2354,
+   "y": -5532,
+   "zona": "Key Lento, condado de Mariana",
+   "descripcion": "Cajero pegado a la casa de Jason. Deposita aquí tu efectivo en BuckMe para no perderlo si mueres o te arrestan. Se usa con Triángulo/Y: Depositar, Retirar, Movimientos. La marca está en la casa según gtadb; el cajero está pegado a ella.",
+   "fuente": "https://gmtreks.com/gta6/page/01M7SFN42K9Y74JEKVMR45NJSX",
+   "fuentes_extra": [
+    "https://www.powerpyx.com/gta-6-deposit-cash-into-buckme-walkthrough/",
+    "https://api.gtadb.org/geocode?gta=6&address=jason"
+   ],
+   "verificado": "sí"
+  },
+  {
+   "id": "atm-starlet",
+   "nombre": "Cajero del Starlet Motel",
+   "categoria": "cajeros",
+   "x": -5355,
+   "y": 3462,
+   "zona": "Historic Route 628, condado de Kelly",
+   "descripcion": "Cajero dentro de la oficina del gerente del motel (Capítulo 2, donde Linda cobra la renta). Sirve para retirar o depositar.",
+   "fuente": "https://howtovideogame.com/gta-6-atm-locations/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=starlet%20motel"
+   ],
+   "verificado": "no"
+  },
+  {
+   "id": "atm-uncle-jacks",
+   "nombre": "Cajero de Uncle Jack's Liquor",
+   "categoria": "cajeros",
+   "x": -6330,
+   "y": 3866,
+   "zona": "Port Gellhorn, condado de Kelly",
+   "descripcion": "Cajero dentro de la licorería: tiene el letrero «Need cash? ATM Machine Inside!». Es interior, así que no se puede arrancar con grúa.",
+   "fuente": "https://howtovideogame.com/gta-6-atm-locations/",
+   "fuentes_extra": [
+    "https://api.gtadb.org/geocode?gta=6&address=uncle%20jack"
+   ],
+   "verificado": "no"
+  }
+ ],
+ "pendientes": [
+  {
+   "id": "pend-strip-4",
+   "nombre": "¿Cuarto strip club?",
+   "categoria": "strip",
+   "descripcion": "Se dijo que eran 4. Todas las guías que se pudieron leer dicen 3 (NINE1NINE, Jack of Hearts, Delights). The Vault y Rusty Anchor son bares o discotecas, no strip clubs.",
+   "fuente": "https://beebom.com/gta-6-strip-club-locations/",
+   "motivo": "Ninguna fuente confirma un cuarto."
+  },
+  {
+   "id": "pend-atm-exterior",
+   "nombre": "Cajeros exteriores para arrancar",
+   "categoria": "cajeros",
+   "descripcion": "Desde los encargos de Yasmani (Cap. 3) puedes arrancar cajeros de pared exteriores con un vehículo con gancho/winch, romperlos y disparar a los cartuchos. Pagan en billetes marcados (llévalos al perista). Dos seguidos ≈ $16,000.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "motivo": "Las guías no dan direcciones de cajeros concretos."
+  },
+  {
+   "id": "pend-atm-clubs",
+   "nombre": "Cajeros dentro de NINE1NINE y Delights",
+   "categoria": "cajeros",
+   "descripcion": "Las guías dicen que hay cajeros dentro de estos dos clubes (para usar tu dinero, no para robar).",
+   "fuente": "https://www.keengamer.com/articles/guides/gta-6-all-strip-club-locations-and-private-dance-prices/",
+   "motivo": "No se pone marcador aparte para no tapar el del club; ver ficha del club."
+  },
+  {
+   "id": "pend-lombank-downtown",
+   "nombre": "Lombank Downtown (bóveda)",
+   "categoria": "bancos",
+   "descripcion": "Bóveda con seguridad alta, botín $135,000–205,000. La que más paga.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-fleeca-tequesta",
+   "nombre": "Fleeca Tequesta (bóveda)",
+   "categoria": "bancos",
+   "descripcion": "Bóveda, botín $65,000–110,000.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-fleeca-vcia",
+   "nombre": "Fleeca VCIA (bóveda)",
+   "categoria": "bancos",
+   "descripcion": "Seguridad alta, botín $100,000–150,000.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-gibson",
+   "nombre": "Gibson Brothers Bank",
+   "categoria": "bancos",
+   "descripcion": "Seguridad alta, botín $10,000–30,000 (caja y caja fuerte, sin bóveda). Pide el bloqueador de tinta.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-payday",
+   "nombre": "Tiendas de préstamos (Payday Loan) ×7",
+   "categoria": "bancos",
+   "descripcion": "7 locales; pagan en billetes marcados. Se abren en el Cap. 3 (las guías difieren en la misión exacta).",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "Las guías no dan direcciones."
+  },
+  {
+   "id": "pend-blanc",
+   "nombre": "Blanc & Giroux / Covgari (joyería)",
+   "categoria": "tiendas",
+   "descripcion": "Joyería pequeña de lujo: seguridad media, $14,000–25,000. Encargos de Yasmani (Cap. 3). Dos guías le dan nombres distintos.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-richardson",
+   "nombre": "Richardson Jewelry & Diamonds",
+   "categoria": "tiendas",
+   "descripcion": "Joyería grande: seguridad media, $4,500–12,000. Cap. 3.",
+   "fuente": "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-avery",
+   "nombre": "Avery Pawn (Port Gellhorn)",
+   "categoria": "tiendas",
+   "descripcion": "Misión «Hit Avery Pawn» (Cap. 2, Coffee Break).",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-bucks",
+   "nombre": "Buck's Jewelry & Pawn",
+   "categoria": "tiendas",
+   "descripcion": "Seguridad baja, $1,000–10,000. Compra doblones y meteoritos.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-dales",
+   "nombre": "Dale's Shopwell",
+   "categoria": "tiendas",
+   "descripcion": "Tienda de carretera: seguridad baja, $50–500.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-infernus",
+   "nombre": "Pegassi Infernus (lista de Randy)",
+   "categoria": "deportivos",
+   "descripcion": "Piso 7 del estacionamiento de la policía de Crosstown. Robarlo trae persecución.",
+   "fuente": "https://gta6route.com/en/rare-cars/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-hellfire",
+   "nombre": "Bravado Gauntlet Hellfire",
+   "categoria": "deportivos",
+   "descripcion": "Al fondo del All Grade Scrapyard, sureste de Hamlet, junto a un contenedor rojo.",
+   "fuente": "https://gta6route.com/en/rare-cars/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-zorrusso",
+   "nombre": "Granforma Zorrusso",
+   "categoria": "deportivos",
+   "descripcion": "Estacionamiento de Hathaway Apartments, sur de Ocean Beach. Auto de la misión «Clonin' Keys, Makin' GS» (Cap. 3).",
+   "fuente": "https://gta6route.com/en/rare-cars/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-vitello",
+   "nombre": "Pegassi Vitello",
+   "categoria": "deportivos",
+   "descripcion": "Una guía dice Vinewood Beach y otra Waning Sands (Flamingo Pkwy).",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "motivo": "Las fuentes se contradicen."
+  },
+  {
+   "id": "pend-paragon",
+   "nombre": "Ascot Paragon",
+   "categoria": "deportivos",
+   "descripcion": "Belville (garaje de mansión) u Ocean Beach (bar en Shore Dr), según la guía.",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "motivo": "Las fuentes se contradicen."
+  },
+  {
+   "id": "pend-furia",
+   "nombre": "Piccia Furia",
+   "categoria": "deportivos",
+   "descripcion": "Mansión amarilla en Palladia Ln, Peacock Estates.",
+   "fuente": "https://gta6route.com/en/rare-cars/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-growler",
+   "nombre": "Pfister Growler",
+   "categoria": "deportivos",
+   "descripcion": "Estacionamiento de varios pisos en Fig St, Ocean Beach.",
+   "fuente": "https://gta6route.com/en/rare-cars/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-banshee",
+   "nombre": "Bravado Banshee",
+   "categoria": "deportivos",
+   "descripcion": "Sunrise Premium Autos (El Joven Blvd) o Sweetbay Inn (Capri), según la guía.",
+   "fuente": "https://gta6route.com/en/rare-cars/",
+   "motivo": "Las fuentes se contradicen."
+  },
+  {
+   "id": "pend-tempesta",
+   "nombre": "Pegassi Tempesta",
+   "categoria": "deportivos",
+   "descripcion": "Entrada de una cabaña de madera al oeste del lago Tallaloko.",
+   "fuente": "https://gta6route.com/en/rare-cars/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-coquette",
+   "nombre": "Invetero Coquette D10",
+   "categoria": "deportivos",
+   "descripcion": "Patio de contenedores en Waxman Island; una guía dice que es robo libre y otra que solo es misión.",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "motivo": "Las fuentes se contradicen."
+  },
+  {
+   "id": "pend-thrax-dalton",
+   "nombre": "Truffade Thrax (Dalton Island Club)",
+   "categoria": "deportivos",
+   "descripcion": "Último encargo de Randy, en el estacionamiento del club de Dalton Island (en ferry).",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-node-thrax",
+   "nombre": "Thrax de Andrew Node",
+   "categoria": "deportivos",
+   "descripcion": "Garaje de mansión en Sabal Cir, sur de Starfish Island.",
+   "fuente": "https://gta6route.com/en/rare-cars/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-cheetah",
+   "nombre": "Grotti Cheetah '95 (Ultimate Edition)",
+   "categoria": "deportivos",
+   "descripcion": "Sótano B1 de Pegassi Residences, tras «Honest Abe» (Cap. 5).",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "motivo": "No se sabe en cuál de las tres torres."
+  },
+  {
+   "id": "pend-emerus-ruby",
+   "nombre": "Progen Emerus «Royal Ruby»",
+   "categoria": "deportivos",
+   "descripcion": "Garaje de Vespucci Mansion (Neptune Cir, Vespucci Island). Una guía dice que está vigilado.",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-emerus-drank",
+   "nombre": "Progen Emerus «Purple Drank»",
+   "categoria": "deportivos",
+   "descripcion": "Entre contenedores de Chatfield Storage & Logistics.",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-rsx",
+   "nombre": "Grotti Itali RSX",
+   "categoria": "deportivos",
+   "descripcion": "Garaje de una casa en Vespucci Island (Rialto Islands).",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-gold-infernus",
+   "nombre": "Infernus «Gold Rope»",
+   "categoria": "raros",
+   "descripcion": "Porche de una casa junto al agua en Reservoir St, Ambrosia.",
+   "fuente": "https://gta6route.com/en/rare-cars/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-enforcer",
+   "nombre": "Coquette «Enforcer»",
+   "categoria": "raros",
+   "descripcion": "En exhibición frente a la policía de Capri. Robarlo trae persecución.",
+   "fuente": "https://gta6route.com/en/rare-cars/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-penumbra",
+   "nombre": "Maibatsu Penumbra FF '97",
+   "categoria": "raros",
+   "descripcion": "Garaje de una villa en Vespucci Island (homenaje a Paul Walker).",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-copperheads",
+   "nombre": "Gauntlet «Copperheads»",
+   "categoria": "raros",
+   "descripcion": "Casa junto al río en Reservoir St, Ambrosia.",
+   "fuente": "https://fandomwire.com/rarest-cars-in-gta-6-you-can-get-for-free-ranked/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-devils",
+   "nombre": "Gauntlet «Devil's Rope»",
+   "categoria": "raros",
+   "descripcion": "Hog Stars Garage, Acacia St, Ambrosia (entrada por el techo, vigilado).",
+   "fuente": "https://fandomwire.com/rarest-cars-in-gta-6-you-can-get-for-free-ranked/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-hustler",
+   "nombre": "Vapid Hustler 1932",
+   "categoria": "raros",
+   "descripcion": "Rialto Islands o un hotel de Capri, según la guía.",
+   "fuente": "https://fandomwire.com/rarest-cars-in-gta-6-you-can-get-for-free-ranked/",
+   "motivo": "Las fuentes se contradicen."
+  },
+  {
+   "id": "pend-schafter",
+   "nombre": "Schafter «Nightlight»",
+   "categoria": "raros",
+   "descripcion": "Casa Guardia, noreste de Little Cuba.",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-sultan",
+   "nombre": "Emperor Sultan de Moses",
+   "categoria": "regalo",
+   "descripcion": "Regalo al completar las 7 entregas de Moses (Port Gellhorn). Registro: $1,600.",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "motivo": "Es un regalo sin punto fijo en el mapa."
+  },
+  {
+   "id": "pend-slimjim",
+   "nombre": "Slim Jim de Moses",
+   "categoria": "regalo",
+   "descripcion": "Moses te lo regala en el Cap. 2 al abrir el registro de autos.",
+   "fuente": "https://gtainfohub.com/gta-6-car-locations/",
+   "motivo": "Sin punto fijo en el mapa."
+  },
+  {
+   "id": "pend-loot-kingpin",
+   "nombre": "Kingpin Bowling",
+   "categoria": "loot",
+   "descripcion": "Operación de Kolt & Associates (Port Gellhorn). Misión «Hit Kingpin Bowling».",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-loot-cascara",
+   "nombre": "La Cascara Motel",
+   "categoria": "loot",
+   "descripcion": "Operación de Kolt & Associates.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-loot-brooks",
+   "nombre": "Brooks Boatworks",
+   "categoria": "loot",
+   "descripcion": "Kolt & Associates; tiene caja fuerte (códigos en un mapa de pared).",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-loot-stash",
+   "nombre": "The Stash House",
+   "categoria": "loot",
+   "descripcion": "Seguridad media, $1,800–2,200.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-loot-nova",
+   "nombre": "Nova Auto Junkyard (Hamlet)",
+   "categoria": "loot",
+   "descripcion": "Operación de metanfetamina del M7: seguridad alta, $10,500–11,500.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-loot-janjak",
+   "nombre": "Janjak's Garage",
+   "categoria": "loot",
+   "descripcion": "Fachada de San4San: $11,300–16,800.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-loot-perle",
+   "nombre": "La Perle Trap House",
+   "categoria": "loot",
+   "descripcion": "Cocaína de San4San.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-loot-palmer",
+   "nombre": "Palmer Fishing Warehouse",
+   "categoria": "loot",
+   "descripcion": "La Polilla Negra: seguridad alta, $7,400–13,200.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-loot-watson",
+   "nombre": "Watson Bay Safehouse",
+   "categoria": "loot",
+   "descripcion": "La Polilla Negra: seguridad alta, $6,200–9,600.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-loot-carrier",
+   "nombre": "Leonida Carrier Warehouse",
+   "categoria": "loot",
+   "descripcion": "Armas ilegales: seguridad alta, $2,500–3,500.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-loot-irons",
+   "nombre": "Irons Building Supply",
+   "categoria": "loot",
+   "descripcion": "Club de The Final Chapter: seguridad alta, $7,000–8,000.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-loot-manatee",
+   "nombre": "Manatee Motel",
+   "categoria": "loot",
+   "descripcion": "Operación de los Kingfishers.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-loot-shacks",
+   "nombre": "Fishing Shacks (Wetman Bay)",
+   "categoria": "loot",
+   "descripcion": "Choza de cocaína de los Kingfishers.",
+   "fuente": "https://meowdb.com/gta6/robberies",
+   "motivo": "gtadb.org no tiene este lugar con nombre; sin coordenadas no se pone marcador."
+  },
+  {
+   "id": "pend-atm-buckme",
+   "nombre": "Cómo encontrar cajeros (app BuckMe)",
+   "categoria": "cajeros",
+   "descripcion": "BuckMe se desbloquea en la misión «Buck Me» del Capítulo 1. Saca el teléfono (Arriba en la cruceta), abre BuckMe y elige «ATM Finder – Set Destination»: marca el cajero más cercano. Depósito máximo por vez: $20,000 según dos guías ($15,000 con la cuenta estándar según otra). El ahorro familiar se pasa desde la app, no en el cajero, y no se puede sacar.",
+   "fuente": "https://readdork.com/features/how-do-atms-work-gta-6-how",
+   "motivo": "Información general, no es un lugar."
+  },
+  {
+   "id": "pend-atm-fireworks",
+   "nombre": "Cajero del Firework Superstore",
+   "categoria": "cajeros",
+   "descripcion": "Cajero de marco rojo en la pared del frente, junto a la puerta. A unos 400 m de la casa de Jason, en Key Lento.",
+   "fuente": "https://howtovideogame.com/gta-6-atm-locations/",
+   "motivo": "gtadb.org no tiene esta tienda; no hay coordenada exacta."
+  },
+  {
+   "id": "pend-atm-ammunation",
+   "nombre": "Cajero de pared pasando el Ammu-Nation de Key Lento",
+   "categoria": "cajeros",
+   "descripcion": "Cajero de marco verde bajo un letrero rojo y blanco de ATM, en un edificio verde de techo rojo junto a un cajón para discapacitados, cerca de Chuck's Tackle and Shot. Es exterior: se puede arrancar con grúa.",
+   "fuente": "https://howtovideogame.com/gta-6-atm-locations/",
+   "motivo": "gtadb.org no tiene este Ammu-Nation de Key Lento; no hay coordenada exacta."
+  }
+ ]
 }

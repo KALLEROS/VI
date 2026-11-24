@@ -6,9 +6,11 @@ No es una tienda ni un catálogo: no incluye ropa ni cosas que solo se compran.
 
 ## Cómo se usa
 
-- **Mapa:** pellizca o usa **+ / −** para el zoom, arrastra para moverte. **⤢** vuelve a la vista completa.
+- **Mapa:** pellizca o usa **+ / −** para el zoom, arrastra para moverte. **⤢** vuelve a la vista completa. Lo más lejos que se puede alejar es con el mapa a lo alto de la pantalla; lo más cerca, el último nivel que todavía se ve nítido.
+- **Nombres:** de lejos se ven Leonida y los condados; al acercarte, ciudades, zonas y barrios.
 - **3D:** inclina el mapa como en el juego.
-- **Filtros:** los botones de colores de arriba encienden o apagan cada categoría.
+- **Filtros:** el mapa arranca limpio. Toca una categoría arriba para encenderla y otra vez para apagarla.
+- **Cajeros:** en el juego se usan con la app BuckMe del teléfono (ATM Finder marca el más cercano). En el mapa solo están los que las guías ubican con nombre; el resto queda en la lista como [PENDIENTE].
 - **Lista:** todos los lugares por categoría, con buscador. Toca uno y el mapa te lleva ahí.
 - **Trucos:** códigos, controles y consejos, cada uno con su fuente.
 
@@ -28,7 +30,8 @@ No es una tienda ni un catálogo: no incluye ropa ni cosas que solo se compran.
 | `js/app.js` | Mapa, filtros, ficha, lista, trucos y vista 3D |
 | `data/locations.json` | Ubicaciones y pendientes (con fuente y verificado sí/no) |
 | `data/trucos.json` | Trucos e información técnica |
-| `tiles/` | Mapa base en teselas (zoom 0 a 5) |
+| `data/zonas.json` | Nombres de condados, ciudades, zonas y barrios con su posición |
+| `tiles/` | Mapa base en teselas (zoom 0 a 6) y `indice.json` con las que existen (las de puro mar no se guardan) |
 | `sw.js` | Modo sin conexión |
 | `manifest.webmanifest`, `icons/` | Para instalarla como app |
 | `vendor/leaflet/` | Librería de mapas Leaflet 1.9.4 (licencia BSD-2) |
@@ -42,6 +45,7 @@ No es una tienda ni un catálogo: no incluye ropa ni cosas que solo se compran.
 
 ## Créditos
 
-- **Mapa base:** [gtadb.org](https://gtadb.org) y el GTA VI Mapping Project, mapa trazado a mano por la comunidad, dominio público según su [FAQ](https://faq.gtadb.org). No es un mapa oficial.
+- **Mapa base:** capa «day» de [gtadb.org](https://gtadb.org) ([repositorio](https://github.com/rolux/gtadb.org)), recoloreada con la paleta del mapa del juego. Dominio público según su [FAQ](https://faq.gtadb.org). No es un archivo de Rockstar.
+- **Nombres de zonas:** geocodificación inversa de [api.gtadb.org](https://api.gtadb.org) sobre una cuadrícula de 400 m.
 - **Librería:** [Leaflet](https://leafletjs.com).
 - GTA VI, Leonida y los nombres del juego son de Rockstar Games. Este proyecto no está afiliado a Rockstar.

@@ -1,0 +1,846 @@
+{
+ "meta": {
+  "fuente": "https://api.gtadb.org/geocode?gta=6",
+  "como": "Nombres y posiciones sacados de la geocodificación inversa de gtadb.org en una cuadrícula de 400 m sobre todo Leonida. Condados: centro de los puntos de la cuadrícula. Ciudades, áreas y barrios: centro que da gtadb, o el centro de sus puntos si no lo da.",
+  "fecha": "2026-11-23"
+ },
+ "estado": {
+  "nombre": "Leonida",
+  "x": -2900,
+  "y": 1500
+ },
+ "zonas": [
+  {
+   "nombre": "Condado de Mariana",
+   "original": "Mariana County",
+   "tipo": "condado",
+   "x": -5234,
+   "y": -3968,
+   "muestras": 259
+  },
+  {
+   "nombre": "Condado de Kelly",
+   "original": "Kelly County",
+   "tipo": "condado",
+   "x": -5524,
+   "y": 3129,
+   "muestras": 185
+  },
+  {
+   "nombre": "Condado de Vice-Dale",
+   "original": "Vice-Dale County",
+   "tipo": "condado",
+   "x": -765,
+   "y": -478,
+   "muestras": 185
+  },
+  {
+   "nombre": "Condado de Lummox",
+   "original": "Lummox County",
+   "tipo": "condado",
+   "x": -3880,
+   "y": 7190,
+   "muestras": 117
+  },
+  {
+   "nombre": "Condado de Leonard",
+   "original": "Leonard County",
+   "tipo": "condado",
+   "x": -1013,
+   "y": 3969,
+   "muestras": 90
+  },
+  {
+   "nombre": "Vice City",
+   "original": "Vice City",
+   "tipo": "ciudad",
+   "x": -1368,
+   "y": -360,
+   "muestras": 81
+  },
+  {
+   "nombre": "Vice Beach",
+   "original": "Vice Beach",
+   "tipo": "ciudad",
+   "x": 1432,
+   "y": 1406,
+   "muestras": 31
+  },
+  {
+   "nombre": "Capri",
+   "original": "Capri",
+   "tipo": "ciudad",
+   "x": -6268,
+   "y": -3,
+   "muestras": 16
+  },
+  {
+   "nombre": "Port Gellhorn",
+   "original": "Port Gellhorn",
+   "tipo": "ciudad",
+   "x": -6764,
+   "y": 3642,
+   "muestras": 14
+  },
+  {
+   "nombre": "Redhill",
+   "original": "Redhill",
+   "tipo": "ciudad",
+   "x": -3271,
+   "y": 7304,
+   "muestras": 12
+  },
+  {
+   "nombre": "Watson Bay",
+   "original": "Watson Bay",
+   "tipo": "ciudad",
+   "x": -4863,
+   "y": -2967,
+   "muestras": 11
+  },
+  {
+   "nombre": "Yorktown",
+   "original": "Yorktown",
+   "tipo": "ciudad",
+   "x": -5202,
+   "y": 6639,
+   "muestras": 11
+  },
+  {
+   "nombre": "Waning Sands",
+   "original": "Waning Sands",
+   "tipo": "ciudad",
+   "x": -431,
+   "y": 4372,
+   "muestras": 10
+  },
+  {
+   "nombre": "Key Lento",
+   "original": "Key Lento",
+   "tipo": "ciudad",
+   "x": -2705,
+   "y": -5904,
+   "muestras": 9
+  },
+  {
+   "nombre": "Hamlet",
+   "original": "Hamlet",
+   "tipo": "ciudad",
+   "x": -2842,
+   "y": -3430,
+   "muestras": 9
+  },
+  {
+   "nombre": "Ambrosia",
+   "original": "Ambrosia",
+   "tipo": "ciudad",
+   "x": -2971,
+   "y": 3873,
+   "muestras": 9
+  },
+  {
+   "nombre": "Belville",
+   "original": "Belville",
+   "tipo": "ciudad",
+   "x": -1320,
+   "y": 2814,
+   "muestras": 7
+  },
+  {
+   "nombre": "St. Joseph",
+   "original": "St. Joseph",
+   "tipo": "ciudad",
+   "x": -915,
+   "y": 6573,
+   "muestras": 5
+  },
+  {
+   "nombre": "Western Keys",
+   "original": "Western Keys",
+   "tipo": "area",
+   "x": -5958,
+   "y": -5143,
+   "muestras": 76
+  },
+  {
+   "nombre": "Lummox County Barrier Islands",
+   "original": "Lummox County Barrier Islands",
+   "tipo": "area",
+   "x": -6014,
+   "y": 7150,
+   "muestras": 31
+  },
+  {
+   "nombre": "Grassrivers",
+   "original": "Grassrivers",
+   "tipo": "area",
+   "x": -3695,
+   "y": -4039,
+   "muestras": 24
+  },
+  {
+   "nombre": "Goliath",
+   "original": "Goliath",
+   "tipo": "area",
+   "x": -4896,
+   "y": -865,
+   "muestras": 20
+  },
+  {
+   "nombre": "Emerald Springs",
+   "original": "Emerald Springs",
+   "tipo": "area",
+   "x": -4022,
+   "y": 1666,
+   "muestras": 20
+  },
+  {
+   "nombre": "Sandbars",
+   "original": "Sandbars",
+   "tipo": "area",
+   "x": -7851,
+   "y": 2874,
+   "muestras": 18
+  },
+  {
+   "nombre": "Gellhorn International Raceway",
+   "original": "Gellhorn International Raceway",
+   "tipo": "area",
+   "x": -6315,
+   "y": 2087,
+   "muestras": 18
+  },
+  {
+   "nombre": "Peregrine Bay",
+   "original": "Peregrine Bay",
+   "tipo": "area",
+   "x": -1368,
+   "y": -3596,
+   "muestras": 14
+  },
+  {
+   "nombre": "West Coast",
+   "original": "West Coast",
+   "tipo": "area",
+   "x": -5213,
+   "y": -1879,
+   "muestras": 13
+  },
+  {
+   "nombre": "South Gellhorn Hills",
+   "original": "South Gellhorn Hills",
+   "tipo": "area",
+   "x": -5454,
+   "y": 2193,
+   "muestras": 13
+  },
+  {
+   "nombre": "Northern Islands",
+   "original": "Northern Islands",
+   "tipo": "area",
+   "x": -2245,
+   "y": 8341,
+   "muestras": 13
+  },
+  {
+   "nombre": "Belpoint",
+   "original": "Belpoint",
+   "tipo": "area",
+   "x": -7976,
+   "y": 31,
+   "muestras": 12
+  },
+  {
+   "nombre": "Goose Key",
+   "original": "Goose Key",
+   "tipo": "area",
+   "x": -6758,
+   "y": -6746,
+   "muestras": 12
+  },
+  {
+   "nombre": "Gellhorn Bay",
+   "original": "Gellhorn Bay",
+   "tipo": "area",
+   "x": -7234,
+   "y": 4610,
+   "muestras": 11
+  },
+  {
+   "nombre": "Buckskin",
+   "original": "Buckskin",
+   "tipo": "area",
+   "x": -4471,
+   "y": 597,
+   "muestras": 11
+  },
+  {
+   "nombre": "Inner Keys",
+   "original": "Inner Keys",
+   "tipo": "area",
+   "x": -2731,
+   "y": -5181,
+   "muestras": 11
+  },
+  {
+   "nombre": "Outer Keys",
+   "original": "Outer Keys",
+   "tipo": "area",
+   "x": -2497,
+   "y": -6716,
+   "muestras": 11
+  },
+  {
+   "nombre": "Mount Kalaga National Park",
+   "original": "Mount Kalaga National Park",
+   "tipo": "area",
+   "x": -2295,
+   "y": 6874,
+   "muestras": 11
+  },
+  {
+   "nombre": "Mount Mountain",
+   "original": "Mount Mountain",
+   "tipo": "area",
+   "x": -4643,
+   "y": 5098,
+   "muestras": 10
+  },
+  {
+   "nombre": "South Ambrosia",
+   "original": "South Ambrosia",
+   "tipo": "area",
+   "x": -3638,
+   "y": 2707,
+   "muestras": 10
+  },
+  {
+   "nombre": "East Ambrosia",
+   "original": "East Ambrosia",
+   "tipo": "area",
+   "x": -1866,
+   "y": 3639,
+   "muestras": 10
+  },
+  {
+   "nombre": "West Ambrosia",
+   "original": "West Ambrosia",
+   "tipo": "area",
+   "x": -4366,
+   "y": 3956,
+   "muestras": 9
+  },
+  {
+   "nombre": "Landfill",
+   "original": "Landfill",
+   "tipo": "area",
+   "x": -1850,
+   "y": 1997,
+   "muestras": 9
+  },
+  {
+   "nombre": "Bobcat Key",
+   "original": "Bobcat Key",
+   "tipo": "area",
+   "x": -6637,
+   "y": -1591,
+   "muestras": 8
+  },
+  {
+   "nombre": "North Gellhorn Hills",
+   "original": "North Gellhorn Hills",
+   "tipo": "area",
+   "x": -5649,
+   "y": 3707,
+   "muestras": 8
+  },
+  {
+   "nombre": "Airward Key",
+   "original": "Airward Key",
+   "tipo": "area",
+   "x": -4526,
+   "y": -7067,
+   "muestras": 8
+  },
+  {
+   "nombre": "Domed Hills",
+   "original": "Domed Hills",
+   "tipo": "area",
+   "x": -4302,
+   "y": 6398,
+   "muestras": 8
+  },
+  {
+   "nombre": "Gloriana Key",
+   "original": "Gloriana Key",
+   "tipo": "area",
+   "x": 644,
+   "y": -1677,
+   "muestras": 8
+  },
+  {
+   "nombre": "Port PGH",
+   "original": "Port PGH",
+   "tipo": "area",
+   "x": -7580,
+   "y": 4950,
+   "muestras": 7
+  },
+  {
+   "nombre": "VCIA West",
+   "original": "VCIA West",
+   "tipo": "area",
+   "x": -3707,
+   "y": 85,
+   "muestras": 7
+  },
+  {
+   "nombre": "North Cape",
+   "original": "North Cape",
+   "tipo": "area",
+   "x": -3797,
+   "y": 7981,
+   "muestras": 7
+  },
+  {
+   "nombre": "Lakeside",
+   "original": "Lakeside",
+   "tipo": "area",
+   "x": -994,
+   "y": 3759,
+   "muestras": 7
+  },
+  {
+   "nombre": "Rialto Islands",
+   "original": "Rialto Islands",
+   "tipo": "area",
+   "x": 538,
+   "y": 1257,
+   "muestras": 7
+  },
+  {
+   "nombre": "North Beaches",
+   "original": "North Beaches",
+   "tipo": "area",
+   "x": 547,
+   "y": 4057,
+   "muestras": 7
+  },
+  {
+   "nombre": "Mount Waffles",
+   "original": "Mount Waffles",
+   "tipo": "area",
+   "x": -5093,
+   "y": 5499,
+   "muestras": 6
+  },
+  {
+   "nombre": "Mount Kalaga",
+   "original": "Mount Kalaga",
+   "tipo": "area",
+   "x": -3236,
+   "y": 6438,
+   "muestras": 6
+  },
+  {
+   "nombre": "Bluegrass",
+   "original": "Bluegrass",
+   "tipo": "area",
+   "x": -2844,
+   "y": -2078,
+   "muestras": 6
+  },
+  {
+   "nombre": "Hialeah",
+   "original": "Hialeah",
+   "tipo": "area",
+   "x": -2216,
+   "y": 538,
+   "muestras": 6
+  },
+  {
+   "nombre": "Catalan Key",
+   "original": "Catalan Key",
+   "tipo": "area",
+   "x": -244,
+   "y": -2106,
+   "muestras": 6
+  },
+  {
+   "nombre": "Port VC",
+   "original": "Port VC",
+   "tipo": "area",
+   "x": 692,
+   "y": -556,
+   "muestras": 6
+  },
+  {
+   "nombre": "Key West",
+   "original": "Key West",
+   "tipo": "area",
+   "x": -7886,
+   "y": -6539,
+   "muestras": 5
+  },
+  {
+   "nombre": "North Ambrosia",
+   "original": "North Ambrosia",
+   "tipo": "area",
+   "x": -4060,
+   "y": 4613,
+   "muestras": 5
+  },
+  {
+   "nombre": "Leonida Zoo",
+   "original": "Leonida Zoo",
+   "tipo": "area",
+   "x": -1051,
+   "y": 5413,
+   "muestras": 5
+  },
+  {
+   "nombre": "Hillside",
+   "original": "Hillside",
+   "tipo": "area",
+   "x": -706,
+   "y": 5314,
+   "muestras": 5
+  },
+  {
+   "nombre": "Ambrosia Hills",
+   "original": "Ambrosia Hills",
+   "tipo": "area",
+   "x": -3305,
+   "y": 5453,
+   "muestras": 4
+  },
+  {
+   "nombre": "North Coast",
+   "original": "North Coast",
+   "tipo": "area",
+   "x": -2040,
+   "y": 7819,
+   "muestras": 4
+  },
+  {
+   "nombre": "Riverside",
+   "original": "Riverside",
+   "tipo": "area",
+   "x": -1726,
+   "y": 1605,
+   "muestras": 4
+  },
+  {
+   "nombre": "North Shores",
+   "original": "North Shores",
+   "tipo": "area",
+   "x": -1911,
+   "y": 5488,
+   "muestras": 4
+  },
+  {
+   "nombre": "Oceanside",
+   "original": "Oceanside",
+   "tipo": "area",
+   "x": -307,
+   "y": 2756,
+   "muestras": 4
+  },
+  {
+   "nombre": "Anastasia",
+   "original": "Anastasia",
+   "tipo": "area",
+   "x": -234,
+   "y": 5608,
+   "muestras": 4
+  },
+  {
+   "nombre": "Leonard County Barrier Island",
+   "original": "Leonard County Barrier Island",
+   "tipo": "area",
+   "x": 411,
+   "y": 5838,
+   "muestras": 4
+  },
+  {
+   "nombre": "Dalton Island",
+   "original": "Dalton Island",
+   "tipo": "area",
+   "x": 1900,
+   "y": -1373,
+   "muestras": 4
+  },
+  {
+   "nombre": "West Bluegrass",
+   "original": "West Bluegrass",
+   "tipo": "area",
+   "x": -3582,
+   "y": -1920,
+   "muestras": 3
+  },
+  {
+   "nombre": "Mount Leonida",
+   "original": "Mount Leonida",
+   "tipo": "area",
+   "x": -2512,
+   "y": 6166,
+   "muestras": 3
+  },
+  {
+   "nombre": "East Key",
+   "original": "East Key",
+   "tipo": "area",
+   "x": -1314,
+   "y": -4436,
+   "muestras": 3
+  },
+  {
+   "nombre": "Stiltsville",
+   "original": "Stiltsville",
+   "tipo": "area",
+   "x": -113,
+   "y": -3266,
+   "muestras": 3
+  },
+  {
+   "nombre": "Ocean Beach South",
+   "original": "Ocean Beach South",
+   "tipo": "area",
+   "x": 1818,
+   "y": -260,
+   "muestras": 3
+  },
+  {
+   "nombre": "Watson Island",
+   "original": "Watson Island",
+   "tipo": "area",
+   "x": 321,
+   "y": 328,
+   "muestras": 2
+  },
+  {
+   "nombre": "Ferry Island",
+   "original": "Ferry Island",
+   "tipo": "area",
+   "x": 870,
+   "y": 40,
+   "muestras": 2
+  },
+  {
+   "nombre": "Shark Valley",
+   "original": "Shark Valley",
+   "tipo": "area",
+   "x": -3774,
+   "y": -2806,
+   "muestras": 1
+  },
+  {
+   "nombre": "Eastern Keys",
+   "original": "Eastern Keys",
+   "tipo": "area",
+   "x": -658,
+   "y": -3351,
+   "muestras": 1
+  },
+  {
+   "nombre": "Picnic Islands",
+   "original": "Picnic Islands",
+   "tipo": "area",
+   "x": 42,
+   "y": 1583,
+   "muestras": 1
+  },
+  {
+   "nombre": "Starfish Island",
+   "original": "Starfish Island",
+   "tipo": "area",
+   "x": 821,
+   "y": 497,
+   "muestras": 1
+  },
+  {
+   "nombre": "Flagler Island",
+   "original": "Flagler Island",
+   "tipo": "area",
+   "x": 832,
+   "y": 902,
+   "muestras": 1
+  },
+  {
+   "nombre": "Haulover",
+   "original": "Haulover",
+   "tipo": "area",
+   "x": 785,
+   "y": 3055,
+   "muestras": 1
+  },
+  {
+   "nombre": "Vice City International Airport",
+   "original": "Vice City International Airport",
+   "tipo": "barrio",
+   "x": -2459,
+   "y": -670,
+   "muestras": 19
+  },
+  {
+   "nombre": "Ocean Beach",
+   "original": "Ocean Beach",
+   "tipo": "barrio",
+   "x": 1590,
+   "y": 989,
+   "muestras": 11
+  },
+  {
+   "nombre": "Downtown",
+   "original": "Downtown",
+   "tipo": "barrio",
+   "x": -567,
+   "y": -102,
+   "muestras": 7
+  },
+  {
+   "nombre": "Nautilus",
+   "original": "Nautilus",
+   "tipo": "barrio",
+   "x": 1009,
+   "y": 1938,
+   "muestras": 6
+  },
+  {
+   "nombre": "Southside",
+   "original": "Southside",
+   "tipo": "barrio",
+   "x": -1760,
+   "y": -2080,
+   "muestras": 5
+  },
+  {
+   "nombre": "Salton",
+   "original": "Salton",
+   "tipo": "barrio",
+   "x": -1539,
+   "y": -791,
+   "muestras": 5
+  },
+  {
+   "nombre": "Peacock Bay",
+   "original": "Peacock Bay",
+   "tipo": "barrio",
+   "x": -1174,
+   "y": -2062,
+   "muestras": 5
+  },
+  {
+   "nombre": "Tequesta",
+   "original": "Tequesta",
+   "tipo": "barrio",
+   "x": -757,
+   "y": -1048,
+   "muestras": 5
+  },
+  {
+   "nombre": "Washington Beach",
+   "original": "Washington Beach",
+   "tipo": "barrio",
+   "x": 1681,
+   "y": 2079,
+   "muestras": 5
+  },
+  {
+   "nombre": "Crosstown",
+   "original": "Crosstown",
+   "tipo": "barrio",
+   "x": -624,
+   "y": 1174,
+   "muestras": 4
+  },
+  {
+   "nombre": "Leaf Links",
+   "original": "Leaf Links",
+   "tipo": "barrio",
+   "x": 517,
+   "y": 2452,
+   "muestras": 4
+  },
+  {
+   "nombre": "Rockridge",
+   "original": "Rockridge",
+   "tipo": "barrio",
+   "x": -1367,
+   "y": 977,
+   "muestras": 3
+  },
+  {
+   "nombre": "Tequesta Retreat",
+   "original": "Tequesta Retreat",
+   "tipo": "barrio",
+   "x": -173,
+   "y": -1050,
+   "muestras": 3
+  },
+  {
+   "nombre": "Little Cuba",
+   "original": "Little Cuba",
+   "tipo": "barrio",
+   "x": -1159,
+   "y": -58,
+   "muestras": 2
+  },
+  {
+   "nombre": "La Perle",
+   "original": "La Perle",
+   "tipo": "barrio",
+   "x": -942,
+   "y": 1454,
+   "muestras": 2
+  },
+  {
+   "nombre": "Bohemia",
+   "original": "Bohemia",
+   "tipo": "barrio",
+   "x": -211,
+   "y": 2204,
+   "muestras": 2
+  },
+  {
+   "nombre": "Port Vice City",
+   "original": "Port Vice City",
+   "tipo": "barrio",
+   "x": 1200,
+   "y": -600,
+   "muestras": 2
+  },
+  {
+   "nombre": "Tisha-Wocka",
+   "original": "Tisha-Wocka",
+   "tipo": "barrio",
+   "x": -2800,
+   "y": 800,
+   "muestras": 1
+  },
+  {
+   "nombre": "Gables Estates",
+   "original": "Gables Estates",
+   "tipo": "barrio",
+   "x": -1167,
+   "y": -2616,
+   "muestras": 1
+  },
+  {
+   "nombre": "Bayside",
+   "original": "Bayside",
+   "tipo": "barrio",
+   "x": -400,
+   "y": 800,
+   "muestras": 1
+  },
+  {
+   "nombre": "Stockyard",
+   "original": "Stockyard",
+   "tipo": "barrio",
+   "x": -269,
+   "y": 1813,
+   "muestras": 1
+  }
+ ]
+}

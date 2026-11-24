@@ -19,20 +19,23 @@
     { id: 'loot',       color: '#c98b5a', icono: '💰' }
   ];
   var CAT = {};
+  // Icono redondo tipo "blip" del juego (para filtros, lista y ficha)
+  var blip = function (c) { return '<span class="blip" style="--c:' + c.color + '">' + c.icono + '</span>'; };
   CATEGORIAS.forEach(function (c) { CAT[c.id] = c; });
 
   /* ---------- Sistema de coordenadas ----------
      Los datos usan metros del juego (x = este, y = norte) como gtadb.org.
-     Las teselas empiezan en la esquina noroeste (x = -10300, y = 9500)
-     y a zoom 0 un píxel equivale a 64 metros. */
-  var X_MIN = -10300, Y_MAX = 9500, METROS_POR_PX = 64;
+     Las teselas siguen la cuadrícula de gtadb: el punto (0, 0) del juego está en el centro
+     de un cuadro de 32768 m; a zoom 0 un píxel son 32 m y a zoom 6, medio metro. */
+  var METROS_POR_PX = 32, MITAD = 16384;
   var CRS_LEONIDA = L.extend({}, L.CRS.Simple, {
-    transformation: new L.Transformation(1 / METROS_POR_PX, -X_MIN / METROS_POR_PX, -1 / METROS_POR_PX, Y_MAX / METROS_POR_PX)
+    transformation: new L.Transformation(1 / METROS_POR_PX, MITAD / METROS_POR_PX, -1 / METROS_POR_PX, MITAD / METROS_POR_PX)
   });
-  // Límites de las teselas (sur, oeste) – (norte, este)
-  var LIMITES_TESELAS = L.latLngBounds([-8932, X_MIN], [Y_MAX, 4036]);
   // Zona con tierra, para "ver todo"
   var LIMITES_TIERRA = L.latLngBounds([-7200, -8200], [8600, 3100]);
+  // Zoom máximo: el último nivel con teselas propias (2 píxeles por metro).
+  // Más allá la imagen solo se estira y se pixela, así que no se deja pasar de aquí.
+  var ZOOM_MAX = 6;
 
   /* ---------- Estado ---------- */
   var datos = null;          // contenido de locations.json
@@ -52,29 +55,68 @@
   /* ---------- Mapa ---------- */
   var mapa = L.map('mapa', {
     crs: CRS_LEONIDA,
-    minZoom: 0,
-    maxZoom: 7,
+    minZoom: -1,          // se recalcula con ajustarZoom()
+    maxZoom: ZOOM_MAX,
     zoomSnap: 0.25,
     zoomControl: false,
     attributionControl: false,
-    maxBounds: LIMITES_TESELAS.pad(0.1),
-    maxBoundsViscosity: 0.8,
+    maxBounds: LIMITES_TIERRA,
+    maxBoundsViscosity: 1,  // no se puede arrastrar fuera del mapa
     tap: false
   });
 
-  L.tileLayer('tiles/{z}/{x}/{y}.jpg', {
-    maxNativeZoom: 5,     // teselas propias hasta zoom 5 (0.5 px por metro)
-    maxZoom: 7,           // más allá, Leaflet amplía la imagen
-    bounds: LIMITES_TESELAS,
-    noWrap: true,
-    keepBuffer: 4
-  }).addTo(mapa);
+  /* Capa de teselas: solo pide las que existen (tiles/indice.json).
+     Donde no hay tesela es mar abierto y se ve el color de fondo. */
+  var CapaLeonida = L.TileLayer.extend({
+    createTile: function (coords, listo) {
+      var lista = this.options.indice[coords.z];
+      if (lista && lista[coords.y + ',' + coords.x]) return L.TileLayer.prototype.createTile.call(this, coords, listo);
+      var vacia = document.createElement('div');
+      setTimeout(function () { listo(null, vacia); }, 0);
+      return vacia;
+    }
+  });
 
-  mapa.fitBounds(LIMITES_TIERRA);
+  fetch('tiles/indice.json').then(function (r) { return r.json(); }).then(function (indice) {
+    // indice: { "z": ["y,x", ...] } -> lo pasamos a objetos para buscar rápido
+    var rapido = {};
+    Object.keys(indice).forEach(function (z) {
+      rapido[z] = {};
+      indice[z].forEach(function (k) { rapido[z][k] = true; });
+    });
+    new CapaLeonida('tiles/{z}/{z},{y},{x}.jpg', {
+      indice: rapido,
+      minNativeZoom: 0,
+      maxNativeZoom: ZOOM_MAX,
+      maxZoom: ZOOM_MAX,
+      noWrap: true,
+      keepBuffer: 4
+    }).addTo(mapa);
+  });
+
+  /* Zoom mínimo: el mapa ocupa todo el alto del teléfono y no se puede achicar más,
+     así nunca quedan bordes vacíos alrededor. Se recalcula al girar el teléfono. */
+  function zoomMinimo() {
+    var t = mapa.getSize();
+    var alto = LIMITES_TIERRA.getNorth() - LIMITES_TIERRA.getSouth();
+    var ancho = LIMITES_TIERRA.getEast() - LIMITES_TIERRA.getWest();
+    // metros por píxel que llenan la pantalla a lo alto y a lo ancho; se usa el que no deja huecos
+    var mpp = Math.min(alto / t.y, ancho / t.x);
+    // redondeado hacia arriba a 1/4 (el paso del zoom) para no quedar nunca por debajo
+    return Math.ceil(Math.log2(METROS_POR_PX / mpp) * 4) / 4;
+  }
+  function ajustarZoom() {
+    var zMin = zoomMinimo();
+    mapa.setMinZoom(zMin);
+    if (mapa.getZoom() < zMin) mapa.setZoom(zMin, { animate: false });
+  }
+  mapa.setView(LIMITES_TIERRA.getCenter(), zoomMinimo(), { animate: false });
+  ajustarZoom();
+  mapa.on('resize', ajustarZoom);
 
   $('#btn-mas').onclick = function () { mapa.zoomIn(1); };
   $('#btn-menos').onclick = function () { mapa.zoomOut(1); };
-  $('#btn-todo').onclick = function () { mapa.flyToBounds(LIMITES_TIERRA, { duration: 0.6 }); };
+  $('#btn-todo').onclick = function () { mapa.flyTo(LIMITES_TIERRA.getCenter(), mapa.getMinZoom(), { duration: 0.6 }); };
 
   /* Vista 3D inclinada (CSS) */
   $('#btn-3d').onclick = function () {
@@ -92,7 +134,8 @@
   function crearIcono(item) {
     var c = CAT[item.categoria];
     var esStrip = item.categoria === 'strip';
-    var tam = esStrip ? 66 : 42;
+    // Tamaño parecido a los iconos del mapa del juego; los strip clubs un poco más grandes
+    var tam = esStrip ? 34 : 24;
     return L.divIcon({
       className: 'pin pin-' + item.categoria + (item.verificado === 'sí' ? '' : ' no-verif'),
       html: '<div class="pin-interior" style="--c:' + c.color + '"><span>' + c.icono + '</span></div>',
@@ -103,8 +146,9 @@
 
   function pintarMarcadores() {
     CATEGORIAS.forEach(function (c) {
-      capas[c.id] = L.layerGroup().addTo(mapa);
-      activas[c.id] = true;
+      // Todas las categorías empiezan apagadas: el mapa arranca limpio y se encienden con los filtros
+      capas[c.id] = L.layerGroup();
+      activas[c.id] = false;
     });
     datos.items.forEach(function (item) {
       var m = L.marker([item.y, item.x], {
@@ -131,6 +175,47 @@
     }
   }
 
+  /* ---------- Nombres de zonas (Leonida, condados, ciudades, barrios) ----------
+     Cada tipo se ve solo en ciertos niveles de zoom, como en el mapa del juego:
+     de lejos el estado y los condados; al acercarse, ciudades, áreas y barrios. */
+  var ZOOM_ETIQUETAS = {
+    estado:  [-9, 1.5],
+    condado: [0, 2.5],
+    ciudad:  [1.5, 4.25],
+    area:    [2.25, 5],
+    barrio:  [3, 99]
+  };
+  var etiquetas = [];
+
+  function pintarZonas(z) {
+    mapa.createPane('etiquetas');
+    mapa.getPane('etiquetas').style.zIndex = 450;          // encima de las teselas, debajo de los iconos
+    mapa.getPane('etiquetas').style.pointerEvents = 'none';
+    var lista = [{ nombre: z.estado.nombre, tipo: 'estado', x: z.estado.x, y: z.estado.y }].concat(z.zonas);
+    lista.forEach(function (zona) {
+      var m = L.marker([zona.y, zona.x], {
+        pane: 'etiquetas',
+        interactive: false,
+        keyboard: false,
+        // Los condados van en dos líneas ("CONDADO DE" / "KELLY") para que quepan en el teléfono
+        icon: L.divIcon({ className: 'etiqueta etiqueta-' + zona.tipo, iconSize: null,
+          html: '<span>' + esc(zona.nombre).replace(/^(Condado de) /, '<small>$1</small><br>') + '</span>' })
+      }).addTo(mapa);
+      etiquetas.push({ m: m, tipo: zona.tipo });
+    });
+    mostrarZonas();
+    mapa.on('zoomend', mostrarZonas);
+  }
+
+  function mostrarZonas() {
+    var z = mapa.getZoom();
+    etiquetas.forEach(function (e) {
+      var r = ZOOM_ETIQUETAS[e.tipo];
+      var el = e.m.getElement();
+      if (el) el.style.display = (z >= r[0] && z < r[1]) ? '' : 'none';
+    });
+  }
+
   /* ---------- Filtros ---------- */
   function pintarFiltros() {
     var nav = $('#filtros');
@@ -138,9 +223,9 @@
     CATEGORIAS.forEach(function (c) {
       var n = datos.items.filter(function (i) { return i.categoria === c.id; }).length;
       var b = document.createElement('button');
-      b.className = 'chip' + (c.id === 'strip' ? ' strip' : '');
+      b.className = 'chip apagado' + (c.id === 'strip' ? ' strip' : '');
       b.style.setProperty('--c', c.color);
-      b.innerHTML = '<span>' + c.icono + '</span>' + esc(datos.categorias[c.id]) + ' <span class="num">' + n + '</span>';
+      b.innerHTML = blip(c) + esc(datos.categorias[c.id]) + ' <span class="num">' + n + '</span>';
       b.onclick = function () {
         activas[c.id] = !activas[c.id];
         b.classList.toggle('apagado', !activas[c.id]);
@@ -167,7 +252,7 @@
       : '<span class="estado no">[PENDIENTE DE VERIFICAR] una sola fuente o datos que no coinciden</span>';
     $('#ficha-contenido').innerHTML =
       '<div class="ficha">' +
-        '<span class="ficha-cat" style="--c:' + c.color + '">' + c.icono + ' ' + esc(datos.categorias[item.categoria]) + '</span>' +
+        '<span class="ficha-cat">' + blip(c) + esc(datos.categorias[item.categoria]) + '</span>' +
         '<h3>' + esc(item.nombre) + '</h3>' +
         '<p class="zona">📍 ' + esc(item.zona || '') + '</p>' +
         verif +
@@ -207,7 +292,7 @@
     }
     cerrar('panel-lista');
     // Centramos un poco más abajo del punto para que la ficha no lo tape
-    var z = 4.5;
+    var z = 3.75;
     var p = mapa.project([item.y, item.x], z).add([0, mapa.getSize().y * 0.22]);
     mapa.flyTo(mapa.unproject(p, z), z, { duration: 0.8 });
     mapa.once('moveend', function () { abrirFicha(item); });
@@ -230,14 +315,14 @@
       var sin = datos.pendientes.filter(function (i) { return i.categoria === c.id && coincide(i); });
       if (!con.length && !sin.length) return;
       total += con.length + sin.length;
-      html += '<div class="grupo"><h4><span class="bola" style="--c:' + c.color + '"></span>' + c.icono + ' ' + esc(datos.categorias[c.id]) + '</h4>';
+      html += '<div class="grupo"><h4>' + esc(datos.categorias[c.id]) + ' <span class="num">' + (con.length + sin.length) + '</span></h4>';
       con.forEach(function (i) {
-        html += '<button class="fila" data-ir="' + esc(i.id) + '"><span class="ico">' + c.icono + '</span>' +
+        html += '<button class="fila" data-ir="' + esc(i.id) + '">' + blip(c) +
           '<span class="txt"><b>' + esc(i.nombre) + '</b><small>' + esc(i.zona || '') +
           (i.verificado === 'sí' ? ' · ✔ verificado' : ' · sin verificar') + '</small></span><span class="flecha">›</span></button>';
       });
       sin.forEach(function (i) {
-        html += '<div class="fila sin-punto"><span class="ico">❔</span><span class="txt">' +
+        html += '<div class="fila sin-punto"><span class="blip" style="--c:#8a87c4">❔</span><span class="txt">' +
           '<b><span class="pendiente-tag">PENDIENTE</span>' + esc(i.nombre) + '</b>' +
           '<small>' + esc(i.descripcion) + '<br><i>Motivo: ' + esc(i.motivo) + '</i> · ' +
           '<a href="' + esc(i.fuente) + '" target="_blank" rel="noopener">' + esc(dominio(i.fuente)) + '</a></small></span></div>';
@@ -295,9 +380,11 @@
   /* ---------- Carga de datos ---------- */
   Promise.all([
     fetch('data/locations.json').then(function (r) { return r.json(); }),
-    fetch('data/trucos.json').then(function (r) { return r.json(); })
+    fetch('data/trucos.json').then(function (r) { return r.json(); }),
+    fetch('data/zonas.json').then(function (r) { return r.json(); })
   ]).then(function (res) {
     datos = res[0];
+    pintarZonas(res[2]);
     pintarMarcadores();
     pintarFiltros();
     pintarLista('');
