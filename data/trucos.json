@@ -254,6 +254,132 @@
   ],
   "secciones": [
     {
+      "id": "lo-nuevo",
+      "titulo": "Lo nuevo de GTA VI (si ya conoces la saga)",
+      "datos": [
+        {
+          "titulo": "Cómo arranca",
+          "texto": "Tras un tutorial corto con Jason y Lucia, Key Lento te retiene más o menos la primera quinta parte del juego. La historia va por capítulos y cada uno desbloquea tipos de robo.",
+          "fuentes": [
+            "https://www.redbull.com/gb-en/gta-6-beginners-guide",
+            "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/"
+          ],
+          "pendiente": false
+        },
+        {
+          "titulo": "Dos protagonistas, no tres",
+          "texto": "Jason y Lucia. Al principio no puedes usar a los dos a la vez. El que no juegas espera cerca de tu casa de seguridad, así que cambiar de personaje es la forma más rápida de viajar.",
+          "fuentes": [
+            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
+          ],
+          "pendiente": false
+        },
+        {
+          "titulo": "Robos en pareja",
+          "texto": "Puedes invitar al otro personaje a un robo desde el mapa (Triángulo/Y) y pasarle las bolsas del botín (→ en la cruceta y luego Círculo/B).",
+          "fuentes": [
+            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
+          ],
+          "pendiente": false
+        },
+        {
+          "titulo": "El dinero no es seguro al principio",
+          "texto": "No hay cuenta de banco hasta la misión «Buck Me» (1–2 h). Antes, si mueres o te arrestan pierdes todo el efectivo y las bolsas que cargues. Escóndelo bajo las tablas sueltas del cuarto de Jason.",
+          "fuentes": [
+            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
+          ],
+          "pendiente": false
+        },
+        {
+          "titulo": "Billetes marcados y peristas",
+          "texto": "Lo que sacas de bancos, préstamos y cajeros sale en billetes marcados: no sirve hasta que lo vendes con un perista. Yasmani (Little Cuba) compra joyas y billetes; Tyrone, drogas.",
+          "fuentes": [
+            "https://meowdb.com/gta6/robberies",
+            "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
+            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
+          ],
+          "pendiente": false
+        },
+        {
+          "titulo": "Robar autos cambió",
+          "texto": "Muchos autos piden el clonador de llaves, que se gana en la historia. Mantén ↑ para abrir la app Waink: ves la seguridad del auto, su precio de venta y lo que cuesta registrarlo. El registro se abre con Moses en Port Gellhorn (Cap. 2); los autos con rastreador fijo no se pueden quedar.",
+          "fuentes": [
+            "https://www.redbull.com/gb-en/gta-6-beginners-guide",
+            "https://consolepulse.com/playstation/gta/guides/gta-6-beginner-tips",
+            "https://gtainfohub.com/gta-6-car-locations/"
+          ],
+          "pendiente": false
+        },
+        {
+          "titulo": "Modo Focus",
+          "texto": "Ambos sticks a la vez: marca enemigos, notas con códigos de cajas fuertes y puertas (blanca = entras, roja = alarma).",
+          "fuentes": [
+            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
+          ],
+          "pendiente": false
+        },
+        {
+          "titulo": "Perfil criminal además de las estrellas",
+          "texto": "La policía guarda tu descripción. Cambiar gorra o lentes (rueda de armas + R1) ayuda, pero no la borra seguro. Ser muy violento lleva tu perfil hacia «Psycho». Las zonas con borde amarillo (base militar, aeropuerto) llaman a la policía al entrar.",
+          "fuentes": [
+            "https://consolepulse.com/playstation/gta/guides/gta-6-beginner-tips",
+            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
+          ],
+          "pendiente": false
+        },
+        {
+          "titulo": "Estadísticas que se pierden",
+          "texto": "Salud (pesas) y resistencia (cardio) bajan si dejas de entrenar; la concentración (pesca, billar) es permanente. Comer, dormir y bañarse dan mejoras temporales.",
+          "fuentes": [
+            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
+          ],
+          "pendiente": false
+        },
+        {
+          "titulo": "Interiores en el mapa",
+          "texto": "Haz zoom: los edificios azul oscuro se pueden entrar. El minimapa muestra si una tienda tiene cuarto o escalera escondida.",
+          "fuentes": [
+            "https://www.redbull.com/gb-en/gta-6-beginners-guide",
+            "https://consolepulse.com/playstation/gta/guides/gta-6-beginner-tips"
+          ],
+          "pendiente": false
+        },
+        {
+          "titulo": "Garajes",
+          "texto": "Hay como una docena para comprar, pero solo después de salir de Key Lento. Guardan autos gratis, dan acceso a tus armas y ahí dejas mercancía para que otros la vendan.",
+          "fuentes": [
+            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
+          ],
+          "pendiente": false
+        },
+        {
+          "titulo": "Sin repetir misiones",
+          "texto": "No hay opción para repetir misiones: guarda a mano en otra ranura antes de una que quieras volver a jugar.",
+          "fuentes": [
+            "https://consolepulse.com/playstation/gta/guides/gta-6-beginner-tips"
+          ],
+          "pendiente": false
+        },
+        {
+          "titulo": "15 ranuras de guardado",
+          "texto": "Dato de una sola guía (PS5, versión de lanzamiento).",
+          "fuentes": [
+            "https://consolepulse.com/playstation/gta/guides/gta-6-beginner-tips"
+          ],
+          "pendiente": true
+        },
+        {
+          "titulo": "Trucos solo al final",
+          "texto": "Ya no se meten en cualquier momento: se desbloquean al terminar la historia y se escriben en el teléfono.",
+          "fuentes": [
+            "https://www.shacknews.com/article/151457/all-cheat-codes-gta6",
+            "https://insider-gaming.com/all-gta-6-cheats-best-grand-theft-auto-6-cheat-codes/"
+          ],
+          "pendiente": false
+        }
+      ]
+    },
+    {
       "id": "como-trucos",
       "titulo": "Cómo activar los trucos",
       "datos": [
@@ -338,123 +464,11 @@
       ]
     },
     {
-      "id": "primera-vez",
-      "titulo": "Si es tu primera vez",
+      "id": "robos",
+      "titulo": "Calendario de robos",
       "datos": [
         {
-          "titulo": "Compra un silenciador",
-          "texto": "Hay un Ammu-Nation en Key Lento justo después del tutorial. Las armas con silenciador no alertan a los enemigos cercanos.",
-          "fuentes": [
-            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
-          ],
-          "pendiente": false
-        },
-        {
-          "titulo": "Explora Key Lento al inicio",
-          "texto": "Tesoros bajo el agua, pesca y los encargos de la vecina Shirley. Volver más tarde son unos 10 minutos de manejo.",
-          "fuentes": [
-            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
-          ],
-          "pendiente": false
-        },
-        {
-          "titulo": "Edificios en el mapa",
-          "texto": "Haz zoom: los edificios azul oscuro tienen entrada o interior.",
-          "fuentes": [
-            "https://www.redbull.com/gb-en/gta-6-beginners-guide",
-            "https://consolepulse.com/playstation/gta/guides/gta-6-beginner-tips"
-          ],
-          "pendiente": false
-        },
-        {
-          "titulo": "Zonas amarillas",
-          "texto": "La base militar y el aeropuerto tienen borde amarillo: entrar llama a la policía.",
-          "fuentes": [
-            "https://consolepulse.com/playstation/gta/guides/gta-6-beginner-tips"
-          ],
-          "pendiente": false
-        },
-        {
-          "titulo": "Entrena",
-          "texto": "Pesas = salud, cardio = resistencia, actividades tranquilas (pesca, billar) = concentración. Salud y resistencia bajan si dejas de entrenar; la concentración es permanente. Comer, dormir y bañarse dan mejoras temporales.",
-          "fuentes": [
-            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
-          ],
-          "pendiente": false
-        },
-        {
-          "titulo": "En los robos a tiendas",
-          "texto": "Revisa las zonas de empleados: hay más dinero, armas y cajas fuertes.",
-          "fuentes": [
-            "https://consolepulse.com/playstation/gta/guides/gta-6-beginner-tips",
-            "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/"
-          ],
-          "pendiente": false
-        },
-        {
-          "titulo": "Descubrir el mapa rápido",
-          "texto": "Una avioneta (fumigadora) es lo más rápido para descubrir el mapa.",
-          "fuentes": [
-            "https://consolepulse.com/playstation/gta/guides/gta-6-beginner-tips"
-          ],
-          "pendiente": false
-        }
-      ]
-    },
-    {
-      "id": "historia",
-      "titulo": "Para continuar la historia",
-      "datos": [
-        {
-          "titulo": "Guarda a mano antes de misiones importantes",
-          "texto": "No hay opción de repetir misiones; guarda en una ranura nueva antes de una misión que quieras repetir.",
-          "fuentes": [
-            "https://consolepulse.com/playstation/gta/guides/gta-6-beginner-tips"
-          ],
-          "pendiente": false
-        },
-        {
-          "titulo": "15 ranuras de guardado",
-          "texto": "Dato de una sola guía (versión de lanzamiento de PS5).",
-          "fuentes": [
-            "https://consolepulse.com/playstation/gta/guides/gta-6-beginner-tips"
-          ],
-          "pendiente": true
-        },
-        {
-          "titulo": "Cambiar de personaje",
-          "texto": "Es la forma más rápida de viajar: el personaje que no usas suele esperar cerca de tu casa de seguridad. Al principio no puedes jugar con los dos a la vez.",
-          "fuentes": [
-            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
-          ],
-          "pendiente": false
-        },
-        {
-          "titulo": "Tu primera cuenta de banco",
-          "texto": "Llega en la misión «Buck Me» (1 a 2 horas de juego). Antes de eso, si te matan o te arrestan pierdes todo el efectivo.",
-          "fuentes": [
-            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
-          ],
-          "pendiente": false
-        },
-        {
-          "titulo": "Esconde el dinero",
-          "texto": "Mientras no tengas banco, guarda el efectivo bajo las tablas sueltas del cuarto de Jason.",
-          "fuentes": [
-            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
-          ],
-          "pendiente": false
-        },
-        {
-          "titulo": "Peristas",
-          "texto": "Yasmani (Little Cuba) paga bien por joyas y billetes marcados; Tyrone, por drogas.",
-          "fuentes": [
-            "https://www.redbull.com/gb-en/gta-6-beginners-guide"
-          ],
-          "pendiente": false
-        },
-        {
-          "titulo": "Calendario de robos",
+          "titulo": "Qué se abre y cuándo",
           "texto": "Tiendas: desde el inicio. Casas de empeño: Cap. 2 (Coffee Break). Joyerías, préstamos y cajeros: Cap. 3 (Yasmani y «Credit Check»). Bóvedas: final del Cap. 4.",
           "fuentes": [
             "https://outputlag.com/guides/gta-6-how-to-rob-stores-heists/",
